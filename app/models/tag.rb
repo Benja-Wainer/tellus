@@ -1,7 +1,9 @@
 class Tag < ApplicationRecord
-  belongs_to :country
-  belongs_to :topic
-  belongs_to :article
+  belongs_to :country, optional: true
+  belongs_to :topic, optional: true
+  belongs_to :article, optional: true
 
-  validates :topic, :country, :article, presence: true
+  validates :country, :topic, :article,
+            presence: true,
+            unless: -> { !topic.blank? || !article.blank? || !country.blank? }
 end
