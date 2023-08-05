@@ -6,12 +6,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index'
   resources :countries, only: %i[index show]
-  get "/countries/:country_id/subscriptions", to: "subscriptions#country", as: :country_subscription
-  get "/countries/:topic_id/subscriptions", to: "subscriptions#topic", as: :topic_subscription
 
-  resources :topics, only: %i[index] do
-    resources :subscriptions, only: :create
-  end
+  resources :topics, only: %i[index]
 
   resources :articles, only: :show
 
