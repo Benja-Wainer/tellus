@@ -11,6 +11,6 @@ Rails.application.routes.draw do
 
   resources :articles, only: :show
 
-  get "/profile", to: "users#show", as: :profile
+  get "/profile", to: "pages#profile", as: :profile
 
 end
