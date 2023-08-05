@@ -10,7 +10,7 @@ puts "Creating seeds"
 
 puts "Making Users"
 
-user = User.create(email: "coolio@coolio.com", password: "coolio")
+user = User.create(username: "coolio", email: "coolio@coolio.com", password: "coolio")
 
 puts "Made user #{user.email}"
 
