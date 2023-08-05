@@ -1,2 +1,6 @@
-<h1>Topics#index</h1>
-<p>Find me in app/views/topics/index.html.erb</p>
+<h1>Here are all trending topics:</h1>
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= topic.name %></li>
+  <% end %>
+</ul>
