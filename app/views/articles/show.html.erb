@@ -1,5 +1,13 @@
-<div class="container">
-  <h2><%= @article.title %></h2>
-  <p><%= @article.content %></p>
-  <p>Read the original article <%= link_to "here", @article.url %></p>
+<div class="article-background">
+  <div class="container container-md article col-6 p-5">
+    <% if @article.source.present? %>
+      <p><%= @article.source %></p>
+    <% else %>
+      <p>Placeholder source</p>
+    <% end %>
+
+    <h2 class="title"><%= @article.title %></h2>
+    <p><%= @article.content %></p>
+    <p>Read the original article <%= link_to "here", @article.url, class: "source-link" %></p>
+  </div>
 </div>
