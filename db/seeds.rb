@@ -226,9 +226,16 @@ topics.each do |t|
   topic = Topic.create(name: t)
   p "created #{topic.name} with id #{topic.id}"
 end
+
+
 puts "finished making topics"
+# require 'net/http'
 
 # next articles
+# uri = URI('https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=c74773216f7bc318b072a88e2891eee4')
+# response = Net::HTTP.get(uri)
+# json_r = JSON.parse(response)
+# p json_r["articles"][0]["description"]
 
 puts "Making articles"
 article = Article.create(url: "https://apnews.com/article/coup-niger-extremists-sahel-c4ff0bc653c8b73366705b19b8c74c3e", title: "West Africa defense chiefs finalize Niger intervention plan as junta negotiations deadlock", content: "BY SAM MEDNICK AND CHINEDU ASADU
@@ -398,8 +405,9 @@ puts "Made articles"
 
 puts "Next Creating Tags"
 
-Tag.create(country: Country.find(129), article: Article.find(1), topic: Topic.find(1))
+tag1 = Tag.create(country: Country.find(129), article: Article.find(1), topic: Topic.find(1))
 
-Tag.create(country: Country.find_by(name: "United Kingdom"), article: Article.find(2), topic: Topic.find(2))
+tag2 = Tag.create(country: Country.find_by(name: "United Kingdom"), article: Article.find(2), topic: Topic.find(2))
 
-puts Tag.all
+puts tag1
+puts tag2
