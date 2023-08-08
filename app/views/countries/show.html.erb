@@ -1,7 +1,20 @@
-<h1><%= @country.name %></h1>
+<div class="article-background">
 
-<ul>
-  <% @country.topics.each do |topic| %>
-    <li><%= topic.name %></li>
-  <% end %>
-</ul>
+
+<div class="container vh-100" style="background: white">
+      <!-- Code your tabs here -->
+  <h1 class="align-center">Top Articles in <%= @country.name %></h1>
+      <div class="articles">
+        <% @country.articles.each do |article| %>
+          <div class="article" style="">
+            <div class="article-content">
+              <p class="date">August 8th, 2023</p>
+              <p><%= article.title %></p>
+        <% end %>
+            </div>
+        </div>
+
+      </div>
+  </div>
+
+</div>
