@@ -1,0 +1,95 @@
+import { Controller } from "@hotwired/stimulus"
+
+// Connects to data-controller="world-map"
+export default class extends Controller {
+  static values = {countries: Array}
+  connect() {
+    console.log("World Map controller connected");
+    const countriesList = this.countriesValue;
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGdhZmZlciIsImEiOiJjbGlrNTVibWEwOHRkM2NwOWF6Y3VvMHFrIn0.UxOvJ3__02GQNNAEkRhF7w';
+    const map = new mapboxgl.Map({
+    container: 'map', // container ID
+    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+    style: 'mapbox://styles/tgaffer/clkxru5dy003m01rg38rb8j6p/draft', // style URL
+    center: [0, 0], // starting position [lng, lat]
+    zoom: 2,
+    projection: {
+      name: 'mercator',
+      center: [0, 0],
+    }
+      });
+
+    map.on('load', function () {
+                map.addSource('cbs', {  // country-boundaries-simplified
+                    'type': 'geojson',
+                    'data': 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson'
+                });
+
+                map.addLayer({
+                    "id": "cf",  // country-fills
+                    "type": "fill",
+                    "source": "cbs",
+                    "layout": {},
+                    "paint": {
+                        "fill-color": "#1B6AD4",
+                        "fill-opacity": 0
+                    }
+                });
+
+                // map.addLayer({
+                //     "id": "cb",  // country borders
+                //     "type": "line",
+                //     "source": "cbs",
+                //     "layout": {},
+                //     "paint": {
+                //         "line-color": "#102B50",
+                //         "line-width": 2
+                //     }
+                // });
+
+                map.addLayer({
+                    "id": "cfh",  // country-fills-hover",
+                    "type": "fill",
+                    "source": "cbs",
+                    "layout": {},
+                    "paint": {
+                        "fill-color": "#FFFFFF",
+                        "fill-opacity": 0.2
+                    },
+                    "filter": ["==", "name", ""]
+                });
+
+                // When the user moves their mouse over the page, we look for features
+                // at the mouse position (e.point) and within the states layer (states-fill).
+                // If a feature is found, then we'll update the filter in the state-fills-hover
+                // layer to only show that state, thus making a hover effect.
+                map.on("mousemove", function(e) {
+                    var features = map.queryRenderedFeatures(e.point, { layers: ["cf"] });
+
+                    if (features.length) {
+                        map.getCanvas().style.cursor = 'pointer';
+                        map.setFilter("cfh", ["==", "name", features[0].properties.name]);
+                        } else {
+                        map.setFilter("cfh", ["==", "name", ""]);
+                        map.getCanvas().style.cursor = '';
+                    }
+                });
+
+                // Reset the state-fills-hover layer's filter when the mouse leaves the map
+                map.on("mouseout", function() {
+                    map.getCanvas().style.cursor = 'auto';
+                    map.setFilter("cfh", ["==", "name", ""]);
+                });
+
+                map.on("click", function(e) {
+                    var features = map.queryRenderedFeatures(e.point, { layers: ["cf"] });
+                    if (features.length) {
+                        this.countryValue= countriesList.indexOf(features[0].properties.name) + 1;
+                        console.log(this.countryValue);
+                        window.location.href=`/countries/${this.countryValue}`
+                    }
+                });
+
+            });
+  }
+}

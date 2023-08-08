@@ -53,10 +53,10 @@ countries = "Afghanistan,
   China,
   Colombia,
   Comoros,
-  Democratic Republic of the Congo,
-  Republic of the Congo,
+  Dem. Rep. Congo,
+  Congo,
   Costa Rica,
-  Côte dIvoire,
+  Côte d'Ivoire,
   Croatia,
   Cuba,
   Cyprus,
@@ -212,7 +212,7 @@ countries = "Afghanistan,
   Zambia,
   Zimbabwe".split(",")
 countries.each do |country|
-  place = Country.create(name: country.gsub("\n", "").delete(' '))
+  place = Country.create(name: country.gsub("\n", "").strip)
   p "created country #{place.name} with id #{place.id}"
 end
 puts "finished making countries"
