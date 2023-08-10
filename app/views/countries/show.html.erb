@@ -1,1 +1,7 @@
-<p>Top articles from <%= @country.name %></p>
+<h1><%= @country.name %></h1>
+
+<ul>
+  <% @country.topics.each do |topic| %>
+    <li><%= topic.name %></li>
+  <% end %>
+</ul>
