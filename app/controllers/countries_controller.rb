@@ -9,6 +9,14 @@ class CountriesController < ApplicationController
     end
   end
 
+  def world_map
+    @countries = Country.all
+    @country_names = []
+    @countries.each do |country|
+      @country_names << country.name
+    end
+  end
+
   def show
     @country = Country.find(params[:id])
   end
