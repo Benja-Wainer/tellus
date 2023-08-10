@@ -1,1 +1,14 @@
 Welcome <%= current_user.username %>
+<h2>Following Countries:</h2>
+  <ol>
+    <% current_user.favorited_by_type('Country').each do |country| %>
+      <li><%=  country.name %></li>
+    <% end %>
+  </ol>
+
+<h2>Following topics:</h2>
+  <ul>
+    <% current_user.favorited_by_type('Topic').each do |topic| %>
+      <li><%=  topic.name %></li>
+    <% end %>
+  </ul>

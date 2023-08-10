@@ -9,21 +9,22 @@
       <% @country.articles.each do |article| %>
         <div class="article">
           <div class="article-content">
-            <h5>Topics:</h5>
-            <ol class="list-group list-group-horizontal">
+            <ul class="list-inline">
               <% article.topics.each do |topic| %>
-                <span>
-                  <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
-                    <% if current_user.favorited?(topic)%>
-                      <i data-reveal-target="item" class="fa-solid fa-heart me-2" style="color: #d31721;"></i>
-                    <% else %>
-                      <i data-reveal-target="item" class="fa-solid fa-regular fa-heart me-2" style="color: #d31721;"></i>
+                <li class="list-inline-item">
+                  <p><span class="badge">
+                    <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
+                      <% if current_user.favorited?(topic)%>
+                        <i data-reveal-target="item" class="fa-solid fa-heart" style="color: #d31721;"></i>
+                      <% else %>
+                        <i data-reveal-target="item" class="fa-solid fa-regular fa-heart" style="color: #d31721;"></i>
+                      <% end %>
                     <% end %>
-                  <% end %>
-                </span>
-                <p><%= topic.name %></p>
+                  </span>
+                  <%= topic.name %></p>
+                </li>
               <% end %>
-            </ol>
+            </ul>
             <p class="date">August 8th, 2023</p>
             <p><%= article.title %></p>
             <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
