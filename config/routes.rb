@@ -5,9 +5,17 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index'
-  resources :countries, only: %i[index show]
+  resources :countries, only: %i[index show] do
+    member do
+      patch "toggle_favorite", to: "countries#toggle_favorite"
+    end
+  end
 
-  resources :topics, only: %i[index]
+  resources :topics, only: %i[index] do
+    member do
+      patch "toggle_favorite", to: "topics#toggle_favorite"
+    end
+  end
 
   resources :articles, only: :show
 

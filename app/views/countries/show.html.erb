@@ -4,6 +4,13 @@
 <div id="article-container" class="container vh-100" style="background: white">
       <!-- Code your tabs here -->
   <h1 class="text-center">Top Articles in <%= @country.name %></h1>
+  <%= link_to toggle_favorite_country_path(@country), data: {"turbo-method": :patch} do %>
+    <% if current_user.favorited?(@country) %>
+      <i class="fa-solid fa-heart" style="color: #d31721;"></i>
+    <% else %>
+      <i class="fa-regular fa-heart" style="color: #d31721;"></i>
+    <% end %>
+  <% end %>
       <div class="articles">
         <% @country.articles.each do |article| %>
             <div class="article">
