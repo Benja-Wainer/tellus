@@ -1,0 +1,7 @@
+<% if @countries.nil? %>
+  <h1><%= "Sorry cant find your search!" %></h1>
+<% else %>
+  <% @countries.each do |country| %>
+    <li><%= country.name %></li>
+  <% end %>
+<% end %>
