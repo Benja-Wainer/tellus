@@ -3,6 +3,10 @@ class CountriesController < ApplicationController
 
   def index
     @countries = Country.all
+    @country_names = []
+    @countries.each do |country|
+      @country_names << country.name
+    end
   end
 
   def show
