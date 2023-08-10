@@ -403,3 +403,12 @@ Tag.create(country: Country.find(129), article: Article.find(1), topic: Topic.fi
 Tag.create(country: Country.find_by(name: "United Kingdom"), article: Article.find(2), topic: Topic.find(2))
 
 puts Tag.all
+
+# require 'net/http'
+
+# uri = URI('https://gnews.io/api/v4/top-headlines?country=uk&category=general&apikey=c74773216f7bc318b072a88e2891eee4')
+
+# api_info = Net::HTTP.get(uri)
+
+# parsed = JSON.parse(api_info)
+# p parsed['articles'][0]['description']
