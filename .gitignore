@@ -29,7 +29,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
+.api_key.rb
 /app/assets/builds/*
 !/app/assets/builds/.keep
 
