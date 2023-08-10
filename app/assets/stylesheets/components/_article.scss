@@ -1,4 +1,5 @@
 .article-background {
+<<<<<<< HEAD
   background-color: navy;
 }
 
@@ -14,4 +15,34 @@
 
 .source-link {
   text-decoration: none;
+=======
+  background-color: #3c3c97;
+}
+
+.article {
+  display: flex;
+  padding: 8px 16px;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid rgb(239, 230, 230);
+}
+
+.date {
+  color: grey;
+  font-size: small;
+}
+
+.article-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+#article-container {
+  max-width: 820px;
+}
+
+.article-button {
+  float: right;
+  margin-right: 32px;
+>>>>>>> d450d1f96d514f80e1ad4f5be0faff4a31ba1c56
 }
