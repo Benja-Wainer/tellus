@@ -1,5 +1,5 @@
 class CountriesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[ index show ]
+  skip_before_action :authenticate_user!, only: %i[ index show world_map ]
 
   def index
     if params[:query].present?
