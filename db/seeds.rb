@@ -411,3 +411,11 @@ tag2 = Tag.create(country: Country.find_by(name: "United Kingdom"), article: Art
 
 puts tag1
 puts tag2
+
+puts news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=c74773216f7bc318b072a88e2891eee4&lang=en")
+
+puts news_array = JSON.parse(news)["articles"]
+
+news_array.each do |s|
+  Article.create(title: s["title"], date: s["date"], content:   s["content"], url: s["url"])
+end
