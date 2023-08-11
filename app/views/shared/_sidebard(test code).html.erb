@@ -1,0 +1,8 @@
+<div class="container-fluid sidebar p-4">
+      <% if current_user.all_favorites.any? %>
+        <% if current_user.favorites_by_type('Country').any? %>
+          <h3 class="sidebar-header">Pinned Countries</h3>
+          <% current_user.favorites_by_type('Country').each do |country| %>
+        <% end %>
+      <% end %>
+</div>
