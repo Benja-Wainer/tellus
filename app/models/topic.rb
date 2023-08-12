@@ -3,7 +3,8 @@ class Topic < ApplicationRecord
   has_many :articles, through: :tags
   has_many :countries, through: :tags
 
-  # acts_as_favoritable
+  acts_as_favoritable
+
   include PgSearch::Model
   pg_search_scope :search_by_name,
     against: [ :name ],
