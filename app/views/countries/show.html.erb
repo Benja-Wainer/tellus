@@ -1,23 +1,36 @@
-<div class="article-background">
+<div class="article-background" data-controller="reveal" data-reveal-hidden-class="fa-regular">
+  <div id="article-container" class="container vh-100" style="background: white">
+        <!-- Code your tabs here -->
+    <h1 class="text-center">Top Articles in <%= @country.name %></h1>
 
 
-<div id="article-container" class="container vh-100" style="background: white">
-      <!-- Code your tabs here -->
-  <h1 class="text-center">Top Articles in <%= @country.name %></h1>
-      <div class="articles">
-        <% @country.articles.each do |article| %>
-            <div class="article">
-              <div class="article-content">
-                <!-- Date Place Holder -->
-                <p class="date">August 8th, 2023</p>
-                <p><%= article.title %></p>
-                <i class="fa-solid fa-heart" style="color: #d31721;"></i>
-                <a class="article-button btn btn-primary">Read Article</a>
-        <% end %>
-              </div>
+
+    <div class="articles">
+      <% @country.articles.each do |article| %>
+        <div class="article">
+          <div class="article-content">
+            <ul class="list-inline">
+              <% article.topics.each do |topic| %>
+                <li class="list-inline-item">
+                  <p><span class="badge">
+                    <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
+                      <% if current_user.favorited?(topic)%>
+                        <i data-reveal-target="item" class="fa-solid fa-heart" style="color: #d31721;"></i>
+                      <% else %>
+                        <i data-reveal-target="item" class="fa-solid fa-regular fa-heart" style="color: #d31721;"></i>
+                      <% end %>
+                    <% end %>
+                  </span>
+                  <%= topic.name %></p>
+                </li>
+              <% end %>
+            </ul>
+            <p class="date">August 8th, 2023</p>
+            <p><%= article.title %></p>
+            <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+          </div>
         </div>
-
-      </div>
+      <% end %>
+    </div>
   </div>
-
 </div>

@@ -7,5 +7,8 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import ToggleHeartController from "./toggle_heart_controller"
+application.register("toggle-heart", ToggleHeartController)
+
 import WorldMapController from "./world_map_controller"
 application.register("world-map", WorldMapController)
