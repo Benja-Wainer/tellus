@@ -417,18 +417,17 @@ def news_secret_key
 end
 
 def news_dataset
-
   api_data = { key: news_secret_key }
 
   news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=#{api_data[:key]}&lang=en")
 
   news_array = JSON.parse(news)["articles"]
 
-    news_array.first(10).each do |s|
-      article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
-      article.country = Country.find(186)
-      p "Created #{article.title}"
-    end
+  news_array.first(10).each do |s|
+    article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
+    tag = Tag.create(country: Country.find_by(name: "United Kingdom"), article: article, topic: Topic.find(1))
+    p "Created #{article.title}"
+  end
 end
 
 news_dataset
