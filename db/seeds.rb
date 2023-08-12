@@ -412,10 +412,23 @@ tag2 = Tag.create(country: Country.find_by(name: "United Kingdom"), article: Art
 puts tag1
 puts tag2
 
-puts news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=c74773216f7bc318b072a88e2891eee4&lang=en")
-
-puts news_array = JSON.parse(news)["articles"]
-
-news_array.each do |s|
-  Article.create(title: s["title"], date: s["date"], content:   s["content"], url: s["url"])
+def news_secret_key
+  ENV["NEWS_API_KEY"]
 end
+
+def news_dataset
+
+  api_data = { key: news_secret_key }
+
+  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=#{api_data[:key]}&lang=en")
+
+  news_array = JSON.parse(news)["articles"]
+
+    news_array.first(10).each do |s|
+      article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
+      article.country = Country.find(186)
+      p "Created #{article.title}"
+    end
+end
+
+news_dataset
