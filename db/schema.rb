@@ -48,9 +48,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_10_105831) do
   end
 
   create_table "tags", force: :cascade do |t|
-    t.bigint "country_id"
-    t.bigint "topic_id"
-    t.bigint "article_id"
+    t.bigint "country_id", null: false
+    t.bigint "topic_id", null: false
+    t.bigint "article_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_tags_on_article_id"
