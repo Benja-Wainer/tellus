@@ -15,15 +15,21 @@
   </head>
 
   <body><%= render "shared/navbar" %>
+  <div class="d-flex">
+    <div class="col-10">
+      <%= render "shared/flashes" %>
 
-  <%= render "shared/flashes" %>
-
-  <div class="page-content">
-    <%= yield %>
+      <div class="page-content">
+        <%= yield %>
+      </div>
+    </div>
+    <div class="col-2">
+      <%= render "shared/sidebar" %>
+    </div>
   </div>
+
   <div class="footer">
     <p>Copyright 2050 Tellus LLC</p>
-    <p>We are not liable for any injuries or deaths that may occur. Use at your own risk.</p>
   </div>
   </body>
 </html>
