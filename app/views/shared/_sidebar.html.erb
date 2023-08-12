@@ -1,12 +1,40 @@
-<div class="container-fluid sidebar p-4">
-    <div class="row">
+<div class="container-fluid sidebar p-4 sticky-top">
+  <div class="row">
+    <% if user_signed_in? && current_user.all_favorited.empty? %>
       <h3 class="sidebar-header">Nothing has been pinned yet...</h3>
 
-      <div class="card" style="width: 18rem;">
-        <img src="<%= image_path('world.jpg') %>" class="card-img-top card-image" alt="default country image">
-        <div class="card-body card-details">
-          <p class="card-text">Card title</p>
-        </div>
-      </div>
-    </div>
+    <% elsif user_signed_in? == false %>
+            <h3 class="sidebar-header">No user signed in.</h3>
+    <% else %>
+
+      <% if user_signed_in? && current_user.favorites_by_type('Country').any? %>
+        <h3 class="sidebar-header">Pinned Countries</h3>
+        <% current_user.favorites_by_type('Country').each do |country| %>
+          <div class="card" style="width: 18rem;">
+            <%= link_to country_path(country) do %>
+              <%= image_tag "world.jpg", class: "card-img-top card-image w-100" %>
+            <% end %>
+            <div class="card-body card-details">
+              <p class="card-text"><%= country.name %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+      <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
+        <h3 class="sidebar-header">Pinned Topics</h3>
+        <% current_user.favorited_by_type('Topic').each do |topic| %>
+          <div class="card" style="width: 18rem;">
+
+            <%= image_tag "newspapers.jpg", class: "card-img-top card-image w-100" %>
+            <div class="card-body card-details">
+              <p class="card-text"><%= topic.name %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+    <% end %>
+
+  </div>
 </div>
