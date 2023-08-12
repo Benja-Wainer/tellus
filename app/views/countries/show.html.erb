@@ -1,4 +1,4 @@
-<div class="article-background" data-controller="reveal" data-reveal-hidden-class="fa-regular">
+<div class="article-background" data-controller="reveal" data-reveal-hidden-class="text-secondary">
   <div id="article-container" class="container vh-100" style="background: white">
         <!-- Code your tabs here -->
     <h1 class="text-center">Top Articles in <%= @country.name %></h1>
@@ -14,10 +14,10 @@
                 <li class="list-inline-item">
                   <p><span class="badge">
                     <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
-                      <% if current_user.favorited?(topic)%>
-                        <i data-reveal-target="item" class="fa-solid fa-heart" style="color: #d31721;"></i>
+                      <% if current_user && current_user.favorited?(topic)%>
+                        <i data-reveal-target="item" class="fa-solid fa-thumbtack" style="color: #26630c;"></i>
                       <% else %>
-                        <i data-reveal-target="item" class="fa-solid fa-regular fa-heart" style="color: #d31721;"></i>
+                        <i data-reveal-target="item" class="fa-solid fa-thumbtack text-secondary" style="color: #26630c;"></i>
                       <% end %>
                     <% end %>
                   </span>
