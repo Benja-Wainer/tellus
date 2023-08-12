@@ -223,7 +223,7 @@ puts "finished making countries"
 puts "Destroying all topics"
 Topic.destroy_all
 puts "Making topics"
-topics = ["Coup in Niger", "Kremlin", "Ukraine", "Saudi Arabia Peace talks", "South Korea Heatwave"]
+topics = ["UK", "Kremlin", "Ukraine", "Saudi Arabia Peace talks", "South Korea Heatwave"]
 
 topics.each do |t|
   topic = Topic.create(name: t)
@@ -436,3 +436,76 @@ def news_dataset
 end
 
 news_dataset
+
+Article.find(1).update(content: "England face Colombia in the Women’s World Cup quarter-finals as the Lionesses continue their knockout campaign in Sydney.
+
+The European champions survived a major scare against Nigeria in the last-16, winning a tense penalty shoot-out after playing extra time with 10 players as star forward Lauren James was sent off.
+
+James, who has been England’s player of the tournament, will be suspended for the quarter-final after the 21-year-old stamped on the back of Nigeria’s Michelle Alozie.
+
+    Follow LIVE: Women’s World Cup updates as England face Colombia
+
+The Lionesses know they will need to improve when they take on a dangerous Colombia side, who shocked heavyweights Germany in the group stages and progressed to their first ever World Cup quarter-final thanks to a 1-0 win over Jamaica in the last-16.
+
+England defender Lucy Bronze admitted the Lionesses are “not happy” with their level of performances so far, but victory against Colombia would move Sarina Wiegman’s side a step away from a place in their first ever Women’s World Cup final.
+
+Here’s everything you need to know.
+Recommended
+
+    Women’s World Cup TV schedule: How to watch every match today
+    Women’s World Cup TV schedule: How to watch every match today
+    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
+    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
+    How many games will Lauren James miss at Women’s World Cup after red card?
+    How many games will Lauren James miss at Women’s World Cup after red card?
+
+When is England vs Colombia?
+
+The quarter-final will be played on Saturday 12 August at Stadium Australia in Sydney, with kick-off at 11:30am UK time (BST).
+How can I watch it?
+
+It will be shown live on ITV 1 and ITV X, with coverage starting from 10:45am.
+<p>Lauren James has apologised to Michelle Alozie over the red-card incident</p>
+
+Lauren James has apologised to Michelle Alozie over the red-card incident
+(PA Wire)
+What is the team news?
+
+After her red card against Nigeria, Lauren James will serve a two -match suspension and will miss England’s quarter-final against Colombia.
+
+With England’s player of the tournament unavailable, Sarina Wiegman has a selection headache as she looks to replace the creative heartbeat of the team. James shone in the No 10 position of England’s new 3-5-2 system, with Manchester United’s Ella Toone an option.
+
+If Wiegman continues with a back three, another option she could have is replacing James with Chloe Kelly and playing the winger and Lauren Hemp either side of striker Alessia Russo in a 3-4-3.
+
+Keira Walsh made her return from injury in the win over Nigeria, but did not look completely comfortable in England’s new system and came off with cramp at the end of extra time. Walsh is one of England’s most important players but Katie Zelem impressed in the 6-1 win against China and could be called upon again. Another player pushing for a start is Bethany England, with Russo often left isolated against Nigeria.
+
+England’s defence is looking settled and is unlikely to change, but three players are a booking away from being suspended from the semi-finals if England make it through. Georgia Stanway, Bronze and Hemp all come into the match on a yellow card.
+Predicted line-up
+
+England: Earps; Carter, Bright, Greenwood; Bronze, Stanway, Walsh, Daly; Toone; Russo, Hemp
+How did both teams reach the quarter-finals?
+
+England (Winners Group D)
+
+    1-0 vs Haiti
+    1-0 vs Denmark
+    6-1 vs China
+    0-0 vs Nigeria (Won 4-2 on penalties)
+
+Colombia (Winners Group H)
+Recommended
+
+    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
+    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
+    Women’s World Cup TV schedule: How to watch every match today
+    Women’s World Cup TV schedule: How to watch every match today
+    Bethany England reveals ‘biggest danger’ facing Lionesses against Colombia
+    Bethany England reveals ‘biggest danger’ facing Lionesses against Colombia
+
+    2-0 vs South Korea
+    2-1 vs Germany
+    0-1 vs Morocco
+    1-0 vs Jamaica")
+coolio = User.find(1)
+kremlin = Topic.find(2)
+coolio.favorite(kremlin)
