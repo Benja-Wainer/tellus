@@ -1,39 +1,27 @@
 <div class="article-background" data-controller="reveal" data-reveal-hidden-class="text-secondary">
   <div id="article-container" class="container" style="background: white">
-        <!-- Code your tabs here -->
+
     <h1 class="text-center">Top Articles in <%= @country.name %></h1>
 
-
-
     <div class="articles">
-      <% @country.articles.each do |article| %>
-        <div class="article">
-          <div class="article-content m-3 p-3 d-flex">
-            <%= image_tag "#{article.image_url}", class: "img-thumbnail", style: "max-width: 30%" %>
-            <div>
-              <ul class="list-inline">
-                <% article.topics.each do |topic| %>
-                  <li class="list-inline-item">
-                    <p><span class="badge">
-                      <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
-                        <% if current_user && current_user.favorited?(topic)%>
-                          <i data-reveal-target="item" class="fa-solid fa-thumbtack" style="color: #26630c;"></i>
-                        <% else %>
-                          <i data-reveal-target="item" class="fa-solid fa-thumbtack text-secondary" style="color: #26630c;"></i>
-                        <% end %>
-                      <% end %>
-                    </span>
-                    <%= topic.name %></p>
-                  </li>
-                <% end %>
-              </ul>
-              <p class="date">August 8th, 2023</p>
-              <p><%= article.title %></p>
-              <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+      <div class="row">
+        <h2>Topic Placeholder</h2>
+        <% @country.articles.each do |article| %>
+          <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="article">
+              <div class="card m-3 p-2" style="width: 18rem;">
+                <%# <img src="..." class="card-img-top" alt="..."> %>
+                <%= image_tag "#{article.image_url}", class: "img-thumbnail", style: "max-width: 80%" %>
+                <div class="card-body">
+                  <h5 class="card-title"><%= article.title  %></h5>
+                  <%# <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> %>
+                   <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+                </div>
+              </div>
             </div>
-          </div>
         </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
