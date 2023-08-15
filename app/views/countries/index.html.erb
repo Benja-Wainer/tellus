@@ -1,12 +1,16 @@
 <div class="container">
   <div class="row">
     <% @countries.each do |country| %>
-      <div class="card col-3 mx-3 my-2">
-        <img class="card-img-top" src="https://flagsapi.com/BE/flat/64.png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= country.name %></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="col-3">
+        <div class="card mx-3 my-2" style="height: 500px;">
+          <img class="card-img-top" src="https://flagsapi.com/BE/flat/64.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= country.name %></h5>
+            <% if country.country_info? %>
+              <p class="card-text"><%= country.country_info[0..100] %></p>
+            <% end %>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
       </div>
     <% end %>
