@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
-    if @article.topics.count == 1
+    unless @article.topics
       @topics = topic_gen.map do |topic_name|
         topic = Topic.create!(name: topic_name)
         tag = Tag.new

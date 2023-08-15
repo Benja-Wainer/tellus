@@ -23,14 +23,16 @@
 
       <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
         <h3 class="sidebar-header">Pinned Topics</h3>
-        <% current_user.favorited_by_type('Topic').each do |topic| %>
-          <div class="card my-2" style="width: 18rem;">
-            <div class="card-body card-details">
-              <p class="card-text"><%= topic.name %></p>
+        <div class="topic-list container">
+          <% current_user.favorited_by_type('Topic').each do |topic| %>
+            <div class="card my-2" style="width: 18rem;">
+              <div class="card-body card-details">
+                <p class="card-text"><%= topic.name %></p>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
 
     <% end %>
 
