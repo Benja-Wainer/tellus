@@ -424,7 +424,7 @@ end
 def news_dataset
   api_data = { key: news_secret_key }
 
-  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=f2093c780900cd67e3a8d3c3cba766be&lang=en")
+  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=#{api_data[:key]}&lang=en")
 
   news_array = JSON.parse(news)["articles"]
 
