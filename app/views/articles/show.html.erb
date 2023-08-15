@@ -13,6 +13,7 @@
     </div>
     <h2 class="title mt-2"><%= @article.title %></h2>
     <ul class="list-inline">
+      <li class="list-inline-item">Suggested topics:</li>
       <% @article.topics.each do |topic| %>
         <li class="list-inline-item">
           <p><span class="badge">

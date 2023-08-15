@@ -430,7 +430,7 @@ def news_dataset
 
   news_array.first(10).each do |s|
     article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
-    tag = Tag.create(country: Country.find_by(name: "United Kingdom"), article: article, topic: Topic.find(1))
+    tag = Tag.create(country: Country.find_by(name: "United Kingdom"), article: article)
     p "Created #{article.title}"
   end
 end
