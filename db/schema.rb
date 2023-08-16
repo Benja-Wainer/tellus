@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_15_114845) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_16_152431) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,6 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_15_114845) do
     t.string "country_flag"
     t.string "country_abbreviation"
     t.string "country_info"
+    t.string "img_url"
   end
 
   create_table "favorites", force: :cascade do |t|
