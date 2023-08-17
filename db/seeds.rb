@@ -433,7 +433,7 @@ article4 = Article.create!(url: "https://www.independent.ie/irish-news/queues-at
                           Bank of Ireland said this morning it’s mobile app and 365online have now been restored following the blunder as it apologised to customers.")
 
 
-article5 = Article.new(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-inflation-re-accelerates-in-June-stays-above-BOJ-target",
+article5 = Article.create!(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-inflation-re-accelerates-in-June-stays-above-BOJ-target",
                           title: "Japan's inflation re-accelerates in June, stays above BOJ target",
                           source: "Nikkei",
                           content: "TOKYO (Reuters) -- Japan's core consumer inflation re-accelerated in June and stayed above the central bank's 2% target for the 15th straight month, data showed on Friday, adding to recent signs of broadening price pressures.
@@ -449,23 +449,22 @@ article5 = Article.new(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-i
                           BOJ Gov. Kazuo Ueda's remarks on Tuesday that Japan was still distant from sustainably achieving the bank's 2% target have pushed down the yen and boosted Japanese shares, as investors scaled back bets of a near-term tweak to YCC.
 
                           Under YCC, the BOJ guides short-term interest rates at -0.1% and buys huge amounts of government bonds to cap the 10-year bond yield around 0% as part of efforts to fire up inflation to its 2% target.")
-article5.save!
 
 puts "Destroying old tags"
 Tag.destroy_all
 puts "Making tags"
 
-Tag.create(country: Country.find_by(name: "Ireland"), article: article4)
-Tag.create(country: Country.find_by(name: "United States"), article: article3)
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(6))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(7))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(8))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(9))
-Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
-Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(2))
-Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(3))
-Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(4))
+Tag.create!(country: Country.find_by(name: "Ireland"), article: article4)
+Tag.create!(country: Country.find_by(name: "United States"), article: article3)
+Tag.create!(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
+Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(6))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(7))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(8))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(9))
+Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(2))
+Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(3))
+Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(4))
 
 p "Tags done"
 
