@@ -240,28 +240,26 @@ countries.each do |country|
   p "created country #{place.name} with id #{place.id} about #{place.country_info}"
 end
 usa = Country.find_by(name: "United States")
-p usa
-usa.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/usa_nature_xajimf.jpg"
-p usa.img_url
-usa.save
+usa.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/usa_nature_xajimf.jpg")
+
 uk = Country.find_by(name: "United Kingdom")
-uk.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198959/tellus/uk_iysxxw.webp"
-uk.save
+uk.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198959/tellus/uk_iysxxw.webp")
+
 uganda = Country.find_by(name: "Uganda")
-uganda.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/uganda_xvqoo1.jpg"
-uganda.save
+uganda.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/uganda_xvqoo1.jpg")
+
 uruguay = Country.find_by(name: "Uruguay")
-uruguay.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uruguay_lu25fb.jpg"
-uruguay.save
+uruguay.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uruguay_lu25fb.jpg")
+
 uzbekistan = Country.find_by(name: "Uzbekistan")
-uzbekistan.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uzbekistan_dkanh6.jpg"
-uzbekistan.save
+uzbekistan.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uzbekistan_dkanh6.jpg")
+
 uae = Country.find_by(name: "United Arab Emirates")
-uae.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692222635/uae_nature_vuxhxr.jpg"
-uae.save
+uae.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692222635/uae_nature_vuxhxr.jpg")
+
 ukraine = Country.find_by(name: "Ukraine")
-ukraine.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/ukraine_iueq73.webp"
-ukraine.save
+ukraine.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/ukraine_iueq73.webp")
+
 puts "finished making countries"
 
 # next topics
