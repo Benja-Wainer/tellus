@@ -10,6 +10,7 @@ export default class extends Controller {
   }
 
   toggle() {
+    console.log(this.iconTarget);
     this.iconTarget.classList.toggle(this.toggleClass);
   }
 }
