@@ -14,6 +14,6 @@ class TopicsController < ApplicationController
     else
       current_user.favorite(@topic)
     end
-    render partial: "shared/sidebar"
+    # render partial: "shared/sidebar"
   end
 end
