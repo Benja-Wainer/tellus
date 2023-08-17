@@ -15,6 +15,7 @@ class CountriesController < ApplicationController
     @countries.each do |country|
       @country_names << country.name
     end
+    @country_names.sort!
   end
 
   def show
