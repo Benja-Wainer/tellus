@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <% @countries.each do |country| %>
+      <div class="col-4 my-4">
+        <div>
+          <figure>
+            <%# <img src=  alt="Mountains"> %>
+            <%= image_tag "#{country.img_url}", style: "width: 400px;" %>
+            <figcaption><%= country.name %></figcaption>
+          </figure>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
