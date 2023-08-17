@@ -1,4 +1,5 @@
-<div class="banner landing-background w-100">
+<div class="parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url(<%= image_path('https://res.cloudinary.com/dm54zi0ff/image/upload/v1692283222/pexels-pixabay-41949_lmwsxh.jpg') %>);">
   <div class="container">
     <div class="d-flex flex-column align-items-center vh-100 justify-content-center">
       <h1 style="font-family: 'Trochut', cursive; color: white;">Tell<span style="font-weight:100;font-family:system-ui;">us</span></h1>
@@ -6,6 +7,25 @@
         <div class="typing-demo">
           World News Tailored to you.
         </div>
+      </div>
+      <%= link_to "Discover the Full Story", world_map_path, class: "btn btn-dark", style: "color: white; text-decoration:none;"%>
+    </div>
+  </div>
+</div>
+<div class="blank">
+</div>
+<div class="parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+    url(<%= image_path('https://res.cloudinary.com/dm54zi0ff/image/upload/v1692284528/pexels-antonio-quagliata-227433_e0nrhd.jpg') %>);">
+    <div class="container">
+    <div class="d-flex flex-column align-items-center vh-100 justify-content-center">
+      <h1 style="font-family: 'Trochut', cursive; font-weight:100; color: white;">Tell<span style="font-family:system-ui;">us</span></h1>
+      <div class="wrapper">
+        <div class="typing-demo">
+          Three ways to stay informed.
+        </div>
+      </div>
+      <div class="image_box">
+        <div class="card"></div>
       </div>
       <%= link_to "Discover the Full Story", world_map_path, class: "btn btn-dark", style: "color: white; text-decoration:none;"%>
     </div>
