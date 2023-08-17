@@ -1,3 +1,5 @@
+require 'net/http'
+require 'json'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -17,8 +19,7 @@ puts "Made user #{user.email}"
 puts "Destroying all countries"
 Country.destroy_all
 puts "Next Countries"
-countries = "Afghanistan,
-  Albania,
+countries = "Afghanistan,Albania,
   Algeria,
   Andorra,
   Angola,
@@ -214,9 +215,51 @@ countries = "Afghanistan,
   Zambia,
   Zimbabwe".split(",")
 countries.each do |country|
+  # Wikipedia API endpoint
+  # base_url = "https://en.wikipedia.org/w/api.php"
+
+  # params = {
+  #   action: "query",
+  #   format: "json",  # Response format
+  #   titles: country.strip, # Replace with the title you're searching for
+  #   prop: "extracts",  # Get content
+  #   exintro: true,  # Only the introduction part
+  #   explaintext: true,  # Plain text content
+  # }
+
+  # Build the URL with parameters
+  # url = URI("#{base_url}?#{URI.encode_www_form(params)}")
+
+  # response = Net::HTTP.get_response(url)
+
+  # data = JSON.parse(response.body)
+
+  # page_id = data["query"]["pages"].keys.first
+  # country_info = data["query"]["pages"][page_id]["extract"]
   place = Country.create(name: country.gsub("\n", "").strip)
-  p "created country #{place.name} with id #{place.id}"
+  p "created country #{place.name} with id #{place.id} about #{place.country_info}"
 end
+usa = Country.find_by(name: "United States")
+usa.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/usa_nature_xajimf.jpg")
+
+uk = Country.find_by(name: "United Kingdom")
+uk.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198959/tellus/uk_iysxxw.webp")
+
+uganda = Country.find_by(name: "Uganda")
+uganda.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/uganda_xvqoo1.jpg")
+
+uruguay = Country.find_by(name: "Uruguay")
+uruguay.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uruguay_lu25fb.jpg")
+
+uzbekistan = Country.find_by(name: "Uzbekistan")
+uzbekistan.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uzbekistan_dkanh6.jpg")
+
+uae = Country.find_by(name: "United Arab Emirates")
+uae.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692222635/uae_nature_vuxhxr.jpg")
+
+ukraine = Country.find_by(name: "Ukraine")
+ukraine.update(img_url: "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/ukraine_iueq73.webp")
+
 puts "finished making countries"
 
 # next topics

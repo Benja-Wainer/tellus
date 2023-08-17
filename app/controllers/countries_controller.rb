@@ -4,7 +4,6 @@ class CountriesController < ApplicationController
   def index
     if params[:query].present?
       @countries = Country.search_by_name(params[:query])
-      raise
     else
       @countries = Country.all
     end
@@ -16,6 +15,7 @@ class CountriesController < ApplicationController
     @countries.each do |country|
       @country_names << country.name
     end
+    @country_names.sort!
   end
 
   def show
