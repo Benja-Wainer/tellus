@@ -327,7 +327,7 @@ article1 = Article.create!(url: "https://www.bbc.com/sport/football/66499185",
                           But this has also been a World Cup to remember for the Matildas, who hope to change the perception of women's football in this country forever.
 
                           It will be hard to ignore their impact and they were given a warm applause on a lap of honour at full-time.")
-tag = Tag.create(country: Country.find_by(name: "United Kingdom"), article: article1, topic: Topic.find(1))
+
 
 article2 = Article.create!(url: "https://www.msnbc.com/opinion/msnbc-opinion/kansas-newspaper-police-raid-marion-county-record-rcna99813",
                           title: "This police raid on rural Kansas newspaper is unconscionable and un-American",
@@ -349,12 +349,6 @@ article2 = Article.create!(url: "https://www.msnbc.com/opinion/msnbc-opinion/kan
                           Due in large part to the county withholding relevant information, the facts here are still largely in dispute. But if the current reporting is true, Marion County appears to be the latest in a line of state and local governments attempting to silence speech they find objectionable. Earlier this year, Florida Gov. Ron DeSantis, who’s seeking the Republican nomination for president, supported an ultimately unsuccessful and unconstitutional bill that would have characterized statements by anonymous sources as presumptively defamatory and characterized allegations of discrimination on the basis of race and sexual and gender identity defamatory per se.
 
                           At PEN America, we are all too familiar with government efforts to ban books in schools and to censor curriculum with which the government disagrees. If the free press is to remain free, then we must be just as outraged at any and every attempt to similarly censor the press. We can’t wait for a house to fall on us before we demand answers.")
-
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(6))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(7))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(8))
-Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(9))
 
 article3 = Article.create!(url: "https://edition.cnn.com/2023/08/11/economy/inflation-rate-spending/index.html",
                           title: "US inflation means families are spending $709 more per month than two years ago",
@@ -384,7 +378,6 @@ article3 = Article.create!(url: "https://edition.cnn.com/2023/08/11/economy/infl
                           “In sum, the report was encouraging,” Bank of America economists wrote in a note to clients on Thursday, adding they “wouldn’t be surprised to see another soft” inflation reading in August.
 
                           Although month-over-month inflation readings are “still likely to be bumpy,” Bank of America economists said they “believe that the current disinflation is not a ‘head fake.’”")
-tag = Tag.create(country: Country.find_by(name: "United States"), article: article3, topic: Topic.find(1))
 
 article4 = Article.create!(url: "https://www.independent.ie/irish-news/queues-at-bank-of-ireland-atms-as-customers-with-no-money-withdraw-up-to-1000-in-cash/a1211513809.html",
                           title: "Queues at Bank of Ireland ATMs as customers with no money withdraw up to €1,000 in cash",
@@ -395,7 +388,7 @@ article4 = Article.create!(url: "https://www.independent.ie/irish-news/queues-at
                           In some towns the queues were so big gardaí had to control them.
 
                           Bank of Ireland said this morning it’s mobile app and 365online have now been restored following the blunder as it apologised to customers.")
-tag = Tag.create(country: Country.find_by(name: "Ireland"), article: article4, topic: Topic.find(1))
+
 
 article5 = Article.new(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-inflation-re-accelerates-in-June-stays-above-BOJ-target",
                           title: "Japan's inflation re-accelerates in June, stays above BOJ target",
@@ -414,113 +407,46 @@ article5 = Article.new(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-i
 
                           Under YCC, the BOJ guides short-term interest rates at -0.1% and buys huge amounts of government bonds to cap the 10-year bond yield around 0% as part of efforts to fire up inflation to its 2% target.")
 article5.save!
-tag = Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
-tag = Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(2))
-tag = Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(3))
-tag = Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(4))
 
-# puts "Made article #{article.title} with the url #{article.url}"
+puts "Destroying old tags"
+Tag.destroy_all
+puts "Making tags"
 
-# puts "Made articles"
+Tag.create(country: Country.find_by(name: "Ireland"), article: article4)
+Tag.create(country: Country.find_by(name: "United States"), article: article3)
+Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
+Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(6))
+Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(7))
+Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(8))
+Tag.create(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(9))
+Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
+Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(2))
+Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(3))
+Tag.create(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(4))
 
-# puts "Next Creating Tags"
+p "Tags done"
 
-# tag1 = Tag.create(country: Country.find(129), article: Article.find(1), topic: Topic.find(1))
+# def news_secret_key
+#   ENV["NEWS_API_KEY"]
+# end
 
-# tag2 = Tag.create(country: Country.find_by(name: "United Kingdom"), article: Article.find(2), topic: Topic.find(2))
+# def news_dataset
+#   api_data = { key: news_secret_key }
 
-# puts tag1
-# puts tag2
+#   news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=#{api_data[:key]}&lang=en")
 
-def news_secret_key
-  ENV["NEWS_API_KEY"]
-end
+#   news_array = JSON.parse(news)["articles"]
 
-def news_dataset
-  api_data = { key: news_secret_key }
+#   news_array.first(10).each do |s|
+#     article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
+#     tag = Tag.create(country: Country.find_by(name: "United States"), article: article, topic: Topic.find(1))
+#     p "Created #{article.title}"
+#   end
+# end
 
-  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=#{api_data[:key]}&lang=en")
+# news_dataset
 
-  news_array = JSON.parse(news)["articles"]
 
-  news_array.first(10).each do |s|
-    article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
-    tag = Tag.create(country: Country.find_by(name: "United States"), article: article, topic: Topic.find(1))
-    p "Created #{article.title}"
-  end
-end
-
-news_dataset
-
-# Article.find(1).update(content: "England face Colombia in the Women’s World Cup quarter-finals as the Lionesses continue their knockout campaign in Sydney.
-
-# The European champions survived a major scare against Nigeria in the last-16, winning a tense penalty shoot-out after playing extra time with 10 players as star forward Lauren James was sent off.
-
-# James, who has been England’s player of the tournament, will be suspended for the quarter-final after the 21-year-old stamped on the back of Nigeria’s Michelle Alozie.
-
-#     Follow LIVE: Women’s World Cup updates as England face Colombia
-
-# The Lionesses know they will need to improve when they take on a dangerous Colombia side, who shocked heavyweights Germany in the group stages and progressed to their first ever World Cup quarter-final thanks to a 1-0 win over Jamaica in the last-16.
-
-# England defender Lucy Bronze admitted the Lionesses are “not happy” with their level of performances so far, but victory against Colombia would move Sarina Wiegman’s side a step away from a place in their first ever Women’s World Cup final.
-
-# Here’s everything you need to know.
-# Recommended
-
-#     Women’s World Cup TV schedule: How to watch every match today
-#     Women’s World Cup TV schedule: How to watch every match today
-#     England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-#     England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-#     How many games will Lauren James miss at Women’s World Cup after red card?
-#     How many games will Lauren James miss at Women’s World Cup after red card?
-
-# When is England vs Colombia?
-
-# The quarter-final will be played on Saturday 12 August at Stadium Australia in Sydney, with kick-off at 11:30am UK time (BST).
-# How can I watch it?
-
-# It will be shown live on ITV 1 and ITV X, with coverage starting from 10:45am.
-# <p>Lauren James has apologised to Michelle Alozie over the red-card incident</p>
-
-# Lauren James has apologised to Michelle Alozie over the red-card incident
-# (PA Wire)
-# What is the team news?
-
-# After her red card against Nigeria, Lauren James will serve a two -match suspension and will miss England’s quarter-final against Colombia.
-
-# With England’s player of the tournament unavailable, Sarina Wiegman has a selection headache as she looks to replace the creative heartbeat of the team. James shone in the No 10 position of England’s new 3-5-2 system, with Manchester United’s Ella Toone an option.
-
-# If Wiegman continues with a back three, another option she could have is replacing James with Chloe Kelly and playing the winger and Lauren Hemp either side of striker Alessia Russo in a 3-4-3.
-
-# Keira Walsh made her return from injury in the win over Nigeria, but did not look completely comfortable in England’s new system and came off with cramp at the end of extra time. Walsh is one of England’s most important players but Katie Zelem impressed in the 6-1 win against China and could be called upon again. Another player pushing for a start is Bethany England, with Russo often left isolated against Nigeria.
-
-# England’s defence is looking settled and is unlikely to change, but three players are a booking away from being suspended from the semi-finals if England make it through. Georgia Stanway, Bronze and Hemp all come into the match on a yellow card.
-# Predicted line-up
-
-# England: Earps; Carter, Bright, Greenwood; Bronze, Stanway, Walsh, Daly; Toone; Russo, Hemp
-# How did both teams reach the quarter-finals?
-
-# England (Winners Group D)
-
-#     1-0 vs Haiti
-#     1-0 vs Denmark
-#     6-1 vs China
-#     0-0 vs Nigeria (Won 4-2 on penalties)
-
-# Colombia (Winners Group H)
-# Recommended
-
-#     England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-#     England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-#     Women’s World Cup TV schedule: How to watch every match today
-#     Women’s World Cup TV schedule: How to watch every match today
-#     Bethany England reveals ‘biggest danger’ facing Lionesses against Colombia
-#     Bethany England reveals ‘biggest danger’ facing Lionesses against Colombia
-
-#     2-0 vs South Korea
-#     2-1 vs Germany
-#     0-1 vs Morocco
-#     1-0 vs Jamaica")
 coolio = User.find(1)
 kremlin = Topic.find(2)
 coolio.favorite(kremlin)
