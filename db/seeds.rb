@@ -257,7 +257,7 @@ uzbekistan = Country.find_by(name: "Uzbekistan")
 uzbekistan.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uzbekistan_dkanh6.jpg"
 uzbekistan.save
 uae = Country.find_by(name: "United Arab Emirates")
-uae.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198958/tellus/uruguay_lu25fb.jpg"
+uae.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692222635/uae_nature_vuxhxr.jpg"
 uae.save
 ukraine = Country.find_by(name: "Ukraine")
 ukraine.img_url = "https://res.cloudinary.com/dm54zi0ff/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1692198979/tellus/ukraine_iueq73.webp"

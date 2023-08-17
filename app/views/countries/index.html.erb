@@ -1,12 +1,13 @@
 <div class="container">
   <div class="row">
+    <h3 class="text-center my-3">Your Search Results</h3>
     <% @countries.each do |country| %>
       <div class="col-4 my-4">
         <div>
           <figure>
             <%# <img src=  alt="Mountains"> %>
             <%= image_tag "#{country.img_url}", style: "width: 400px;" %>
-            <figcaption><%= country.name %></figcaption>
+            <figcaption><%= link_to "#{country.name}", country_path(country) %></figcaption>
           </figure>
         </div>
       </div>
