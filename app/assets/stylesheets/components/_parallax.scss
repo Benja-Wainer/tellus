@@ -68,3 +68,18 @@ body, html {
   justify-content: space-around;
   width: 100%;
 }
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.p {
+  height: 300px;
+}
