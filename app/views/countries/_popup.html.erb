@@ -1,7 +1,7 @@
 <div class="bg-dark text-white w-100 h-100 p-0 card">
     <img src="<%=country.img_url%>" alt="country_image" class="card-img-top" style="background-size:cover;">
     <h5 class="card-title m-3"><%= country.name %>
-      <span class="badge" data-controller="toggle-heart">
+      <span class="badge" data-controller="toggle-heart" data-toggle-heart-class="toggle">
         <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
             <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
         <% end %>
