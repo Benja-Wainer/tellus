@@ -10,12 +10,18 @@ class CountriesController < ApplicationController
   end
 
   def world_map
-    @countries = Country.all
-    @country_names = []
-    @countries.each do |country|
-      @country_names << country.name
+    @countries = Country.all.map do |country|
+      {
+        name: country.name,
+        id: country.id,
+        popup_html: render_to_string(partial: "popup", locals: {country: country})
+      }
     end
-    @country_names.sort!
+    # @country_names = []
+    # @countries.each do |country|
+    #   @country_names << country.name
+    # end
+    # @country_names.sort!
   end
 
   def show

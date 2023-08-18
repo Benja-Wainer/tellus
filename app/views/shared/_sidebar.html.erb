@@ -1,40 +1,45 @@
-<div class="container-fluid sidebar p-4">
-  <div class="row">
-    <% if user_signed_in? && current_user.all_favorited.empty? %>
-      <h3 class="sidebar-header">Nothing has been pinned yet...</h3>
+<aside>
+  <div class="container-fluid sidebar" data-sidebar-target="background">
+    <div class="absolute right-2 top-2 cursor-pointer"  data-sidebar-target="icon" data-action="click->sidebar#toggle"">
+      <button class="fa-solid fa-angles-right text-light btn btn-outline-dark"></button>
+    </div>
+    <div class="row container" data-sidebar-target="content">
+      <% if user_signed_in? && current_user.all_favorited.empty? %>
+        <h4 class="sidebar-header mt-3 text-wrap">Nothing has been pinned yet...</h4>
 
-    <% elsif user_signed_in? == false %>
-            <h3 class="sidebar-header">No user signed in.</h3>
-    <% else %>
+      <% elsif user_signed_in? == false %>
+              <h4 class="sidebar-header mt-3 text-wrap">Sign in to see your favorite <br>countries and topics!</h4>
+      <% else %>
 
-      <% if user_signed_in? && current_user.favorites_by_type('Country').any? %>
-        <h3 class="sidebar-header">Pinned Countries</h3>
-        <% current_user.favorites_by_type('Country').each do |country| %>
-          <div class="card" style="width: 18rem;">
-            <%= link_to country_path(country) do %>
-              <%= image_tag "world.jpg", class: "card-img-top card-image w-100" %>
-            <% end %>
-            <div class="card-body card-details">
-              <p class="card-text"><%= country.name %></p>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-
-      <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
-        <h3 class="sidebar-header">Pinned Topics</h3>
-        <div class="topic-list container">
-          <% current_user.favorited_by_type('Topic').each do |topic| %>
-            <div class="card my-2" style="width: 18rem;">
+        <% if user_signed_in? && current_user.favorites_by_type('Country').any? %>
+          <h3 class="sidebar-header mt-3">Pinned Countries</h3>
+          <% current_user.favorites_by_type('Country').each do |country| %>
+            <div class="card" style="width: 18rem;">
+              <%= link_to country_path(country) do %>
+                <%= image_tag "world.jpg", class: "card-img-top card-image w-100" %>
+              <% end %>
               <div class="card-body card-details">
-                <p class="card-text"><%= topic.name %></p>
+                <p class="card-text"><%= country.name %></p>
               </div>
             </div>
           <% end %>
         <% end %>
-      </div>
 
-    <% end %>
+        <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
+          <h3 class="sidebar-header mt-3">Pinned Topics</h3>
+          <div class="topic-list container">
+            <% current_user.favorited_by_type('Topic').each do |topic| %>
+              <div class="card my-2" style="width: 18rem;">
+                <div class="card-body card-details">
+                  <p class="card-text"><%= topic.name %></p>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
 
+      <% end %>
+
+    </div>
   </div>
-</div>
+</aside>
