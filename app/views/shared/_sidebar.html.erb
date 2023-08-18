@@ -11,18 +11,17 @@
               <h4 class="sidebar-header mt-3 text-wrap">Sign in to see your favorite <br>countries and topics!</h4>
       <% else %>
 
-        <% if user_signed_in? && current_user.favorites_by_type('Country').any? %>
-          <h3 class="sidebar-header mt-3">Pinned Countries</h3>
-          <% current_user.favorites_by_type('Country').each do |country| %>
-            <div class="card" style="width: 18rem;">
-              <%= link_to country_path(country) do %>
-                <%= image_tag "world.jpg", class: "card-img-top card-image w-100" %>
-              <% end %>
-              <div class="card-body card-details">
-                <p class="card-text"><%= country.name %></p>
+        <% if user_signed_in? && current_user.favorited_by_type('Country').any? %>
+          <div class="border-bottom pb-5"><h3 class="sidebar-header mt-3">Pinned Countries</h3>
+            <% current_user.favorited_by_type('Country').each do |country| %>
+              <div class="card p-0 border-dark" style="width: 18rem;">
+                  <%= image_tag country.img_url, class: "card-img-top w-100", style: "height: 172px; object-fit: cover;" %>
+                <div class="card-body">
+                  <h5><%= link_to country.name, country_path(country), class: "text-dark text-center stretched-link", style: "text-decoration: none;" %></h5>
+                </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         <% end %>
 
         <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
