@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="sidebar"
 export default class extends Controller {
-  static targets = ["icon", "sidebar", "content", "background"]
+  static targets = ["icon", "sidebar", "content", "background", "pinned-topics", "pin"]
 
   connect() {
     console.log("Sidebar controller connected");
@@ -38,5 +38,10 @@ export default class extends Controller {
       <i class="fa-solid fa-angles-right text-light btn btn-outline-dark" data-sidebar-target="icon"></i>
     `
     this.contentTarget.classList.remove("d-none")
+  }
+
+  pinTopic() {
+    // this.pinnedTopicsTarget.insertAdjacentHTML("beforeend", "New target HTML")
+    console.log(this.pinnedTopicsTarget)
   }
 }
