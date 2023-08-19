@@ -4,4 +4,6 @@ class Article < ApplicationRecord
   has_many :topics, through: :tags
 
   validates :title, :content, :url, presence: true
+
+  acts_as_favoritable
 end
