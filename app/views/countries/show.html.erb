@@ -12,7 +12,7 @@
                   <% if article.image_url? %>
                     <%= image_tag "#{article.image_url}", class: "img-thumbnail", style: "width: auto; border: none; height: 160px;" %>
                   <% else %>
-                      <%= image_tag "/assets/TellUsBanner.jpg", class: "img-thumbnail", style: "width: auto; border: none; height: 160px;" %>
+                      <%= image_tag "newspapers.jpg", class: "img-thumbnail", style: "width: auto; border: none; height: 160px;" %>
                   <% end %>
                   <div class="card-body border-0">
                     <p class="card-text"><%= article.title %></p>

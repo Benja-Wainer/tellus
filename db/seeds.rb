@@ -458,9 +458,9 @@ Tag.destroy_all
 puts "Making tags"
 
 Tag.create!(country: Country.find_by(name: "Ireland"), article: article4)
-Tag.create!(country: Country.find_by(name: "United States"), article: article3)
+Tag.create!(country: Country.find_by(name: "United States"), article: article3, topic: Topic.find(1))
 Tag.create!(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
-Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
+Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(2))
 Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(6))
 Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(7))
 Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(8))
