@@ -19,7 +19,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :articles, only: :show
+  resources :articles, only: :show do
+    member do
+      get "refresh_pins", to: "articles#refresh_pins"
+    end
+  end
 
   get "/profile", to: "pages#profile", as: :profile
 

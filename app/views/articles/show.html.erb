@@ -15,13 +15,13 @@
     <ul class="list-inline">
       <li class="list-inline-item">Suggested topics:</li>
       <% @article.topics.each do |topic| %>
-        <li data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary" class="list-inline-item">
+        <li class="list-inline-item">
           <p><span class="badge">
             <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
-                <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
+                <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
             <% end %>
           </span>
-          <%= topic.name %></p>
+          <span data-toggle-heart-target="newTopic"><%= topic.name %></span></p>
         </li>
       <% end %>
     </ul>
