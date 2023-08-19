@@ -1,8 +1,9 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-fixed-top navbar-lewagon">
   <div class="container-fluid">
     <div class="px-5">
-      <%= link_to "Tellus", root_path, class: "navbar-brand mx-4", style: "font-family: 'Raleway', sans-serif;
-      font-family: 'Trochut', cursive; color: white; font-size: 35px" %>
+      <%= link_to root_path do %>
+        <p class="navbar-brand mx4" style="font-family: 'Trochut', cursive; color: white; font-size: 35px;">Tell<span style="font-weight:100;font-family:system-ui;">us</span></p>
+      <% end %>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,8 +25,8 @@
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: 'nav-link text-white' %>
             </li>
             <li class="nav-item dropdown">
-            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            </a>
+              <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              </a>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Action", "#", class: "dropdown-item" %>
                 <%= link_to "Another action", "#", class: "dropdown-item" %>
@@ -33,14 +34,12 @@
               </div>
             </li>
           <% else %>
-            <%# <div class="flex-column"> %>
               <li class="nav-item">
-                <%= link_to "Login", new_user_session_path, class: "nav-link btn btn-outline-secondary mx-2 text-center" %>
+                <%= link_to "Login", new_user_session_path, class: "btn btn-secondary mx-2 text-center text-white" %>
               </li>
               <li class="nav-item">
-                <%= link_to "Sign up", new_user_registration_path, class: "nav-link btn btn-outline-secondary mx-2 text-center" %>
+                <%= link_to "Sign up", new_user_registration_path, class: "btn btn-dark mx-2 text-center text-white" %>
               </li>
-            <%# </div> %>
           <% end %>
         </ul>
       </div>

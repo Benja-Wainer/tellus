@@ -1,0 +1,13 @@
+<div class="bg-dark text-white w-100 h-100 p-0 card">
+    <% if country.img_url %>
+      <img src="<%=country.img_url%>" alt="country_image" class="card-img-top rounded" style="height: 172px; object-fit: cover;">
+    <% end %>
+    <h5 class="card-title m-3"><%= country.name %>
+      <span class="badge"data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary">
+        <%= link_to toggle_favorite_country_path(country), data: {"turbo-method": :patch} do %>
+            <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-heart <%= user_signed_in? && current_user.favorited?(country) ? "" : "text-secondary" %>" style="color: #ff5551;"></i>
+        <% end %>
+      </span>
+    </h5>
+    <%= link_to "See articles", country_path(country), class: "btn btn-primary" %>
+</div>

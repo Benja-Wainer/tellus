@@ -1,4 +1,4 @@
-<div class="article-background sticky-top" data-controller="reveal" data-reveal-hidden-class="text-secondary">
+<div class="article-background sticky-top" data-controller="toggleHeart" data-reveal-hidden-class="text-secondary">
   <div class="container container-md article col-6 p-5">
     <% if @article.source.present? %>
       <p><%= @article.source %></p>
@@ -8,11 +8,12 @@
     <% if @article.image_url %>
       <div class="article-image" style="background-image: url(<%=@article.image_url%>;)">
     <% else %>
-      <div class="article-image" style="background-image: url(https://images.unsplash.com/photo-1584931423298-c576fda54bd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)">
+      <div class="article-image" style="background-image: url(<%= image_path('newspapers.jpg') %>)">
     <% end %>
     </div>
     <h2 class="title mt-2"><%= @article.title %></h2>
     <ul class="list-inline">
+      <li class="list-inline-item">Suggested topics:</li>
       <% @article.topics.each do |topic| %>
         <li class="list-inline-item">
           <p><span class="badge">
@@ -22,6 +23,7 @@
               <% else %>
                 <i data-reveal-target="item" class="fa-solid fa-thumbtack text-secondary" style="color: #26630c;"></i>
               <% end %>
+              <%# <%= render "shared/sidebar" %>
             <% end %>
           </span>
           <%= topic.name %></p>

@@ -7,6 +7,10 @@ class TopicsController < ApplicationController
     end
   end
 
+  def show
+    @topic = Topic.find(params[:id])
+  end
+
   def toggle_favorite
     @topic = Topic.find(params[:id])
     if current_user.favorited?(@topic)
@@ -14,5 +18,6 @@ class TopicsController < ApplicationController
     else
       current_user.favorite(@topic)
     end
+    # render partial: "shared/sidebar"
   end
 end
