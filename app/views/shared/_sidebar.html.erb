@@ -15,7 +15,6 @@
           <div class="border-bottom pb-5"><h3 class="sidebar-header mt-3">Pinned Countries</h3>
             <% current_user.favorited_by_type('Country').each do |country| %>
               <div class="card p-0 border-dark" style="width: 18rem;">
-                  <%= image_tag country.img_url, class: "card-img-top w-100", style: "height: 172px; object-fit: cover;" %>
                 <div class="card-body">
                   <h5><%= link_to country.name, country_path(country), class: "text-dark text-center stretched-link", style: "text-decoration: none;" %></h5>
                 </div>
