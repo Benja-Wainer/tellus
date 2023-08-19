@@ -14,4 +14,10 @@
 
 .card-text {
   font-size: 24;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
