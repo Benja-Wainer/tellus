@@ -1,4 +1,4 @@
-<div class="article-background" data-controller="reveal" data-reveal-hidden-class="text-secondary">
+<div class="article-background">
   <div id="article-container" class="container" style="background: white">
         <!-- Code your tabs here -->
     <h1 class="text-center">Top Articles in <%= @country.name %></h1>
@@ -13,17 +13,13 @@
             <div>
               <ul class="list-inline">
                 <% article.topics.each do |topic| %>
-                  <li class="list-inline-item">
+                  <li data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary" class="list-inline-item">
                     <p><span class="badge">
-                      <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
-                        <% if current_user && current_user.favorited?(topic)%>
-                          <i data-reveal-target="item" class="fa-solid fa-thumbtack" style="color: #26630c;"></i>
-                        <% else %>
-                          <i data-reveal-target="item" class="fa-solid fa-thumbtack text-secondary" style="color: #26630c;"></i>
-                        <% end %>
+                      <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
+                          <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
                       <% end %>
                     </span>
-                    <%= topic.name %></p>
+                    <%= link_to topic.name, topic, class: "link-secondary" %></p>
                   </li>
                 <% end %>
               </ul>
