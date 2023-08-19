@@ -73,10 +73,17 @@ export default class extends Controller {
       map.on("click", function(e) {
           var features = map.queryRenderedFeatures(e.point, { layers: ["cf"] });
           if (features.length) {
-            console.log(features[0].properties.name);
-            this.countryValue= countriesList.indexOf(features[0].properties.name) + 1;
-            console.log(this.countryValue);
-            window.location.href=`/countries/${this.countryValue}`
+            console.log(features);
+            const country = countriesList.find((country) => country.name === features[0].properties.name);
+            console.log(country.popup_html);
+            // window.location.href=`/countries/${country.id}`
+            // const popup = new mapboxgl.Popup().setHTML(country.popup_html);
+            new mapboxgl.Popup({className: "bg-dark"})
+              .setLngLat(e.lngLat)
+              .setHTML(country.popup_html)
+              .addTo(map)
+              .addClassName("bg-dark");
+
           }
       });
 
