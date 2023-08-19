@@ -289,6 +289,7 @@ puts "Making articles"
 article1 = Article.create!(url: "https://www.bbc.com/sport/football/66499185",
                           title: "England reach first Women's World Cup final",
                           source: "BBC",
+                          image_url: "https://m.files.bbci.co.uk/modules/bbc-morph-sport-football-oppm-header/1.1.10/images/football-header-tablet.jpg",
                           content: "England reached the Women's World Cup final for the first time as they spoiled co-hosts Australia's party on a historic evening in Sydney.
 
                           Silencing a sell-out crowd at Stadium Australia with their 3-1 victory, the Lionesses became the first England football team since 1966 to reach a senior final on the world stage.
@@ -375,6 +376,7 @@ article1 = Article.create!(url: "https://www.bbc.com/sport/football/66499185",
 article2 = Article.create!(url: "https://www.msnbc.com/opinion/msnbc-opinion/kansas-newspaper-police-raid-marion-county-record-rcna99813",
                           title: "This police raid on rural Kansas newspaper is unconscionable and un-American",
                           source: "MSNBC",
+                          image_url: "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/rockcms/2023-08/230814-marion-county-record-jm-1259-e7e5ae.jpg",
                           content: "At first blush, reports of an outrageous police raid on a small newspaper in rural Kansas appear as implausible as the fictional tornado that swept Dorothy and Toto out of that state. But this alarming incident — the stress from which, according to the newspaper’s publisher, contributed to the death of the paper’s 98-year-old co-owner, Joan Meyer — appears to be part of an insidious and growing trend of government censorship of free expression: one that we’ve seen lead to book bans and now threatens the freedom of the press.
 
                           On Aug. 11, police, with a search warrant in hand, raided the office of the Marion County Record and the home its publisher Eric Meyer shared with his mother, Joan, in Marion, northern Kansas. Police seized digital communications, computers and cellphones. According to Meyer, the police took “everything we have.” Under federal law, journalists are generally protected from these types of paralyzing searches and seizures. Instead, law enforcement is supposed to serve a subpoena for any information it seeks.
@@ -436,6 +438,7 @@ article4 = Article.create!(url: "https://www.independent.ie/irish-news/queues-at
 article5 = Article.create!(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-inflation-re-accelerates-in-June-stays-above-BOJ-target",
                           title: "Japan's inflation re-accelerates in June, stays above BOJ target",
                           source: "Nikkei",
+                          image_url: "https://www.ft.com/__origami/service/image/v2/images/raw/https%253A%252F%252Fcms-image-bucket-production-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com%252Fimages%252F7%252F1%252F2%252F2%252F46262217-3-eng-GB%252FCropped-16898976542023-03-24T082320Z_1264621960_RC2600ADKMJA_RTRMADP_3_JAPAN-ECONOMY-INFLATION.JPG?width=700&fit=cover&gravity=faces&dpr=2&quality=medium&source=nar-cms",
                           content: "TOKYO (Reuters) -- Japan's core consumer inflation re-accelerated in June and stayed above the central bank's 2% target for the 15th straight month, data showed on Friday, adding to recent signs of broadening price pressures.
 
                           The data comes ahead of the Bank of Japan's closely watched policy meeting next week, when the board will produce fresh quarterly forecasts and debate whether conditions are falling into place to begin phasing out the bank's massive stimulus.
