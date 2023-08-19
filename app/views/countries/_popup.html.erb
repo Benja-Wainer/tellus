@@ -3,7 +3,7 @@
       <img src="<%=country.img_url%>" alt="country_image" class="card-img-top rounded" style="height: 172px; object-fit: cover;">
     <% end %>
     <h5 class="card-title m-3"><%= country.name %>
-      <span class="badge"data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary">
+      <span class="badge">
         <%= link_to toggle_favorite_country_path(country), data: {"turbo-method": :patch} do %>
             <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-heart <%= user_signed_in? && current_user.favorited?(country) ? "" : "text-secondary" %>" style="color: #ff5551;"></i>
         <% end %>
