@@ -1,35 +1,29 @@
-<div class="article-background">
-  <div id="article-container" class="container" style="background: white">
-        <!-- Code your tabs here -->
-    <h1 class="text-center">Top Articles in <%= @country.name %></h1>
-
-
-
+<div class="article-background" data-controller="reveal" data-reveal-hidden-class="text-secondary">
+  <div id="article-container" class="container" style="background: #555252">
+    <h1 class="text-center" style="color: white;">Top Articles in <%= @country.name %></h1>
     <div class="articles">
-      <% @country.articles.each do |article| %>
-        <div class="article">
-          <div class="article-content m-3 p-3 d-flex">
-            <%= image_tag "#{article.image_url}", class: "img-thumbnail", style: "max-width: 30%" %>
-            <div>
-              <ul class="list-inline">
-                <% article.topics.each do |topic| %>
-                  <li data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary" class="list-inline-item">
-                    <p><span class="badge">
-                      <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
-                          <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
-                      <% end %>
-                    </span>
-                    <%= link_to topic.name, topic, class: "link-secondary" %></p>
-                  </li>
-                <% end %>
-              </ul>
-              <p class="date">August 8th, 2023</p>
-              <p><%= article.title %></p>
-              <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+      <div class="row">
+        <% @country.topics.uniq.each do |topic| %>
+          <h2 class="mx-5" style="color: white"><%= topic.name %></h2>
+          <% @country.articles.each do |article| %>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+              <div class="topic">
+                <div class="card m-3 shadow-lg border-dark" style="max-width: 100%; border: none; position: static; height: 320px;">
+                  <% if article.image_url? %>
+                    <%= image_tag "#{article.image_url}", class: "img-thumbnail", style: "width: auto; border: none; height: 160px;" %>
+                  <% else %>
+                      <%= image_tag "/assets/TellUsBanner.jpg", class: "img-thumbnail", style: "width: auto; border: none; height: 160px;" %>
+                  <% end %>
+                  <div class="card-body border-0">
+                    <p class="card-text"><%= article.title %></p>
+                    <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      <% end %>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
