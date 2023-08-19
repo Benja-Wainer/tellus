@@ -266,13 +266,12 @@ puts "finished making countries"
 puts "Destroying all topics"
 Topic.destroy_all
 puts "Making topics"
-topics = ["UK", "Kremlin", "Ukraine", "Saudi Arabia Peace talks", "South Korea Heatwave"]
+topics = ["United States", "Japan", "Economy", "Inflation", "Bank of Japan", "Kansas", "Newspapers", "Police", "Free speech", "Household spending", "Gas prices", "Consumer price index"]
 
 topics.each do |t|
   topic = Topic.create(name: t)
   p "created #{topic.name} with id #{topic.id}"
 end
-
 
 puts "finished making topics"
 # require 'net/http'
@@ -286,179 +285,188 @@ puts "finished making topics"
 puts "Destroying old articles"
 Article.destroy_all
 puts "Making articles"
-# article = Article.create(url: "https://apnews.com/article/coup-niger-extremists-sahel-c4ff0bc653c8b73366705b19b8c74c3e", title: "West Africa defense chiefs finalize Niger intervention plan as junta negotiations deadlock", content: "BY SAM MEDNICK AND CHINEDU ASADU
-#   Updated 11:11 AM GMT+9, August 5, 2023
-#   Share
-#   NIAMEY, Niger (AP) — Defense chiefs from West African nations finalized an intervention plan Friday and urged militaries to ready resources after negotiations deadlocked with Niger’s military junta, which says it is severing military agreements with France, its former colonial ruler.
 
-#   With two days remaining before a deadline set by the regional bloc to release and reinstate President Mohamed Bazoum or face possible force, the junta announced that it was firing some of the previous government’s key ambassadors and warning citizens of the West African nation to watch for foreign armies and spies. In a plea published in a Washington Post opinion piece, Bazoum said, “I write this as a hostage” and urged the U.S. and partners to help.
+article1 = Article.create!(url: "https://www.bbc.com/sport/football/66499185",
+                          title: "England reach first Women's World Cup final",
+                          source: "BBC",
+                          content: "England reached the Women's World Cup final for the first time as they spoiled co-hosts Australia's party on a historic evening in Sydney.
 
-#   The junta’s announcement late Thursday deepens the post-coup isolation for what had been the United States’ and allies’ last major security partner in the Sahel, the vast region south of the Sahara Desert that Islamic extremist groups have turned into the global center of terrorism.
+                          Silencing a sell-out crowd at Stadium Australia with their 3-1 victory, the Lionesses became the first England football team since 1966 to reach a senior final on the world stage.
 
-#   ADVERTISEMENT
+                          It caps a sensational two years under manager Sarina Wiegman as England, crowned European champions for the first time last year on home soil, showed their superiority and know-how to see off an Australia side spurred on by a nation who have been inspired by the Matildas' success.
 
+                          Ella Toone gave England the lead in the first half with a superb first-time strike which sailed into the top corner.
 
-#   Niger’s soldiers, who staged a mutiny July 26, face a Sunday deadline set by the regional bloc known as ECOWAS, whose envoys arrived Thursday for talks. But those discussions stalled, with the delegation unable to meet with the coup leader, Gen. Abdourahmane Tchiani, or go into the capital, Niamey, according to a person with close knowledge of the talks who spoke on condition of anonymity because they weren’t authorized to comment.
+                          The Lionesses controlled proceedings until the second half when Australia threw everything at them and star striker Sam Kerr - starting her first match of the tournament - struck a 25-yard stunner over goalkeeper Mary Earps' head to make it 1-1.
 
-#   OTHER NEWS
-#   FILE - Supporters of Niger's ruling junta gather at the start of a protest called to fight for the country's freedom and push back against foreign interference in Niamey, Niger, Aug. 3, 2023. As several European countries evacuate Niger, the Biden administration is showing itself unusually intent on staying. It sees Niger as the United States' last, best counterterrorism outpost — and until the coup, a promising democracy — in a region plagued by instability. (AP Photo/Sam Mednick, File)
-#   In Niger, the US seeks to hang on to its last, best counterterrorist outpost in West Africa
-#   Supporters of Niger's ruling junta hold a Russian flag at the start of a protest called to fight for the country's freedom and push back against foreign interference in Niamey, Niger, Thursday, Aug. 3, 2023. The march falls on the West African nation's independence day from its former colonial ruler, France, and as anti-French sentiment spikes, more than one week after mutinous soldiers ousted the country's democratically elected president. (AP Photo/Sam Mednick)
-#   International pressure mounts on coup leaders in Niger while hundreds rally in support of junta
-#   French and other nationals gather at the international Airport to be airlifted back to France on a French military aircraft, in Niamey, Niger, Wednesday, Aug. 2, 2023, to be airlifted back to France on a French military aircraft. French forces in the capital, Niamey, evacuated hundreds of mostly French nationals to Paris on two flights Tuesday, following concerns that their citizens and other Europeans risked becoming trapped by last week’s military coup, which ousted and detained President Mohamed Bazoum. (AP Photo/Sam Mednick)
-#   Niger’s military ruler warns against foreign meddling, urges population to defend the country
-#   However, defense chiefs from ECOWAS countries excluding Mali, Burkina Faso, Chad, Guinea and Niger met Friday in Abuja, Nigeria, concluding with several measures including a military intervention outlined as recommendations to the regional leaders.
+                          But England, as they so often do, found a way back into the game when Lauren Hemp pounced on a defensive error to restore their lead, before Alessia Russo made sure of victory late on to set up a final with Spain on Sunday.Build-up to this semi-final has dominated every aspect of Australian life this week as cities across the country became absorbed in 'Matildas Mania'.
 
-#   “All the elements that would go into any eventual intervention have been brought out here and been refined, including the timing, the resources needed and the how and where and when we are going to deploy such a force,” said Abdel-Fatau Musah, ECOWAS commissioner for political affairs, peace and security.
+                          Fans were queueing outside fan parks in Sydney five hours before kick-off, train stations were decorated in yellow and green balloons, shops sold out of merchandise, and newspapers had the players' faces plastered over their front and back pages.
 
-#   Musah did not say whether ECOWAS would deploy such a force at the end of the one-week deadline given to the junta but added that the junta should reinstate Bazoum as president in the coming days or “we will make them handover to the civilians authorities.”
+                          All focus was on the co-hosts' attempts to create history, but England quietly went about their business and arrived in Sydney ready to compete in their third successive Women's World Cup semi-final.
 
-#   Nigerian chief of defense staff asked the regional military chiefs to follow “a sense of urgency” and allocate the necessary resources as they had agreed.
+                          Their experience of handling big occasions was evident from the first minute as they disrupted Australia's rhythm and made every attempt to frustrate the crowd, taking their time over throw-ins and breaking down dangerous counter-attacks.
 
-#   ADVERTISEMENT
+                          It worked for large parts, but when Australia fought their way back into the game through Kerr, England had to find another way - and they did.
 
+                          Backs against the wall, England's defence, who have been magnificent throughout the tournament, stepped up to make blocks, tackles and head away relentless balls into the box.
 
-#   “ECOWAS will not be used for coups. Democracy is what we stand for and democracy is what we will sustain,” said Christopher Musa, the Nigerian defense chief. He called for action to also address security lapses in West Africa, saying the latest mutiny highlights “the fragility of our region.”
+                          \"My thought was 'we're not going to give this away now',\" said Wiegman, reflecting on Australia's equaliser. \"You are never sure. But it was later in the game so we got through.\"
 
-#   The junta’s announcement brought further skepticism about any deal. It said it was terminating the military agreements and protocols signed with France and announced the end of functions for Niger’s ambassadors to France, the United States, Togo and neighboring Nigeria, which is leading ECOWAS efforts on dialogue.
+                          Hemp and Russo's flourishing partnership up front ultimately decided the game when they combined late on - Manchester City winger Hemp with a superb no-look pass to set-up Russo.
 
-#   “All aggression or attempt at aggression against the state of Niger will see an immediate response and without warning,” said a spokesman for the coup leaders, Col. Maj. Amadou Abdramane, with the exception of Mali, Burkina Faso and Guinea, which have expressed support for the coup. Mali and Burkina Faso have said such an intervention would be a declaration of war against them.
+                          \"That was just an incredible pass,\" added Wiegman. \"The finish was really good too. I'm really happy with the performance and the players themselves are happy too.\"
 
-#   France’s Foreign Ministry responded that Paris only recognizes “the legitimate Nigerien authorities,” dismissing the move by coup leaders. France reiterated its call for “the re-establishment of the democratic institutions of Niger,” the ministry said.
+                          England's celebrations at full-time were initially subdued. They have created history but this is a team of winners and they have not finished yet.
 
-#   The United States said late Friday it was suspending some assistance programs that benefit the government of Niger, making good on threats to pull financial support unless mutinous forces reversed their takeover.
+                          Build-up to this semi-final has dominated every aspect of Australian life this week as cities across the country became absorbed in 'Matildas Mania'.
 
-#   ADVERTISEMENT
+                          Fans were queueing outside fan parks in Sydney five hours before kick-off, train stations were decorated in yellow and green balloons, shops sold out of merchandise, and newspapers had the players' faces plastered over their front and back pages.
 
+                          All focus was on the co-hosts' attempts to create history, but England quietly went about their business and arrived in Sydney ready to compete in their third successive Women's World Cup semi-final.
 
-#   Secretary of State Antony Blinken gave no details, but stressed in a statement that Washington would continue life-saving humanitarian and food aid.
+                          Their experience of handling big occasions was evident from the first minute as they disrupted Australia's rhythm and made every attempt to frustrate the crowd, taking their time over throw-ins and breaking down dangerous counter-attacks.
 
-#   The Biden administration, which has given impoverished Niger hundreds of millions of dollars in civilian and security assistance, paused its security partnerships with the country earlier in the coup.
+                          It worked for large parts, but when Australia fought their way back into the game through Kerr, England had to find another way - and they did.
 
-#   Bazoum wrote that Niger’s security situation had been improving before the coup, in contrast to neighboring Mali and Burkina Faso that are led by military juntas, but said that’s now at risk because Niger would lose aid from foreign partners and extremist groups would take advantage of the country’s instability.
+                          Backs against the wall, England's defence, who have been magnificent throughout the tournament, stepped up to make blocks, tackles and head away relentless balls into the box.
 
-#   “In our hour of need, I call on the U.S. government and the entire international community to help us restore our constitutional order,” he wrote.
+                          \"My thought was 'we're not going to give this away now',\" said Wiegman, reflecting on Australia's equaliser. \"You are never sure. But it was later in the game so we got through.\"
 
-#   France has 1,500 military personnel in Niger, which had been envisioned as the base for counterterror operations in the region after anti-French sentiments grew elsewhere.
+                          Hemp and Russo's flourishing partnership up front ultimately decided the game when they combined late on - Manchester City winger Hemp with a superb no-look pass to set-up Russo.
 
-#   ADVERTISEMENT
+                          \"That was just an incredible pass,\" added Wiegman. \"The finish was really good too. I'm really happy with the performance and the players themselves are happy too.\"
 
+                          England's celebrations at full-time were initially subdued. They have created history but this is a team of winners and they have not finished yet.
 
-#   The U.S. has 1,100 military personnel in Niger, including at a key drone base, and indicates it’s reluctant to leave, especially with the growing influence of the Russian private military group Wagner in the Sahel.
+                          England's plan to stifle Australia's intensity and quick counter-attacking football worked a treat.
 
-#   Kremlin spokesman Dmitry Peskov told reporters it was concerned about emerging regional tensions but the “interference by non-regional powers is unlikely to change the situation for the better.”
+                          From the first minute they showed they were not afraid to play with physicality, going in hard in 50-50 challenges and doing all it took to bring down Kerr and prevent her getting a run at England's defence.
 
-#   ECOWAS has been unsuccessful in stemming coups and is trying to change course with Niger in a region that has seen five of them in the past three years — two each in Mali and Burkina Faso.
+                          Keira Walsh set the tone with a crunching tackle on Kerr within two minutes and Alex Greenwood later came sliding in on the Chelsea striker, earning herself a yellow card, to prevent a dangerous break.
 
-#   Nigeria’s President Bola Tinubu, fulfilling a legal requirement, informed l  awmakers Friday of the ECOWAS intention to intervene militarily in Niger if the coup leaders “remain recalcitrant.”
+                          With each tackle came a ripple of boos from the home fans, while Earps was in no rush to get things going again on goal-kicks.
 
-#   But there are risks that any intervention could get Bazoum killed, said James Barnett, a researcher specializing in West Africa at the Hudson Institute.
+                          It was England who controlled things early on - although both teams created a few chances - as they had 70% of the ball in the opening 15 minutes.
 
-#   ADVERTISEMENT
+                          Their control did not really waver as the first half wore on and the crowd became increasingly frustrated, whistling as England enjoyed prolonged periods of possession and passed through Australia's press.
 
+                          By the time the break arrived with England leading, the deafening roar which had greeted the players on their entrance had turned to polite applause as the Australians were still processing Toone's superb strike.
 
-#   “You would have to have a very surgical rescue operation to ensure that doesn’t happen,” he said.
+                          The second half was a different story, however. Kerr's sensational equaliser was followed by a dangerous strike from Cortnee Vine which called Earps into action.
 
-#   Another concern is that the junta might arm civilian militias to resist any intervention.
+                          Kerr headed another two chances over the bar, while Russo and Lucy Bronze came close at the other end for England.
 
-#   “I fear the junta would gladly use its own people as cannon fodder or human shields, and ECOWAS militaries don’t have a good record when it comes to avoiding collateral damage,” Barnett said.
+                          However, it was the Lionesses who were more ruthless, keeping their composure in the big moments and delivering when it mattered.
 
-#   Many people in Niamey didn’t appear concerned that ECOWAS will use force, while others wondered why the regional bloc hasn’t had the same resolve to tackle extremist violence.
+                          \"Knowing Sam, she will think that goal means nothing. She is a winner,\" said Australia manager Tony Gustavsson.
 
-#   “If ECOWAS has an army, it could mobilize 1,000 soldiers per country ... 15,000 soldiers. If ECOWAS was serious, why didn’t it consider mobilizing 15,000 soldiers to help Mali, Burkina and Niger, which are undergoing insecurity?” said Annassa Djibrilla, president of the Dynamic Citizen activist group.
+                          \"I know she's upset that she missed those two chances at the end. We need to support her. She did everything she could tonight.
 
-#   Niger’s roughly 25 million people live in one of the poorest countries in the world, and any cuts in foreign aid could be disastrous. Already, citizens are feeling the effects after ECOWAS suspended all commercial and financial transactions between its member states and Niger and froze Nigerien assets held in regional central banks.
+                          The fact she played 90 minutes is unbelievable. It is a world-class goal and shows what Sam Kerr is about. We promised to leave every single thing out there and every player did.\"
 
-#   The bloc’s sanctions include halting energy transactions with Niger, which gets up to 90% of its power from Nigeria, according to the International Renewable Energy Agency. Earlier this week, power transmission from Nigeria to Niger was cut off, an official at one of Nigeria’s main electricity companies said, speaking on condition of anonymity because they were not authorized to comment.
+                          England will go into the final full of confidence having overcome every hurdle so far in the tournament.
 
-#   The People’s Coalition for the Sahel, an informal alliance of several dozen Sahelian and West African civil society organizations, expressed concern for the military takeover and called for the protection of civilian populations to be a priority for all parties.
+                          But this has also been a World Cup to remember for the Matildas, who hope to change the perception of women's football in this country forever.
 
-#   “Nigerien civil and political liberties must be preserved and safeguarded, including protecting the rights of civil society organizations and human rights defenders to continue their activities freely and safely,” the group said in a statement.
+                          It will be hard to ignore their impact and they were given a warm applause on a lap of honour at full-time.")
 
-#   ___
-#   Asadu reported from Abuja, Nigeria; AP writers Elaine Ganley in Paris; Carley Petesch in Chicago and James Heintz contributed.".gsub("ADVERTISEMENT", ""))
-# puts "Made article #{article.title} with the url #{article.url}"
 
-# article = Article.create(url: "https://www.aljazeera.com/news/2023/8/4/west-african-leaders-make-plan-for-military-intervention-in-niger", title: "West African leaders make plan for military intervention in Niger", content: "West African defence chiefs have made a plan for potential military intervention to reverse last week’s coup in Niger, including how and when to deploy forces.
+article2 = Article.create!(url: "https://www.msnbc.com/opinion/msnbc-opinion/kansas-newspaper-police-raid-marion-county-record-rcna99813",
+                          title: "This police raid on rural Kansas newspaper is unconscionable and un-American",
+                          source: "MSNBC",
+                          content: "At first blush, reports of an outrageous police raid on a small newspaper in rural Kansas appear as implausible as the fictional tornado that swept Dorothy and Toto out of that state. But this alarming incident — the stress from which, according to the newspaper’s publisher, contributed to the death of the paper’s 98-year-old co-owner, Joan Meyer — appears to be part of an insidious and growing trend of government censorship of free expression: one that we’ve seen lead to book bans and now threatens the freedom of the press.
 
-#   The Economic Community of West African States (ECOWAS) will not divulge to the coup plotters when and where it will strike, but Abdel-Fatau Musah – ECOWAS commissioner for political affairs, peace and security – said on Friday the decision will be taken by the bloc’s heads of state.
+                          On Aug. 11, police, with a search warrant in hand, raided the office of the Marion County Record and the home its publisher Eric Meyer shared with his mother, Joan, in Marion, northern Kansas. Police seized digital communications, computers and cellphones. According to Meyer, the police took “everything we have.” Under federal law, journalists are generally protected from these types of paralyzing searches and seizures. Instead, law enforcement is supposed to serve a subpoena for any information it seeks.
 
-#   KEEP READING
-#   list of 4 items
-#   list 1 of 4
-#   Nigeria’s Tinubu seeks Senate support for ECOWAS intervention in Niger
-#   list 2 of 4
-#   Kremlin says interference of non-regional actors unlikely to help Niger
-#   list 3 of 4
-#   France: Deals revoked by Niger military were signed with ‘legitimate’ gov’t
-#   list 4 of 4
-#   Niger’s Bazoum warns of ‘devastating’ fallout for world if coup succeeds
-#   end of list
-#   “All the elements that will go into any eventual intervention have been worked out here, including the resources needed, the how and when we are going to deploy the force,” Musah said at the close of a three-day meeting in Nigeria’s capital, Abuja.
+                          Marion County Police claim its raid falls within an exception to federal law that applies when there’s probable cause to believe a journalist has committed a crime. The search warrant, which was signed by Magistrate Judge Laura Viar, allowed authorities to look for evidence of identity theft and evidence of criminal use of a computer. Over the weekend, local restaurateur Kari Newell (who reportedly threw a Record reporter out of a public event hosted at her restaurant for Rep. Jake LaTurner, R-Kan.) accused the paper of using illegal means to obtain information about her and her driving record. The paper denies any wrongdoing. According to Meyer, a source provided information about Newell to the paper. After attempts were made to verify the information, Meyer decided not to publish a story.
 
-#   ECOWAS has already imposed sanctions on Niger and said it could authorise the use of force if the coup leaders do not restore power to elected President Mohamed Bazoum by Sunday.
+                          To be clear, receiving information from a source is not a crime. Nor is it a crime to fact-check that information, to publish that information or, in this case, not publish that information. To the contrary: Receiving tips, checking them out and deciding what, if anything, to do with that information if it’s confirmed, is the daily work of journalists and newsrooms. Even if the source who provided the information to the Record obtained it illegally, Supreme Court precedent holds that the paper cannot be held liable for receiving or publishing that information, unless it also participated in the illegal activity.
 
-#   The 15-member body sent a delegation to Niger on Thursday seeking an “amicable resolution”, but a source in the entourage said a meeting at the airport with the military’s representatives yielded no breakthrough.
+                          Moreover, in order to obtain a search warrant of a newsroom, even under the county’s claimed exception, law enforcement must establish probable cause by providing an affidavit to the court. Although the search warrant is publicly available, the underlying affidavit was reportedly being withheld by a county attorney who also owns the hotel that houses Newell’s restaurant, though local reports indicate it may be released in the coming days. It’s also been reported that the Record has been investigating the Marion County chief of police, who carried out the raid and has since defended it.
 
-#   “We want diplomacy to work, and we want this message clearly transmitted to them that we are giving them every opportunity to reverse what they have done,” Musah said.
+                          Without access to the affidavit, the public cannot begin to assess whether this raid on the small, rural newspaper was in any way justified, but as it stands now, it looks like a dramatic violation of basic press freedoms. Just as alarmingly, the confiscation of The Record’s devices and documents has jeopardized its ability to publish a paper at all, effectively erasing a vital source of news for the Marion community. This wholesale seizure appears not only to have violated federal law, but to have run roughshod over the paper’s First Amendment right to gather and disseminate the news.
 
+                          The implications of the raid potentially stretch far beyond the Record. Sources far from Kansas may now be reluctant to share information with journalists out of fear that their communications and identities may become known to law enforcement if that journalist or newsroom is similarly raided. That’s precisely why protecting sources is vital to journalists’ ability to do their jobs.
 
-#   Nigerian President Bola Tinubu told his government to prepare for options, including the deployment of military personnel, in a letter read out to the Senate on Friday. Senegal has also said it would send troops.
+                          Due in large part to the county withholding relevant information, the facts here are still largely in dispute. But if the current reporting is true, Marion County appears to be the latest in a line of state and local governments attempting to silence speech they find objectionable. Earlier this year, Florida Gov. Ron DeSantis, who’s seeking the Republican nomination for president, supported an ultimately unsuccessful and unconstitutional bill that would have characterized statements by anonymous sources as presumptively defamatory and characterized allegations of discrimination on the basis of race and sexual and gender identity defamatory per se.
 
-#   Niger’s military rulers denounced outside interference and said they would fight back.
+                          At PEN America, we are all too familiar with government efforts to ban books in schools and to censor curriculum with which the government disagrees. If the free press is to remain free, then we must be just as outraged at any and every attempt to similarly censor the press. We can’t wait for a house to fall on us before we demand answers.")
 
-#   The 59-year-old coup leader, Abdourahamane Tchiani, served as battalion commander for ECOWAS forces during conflicts in Ivory Coast in 2003, so he knows what such missions involve.
+article3 = Article.create!(url: "https://edition.cnn.com/2023/08/11/economy/inflation-rate-spending/index.html",
+                          title: "US inflation means families are spending $709 more per month than two years ago",
+                          source: "CNN",
+                          content: "The typical American household spent $709 more in July than they did two years ago to buy the same goods and services, according to Moody’s Analytics.
 
-#   Support for him from other military leaders in neighbouring Mali and Burkina Faso, which are both ECOWAS members, could also undermine the regional response. The two countries have said they would come to Niger’s defence.
+                          That figure underscores the cumulative impact high inflation has had on consumer finances — even as price growth has cooled considerably in recent months.
 
-#   Sign up for Al Jazeera
-#   Week in the Middle East
-#   Catch up on our coverage of the region, all in one place.
-#   E-mail address
-#   Sign up
-#   By signing up, you agree to our Privacy Policy
-#   Play Video
-#   Video Duration 03 minutes 50 seconds
-#   03:50
-#   Burkina Faso & Mali warn against intervention after Niger coup
-#   Borders opened
-#   The coup leaders closed the borders of Niger on July 26 when announcing they had removed Bazoum from power. The borders were opened five days later.
+                          “High inflation of the past 2+ years has done lots of economic damage,” Mark Zandi, chief economist at Moody’s Analytics, wrote in a post on X, the platform formerly known as Twitter.
 
+                          Most of that increase in spending is driven by housing costs, which have surged, Zandi told CNN in an email on Friday. He added that families are also spending more at the grocery store; on buying, maintaining and insuring vehicles and on recreational services like cable.
 
-#   Niger, which borders seven African countries – including Libya, Chad and Nigeria – is seen by the United States and former colonial ruler France as an important partner to address security threats in the region.
+                          Of course, paychecks have also grown over the past two years — but not by as much as the cost of living.
 
-#   The country is the largest recipient of US military assistance in West Africa, having received an estimated $500m since 2012.
+                          Even though prices have soared, real earnings, which adjust for inflation, are stuck at late 2019 levels.
 
-#   The country also hosts more than 2,000 Western troops, mostly from the US and France. Various Western nations have cancelled aid and cooperation agreements with the military administration since the putsch.
+                          “Real earnings remain below what they would have been if not for the pandemic and the Russian war, which is weighing on the collective psyche,” Zandi told CNN in an email on Friday.
 
-#   Niger’s coup was the seventh military takeover in less than three years in Western and Central Africa.
+                          The good news is that wages are finally starting to outpace inflation and consumer price growth has eased significantly, so much so that many investors are betting the Federal Reserve is done raising interest rates.
 
-#   Given its uranium and oil riches and pivotal role in the war with rebels in the Sahel region, Niger also has strategic significance for China, Europe and Russia.
+                          Looking at just the last year, Zandi calculates that the typical household spent $202 more this July than they did a year ago to buy the same goods and services.
 
+                          That’s significant, but it’s still below the peak of $536 for this year-over-year metric — a record hit back June 2022, when gas prices spiked above $5 a gallon for the first time.
 
-#   Bazoum, 63, who was elected in 2021, was detained at the presidential residence in Niamey. He said in his first remarks since the coup that he was a hostage in need of US and international help.
+                          Consumer prices increased by a cooler-than-expected 3.2% in July compared with the year before, according to a government report released Wednesday. Even though that was slightly higher than the annual inflation rate in June, most of the impact was driven by calendar effects.
 
-#   “If it [the coup] succeeds, it will have devastating consequences for our country, our region and the entire world,” he wrote in a Washington Post opinion piece.
+                          “In sum, the report was encouraging,” Bank of America economists wrote in a note to clients on Thursday, adding they “wouldn’t be surprised to see another soft” inflation reading in August.
 
-#   Linda Thomas-Greenfield, the US envoy to the UN, said the United States recognised Bazoum as the legitimate leader of Niger, and Washington supported ECOWAS to find a path forward in resolving the situation.
+                          Although month-over-month inflation readings are “still likely to be bumpy,” Bank of America economists said they “believe that the current disinflation is not a ‘head fake.’”")
 
-#   “We are engaging diplomatically with countries in the region and at the United Nations to condemn what this military has done, and we will continue to keep pressure on them until they make the decision to allow this democratically elected government resume its place,” she told Al Jazeera.
+article4 = Article.create!(url: "https://www.independent.ie/irish-news/queues-at-bank-of-ireland-atms-as-customers-with-no-money-withdraw-up-to-1000-in-cash/a1211513809.html",
+                          title: "Queues at Bank of Ireland ATMs as customers with no money withdraw up to €1,000 in cash",
+                          source: "Irish Independent",
+                          content: "Bank of Ireland’s mobile app and 365online services have been restored after a massive technology break-down allowed customers who have no money in their accounts to get access to funds.
+                          This prompted huge queues at ATMs around the country last night, with people mistakenly believing they were getting access to free cash.
 
-#   Niger’s deposed gov’t says ECOWAS can restore power by force
-#   SOURCE: AL JAZEERA AND NEWS AGENCIES")
+                          In some towns the queues were so big gardaí had to control them.
 
-# puts "Made article #{article.title} with the url #{article.url}"
+                          Bank of Ireland said this morning it’s mobile app and 365online have now been restored following the blunder as it apologised to customers.")
 
-# puts "Made articles"
 
-# puts "Next Creating Tags"
+article5 = Article.create!(url: "https://asia.nikkei.com/Economy/Inflation/Japan-s-inflation-re-accelerates-in-June-stays-above-BOJ-target",
+                          title: "Japan's inflation re-accelerates in June, stays above BOJ target",
+                          source: "Nikkei",
+                          content: "TOKYO (Reuters) -- Japan's core consumer inflation re-accelerated in June and stayed above the central bank's 2% target for the 15th straight month, data showed on Friday, adding to recent signs of broadening price pressures.
 
-# tag1 = Tag.create(country: Country.find(129), article: Article.find(1), topic: Topic.find(1))
+                          The data comes ahead of the Bank of Japan's closely watched policy meeting next week, when the board will produce fresh quarterly forecasts and debate whether conditions are falling into place to begin phasing out the bank's massive stimulus.
 
-# tag2 = Tag.create(country: Country.find_by(name: "United Kingdom"), article: Article.find(2), topic: Topic.find(2))
+                          The nationwide core consumer price index (CPI), which excludes fresh food costs, rose 3.3% in June from a year earlier, matching a median market forecast. It followed a 3.2% gain in May.
 
-# puts tag1
-# puts tag2
+                          The \"core core\" inflation rate, which strips away both fresh food and fuel costs, stood at 4.2% in June after a 4.3% rise in May, the data showed.
+
+                          As inflation perks up, markets are simmering with speculation the BOJ could soon phase out its controversial yield curve control (YCC) policy that is criticized for distorting market pricing and narrowing margins for financial institution.
+
+                          BOJ Gov. Kazuo Ueda's remarks on Tuesday that Japan was still distant from sustainably achieving the bank's 2% target have pushed down the yen and boosted Japanese shares, as investors scaled back bets of a near-term tweak to YCC.
+
+                          Under YCC, the BOJ guides short-term interest rates at -0.1% and buys huge amounts of government bonds to cap the 10-year bond yield around 0% as part of efforts to fire up inflation to its 2% target.")
+
+puts "Destroying old tags"
+Tag.destroy_all
+puts "Making tags"
+
+Tag.create!(country: Country.find_by(name: "Ireland"), article: article4)
+Tag.create!(country: Country.find_by(name: "United States"), article: article3)
+Tag.create!(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
+Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(6))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(7))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(8))
+Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(9))
+Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(2))
+Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(3))
+Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(4))
+
+p "Tags done"
 
 def news_secret_key
   ENV["NEWS_API_KEY"]
@@ -467,88 +475,20 @@ end
 def news_dataset
   api_data = { key: news_secret_key }
 
-  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=gb&category=general&apikey=#{api_data[:key]}&lang=en")
+  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=#{api_data[:key]}&lang=en")
 
   news_array = JSON.parse(news)["articles"]
 
   news_array.first(10).each do |s|
     article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
-    tag = Tag.create(country: Country.find_by(name: "United Kingdom"), article: article, topic: Topic.find(1))
+    tag = Tag.create(country: Country.find_by(name: "United States"), article: article, topic: Topic.find(1))
     p "Created #{article.title}"
   end
 end
 
 news_dataset
 
-Article.find(1).update(content: "England face Colombia in the Women’s World Cup quarter-finals as the Lionesses continue their knockout campaign in Sydney.
 
-The European champions survived a major scare against Nigeria in the last-16, winning a tense penalty shoot-out after playing extra time with 10 players as star forward Lauren James was sent off.
-
-James, who has been England’s player of the tournament, will be suspended for the quarter-final after the 21-year-old stamped on the back of Nigeria’s Michelle Alozie.
-
-    Follow LIVE: Women’s World Cup updates as England face Colombia
-
-The Lionesses know they will need to improve when they take on a dangerous Colombia side, who shocked heavyweights Germany in the group stages and progressed to their first ever World Cup quarter-final thanks to a 1-0 win over Jamaica in the last-16.
-
-England defender Lucy Bronze admitted the Lionesses are “not happy” with their level of performances so far, but victory against Colombia would move Sarina Wiegman’s side a step away from a place in their first ever Women’s World Cup final.
-
-Here’s everything you need to know.
-Recommended
-
-    Women’s World Cup TV schedule: How to watch every match today
-    Women’s World Cup TV schedule: How to watch every match today
-    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-    How many games will Lauren James miss at Women’s World Cup after red card?
-    How many games will Lauren James miss at Women’s World Cup after red card?
-
-When is England vs Colombia?
-
-The quarter-final will be played on Saturday 12 August at Stadium Australia in Sydney, with kick-off at 11:30am UK time (BST).
-How can I watch it?
-
-It will be shown live on ITV 1 and ITV X, with coverage starting from 10:45am.
-<p>Lauren James has apologised to Michelle Alozie over the red-card incident</p>
-
-Lauren James has apologised to Michelle Alozie over the red-card incident
-(PA Wire)
-What is the team news?
-
-After her red card against Nigeria, Lauren James will serve a two -match suspension and will miss England’s quarter-final against Colombia.
-
-With England’s player of the tournament unavailable, Sarina Wiegman has a selection headache as she looks to replace the creative heartbeat of the team. James shone in the No 10 position of England’s new 3-5-2 system, with Manchester United’s Ella Toone an option.
-
-If Wiegman continues with a back three, another option she could have is replacing James with Chloe Kelly and playing the winger and Lauren Hemp either side of striker Alessia Russo in a 3-4-3.
-
-Keira Walsh made her return from injury in the win over Nigeria, but did not look completely comfortable in England’s new system and came off with cramp at the end of extra time. Walsh is one of England’s most important players but Katie Zelem impressed in the 6-1 win against China and could be called upon again. Another player pushing for a start is Bethany England, with Russo often left isolated against Nigeria.
-
-England’s defence is looking settled and is unlikely to change, but three players are a booking away from being suspended from the semi-finals if England make it through. Georgia Stanway, Bronze and Hemp all come into the match on a yellow card.
-Predicted line-up
-
-England: Earps; Carter, Bright, Greenwood; Bronze, Stanway, Walsh, Daly; Toone; Russo, Hemp
-How did both teams reach the quarter-finals?
-
-England (Winners Group D)
-
-    1-0 vs Haiti
-    1-0 vs Denmark
-    6-1 vs China
-    0-0 vs Nigeria (Won 4-2 on penalties)
-
-Colombia (Winners Group H)
-Recommended
-
-    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-    England reach World Cup dividing line as Sarina Wiegman faces crunch decision
-    Women’s World Cup TV schedule: How to watch every match today
-    Women’s World Cup TV schedule: How to watch every match today
-    Bethany England reveals ‘biggest danger’ facing Lionesses against Colombia
-    Bethany England reveals ‘biggest danger’ facing Lionesses against Colombia
-
-    2-0 vs South Korea
-    2-1 vs Germany
-    0-1 vs Morocco
-    1-0 vs Jamaica")
 coolio = User.find(1)
 kremlin = Topic.find(2)
 coolio.favorite(kremlin)

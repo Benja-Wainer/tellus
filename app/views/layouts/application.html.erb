@@ -15,22 +15,21 @@
   </head>
 
   <body>
-  <%= render "shared/navbar" %>
-  <div class="d-flex">
-    <div class="col-10">
-      <%= render "shared/flashes" %>
-
-      <div class="page-content">
-        <%= yield %>
+    <%= render "shared/navbar" %>
+    <%= render "shared/flashes" %>
+    <div class="page-content">
+      <div class="d-flex m-0 p-0">
+        <div class="flex-grow-1">
+          <%= yield %>
+        </div>
+      <div class="col-2" data-controller="sidebar" data-sidebar-target="sidebar" data-expanded="<%= user_signed_in? ? "1" : "0" %>">
+        <%= render "shared/sidebar" %>
       </div>
     </div>
-    <div class="col-2">
-      <%= render "shared/sidebar" %>
-    </div>
   </div>
 
-  <div class="footer">
-    <p>Copyright 2050 Tellus LLC</p>
-  </div>
+    <div class="footer">
+      <p>Copyright 2050 Tellus LLC</p>
+    </div>
   </body>
 </html>

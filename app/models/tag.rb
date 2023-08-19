@@ -6,4 +6,6 @@ class Tag < ApplicationRecord
   validates :country, :topic, :article,
             presence: true,
             unless: -> { !topic.blank? || !article.blank? || !country.blank? }
+
+  validates :country, uniqueness: { scope: :article }, unless: -> { article.blank? }
 end

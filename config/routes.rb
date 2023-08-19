@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get "world_map", to: "countries#world_map", as: :world_map
 
-  resources :topics, only: %i[index] do
+  resources :topics, only: %i[index show] do
     member do
       patch "toggle_favorite", to: "topics#toggle_favorite"
     end
