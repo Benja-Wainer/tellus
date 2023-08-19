@@ -1,16 +1,8 @@
-<div class="article-background sticky-top">
+<div class="article-background">
   <div class="container container-md article col-6 p-5">
-    <% if @article.source.present? %>
-      <p><%= @article.source %></p>
-    <% else %>
-      <p>Placeholder source</p>
-    <% end %>
-    <% if @article.image_url %>
-      <div class="article-image" style="background-image: url(<%=@article.image_url%>;)">
-    <% else %>
-      <div class="article-image" style="background-image: url(<%= image_path('newspapers.jpg') %>)">
-    <% end %>
-    </div>
+    <p><%= @article.source.present? ? @article.source : "No source available" %></p>
+    <%= image_tag @article.image_url? ? @article.image_url : "TellUsBanner",
+        class: "img-thumbnail article-image" %>
     <h2 class="title mt-2"><%= @article.title %></h2>
     <ul class="list-inline">
       <li class="list-inline-item">Suggested topics:</li>
