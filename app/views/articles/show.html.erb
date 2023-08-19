@@ -1,4 +1,4 @@
-<div class="article-background sticky-top" data-controller="toggleHeart" data-reveal-hidden-class="text-secondary">
+<div class="article-background sticky-top">
   <div class="container container-md article col-6 p-5">
     <% if @article.source.present? %>
       <p><%= @article.source %></p>
@@ -15,15 +15,10 @@
     <ul class="list-inline">
       <li class="list-inline-item">Suggested topics:</li>
       <% @article.topics.each do |topic| %>
-        <li class="list-inline-item">
+        <li data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary" class="list-inline-item">
           <p><span class="badge">
-            <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch, action: "click->reveal#toggle"} do %>
-              <% if current_user && current_user.favorited?(topic)%>
-                <i data-reveal-target="item" class="fa-solid fa-thumbtack" style="color: #26630c;"></i>
-              <% else %>
-                <i data-reveal-target="item" class="fa-solid fa-thumbtack text-secondary" style="color: #26630c;"></i>
-              <% end %>
-              <%# <%= render "shared/sidebar" %>
+            <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
+                <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
             <% end %>
           </span>
           <%= topic.name %></p>
