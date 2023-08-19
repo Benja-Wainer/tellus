@@ -3,9 +3,9 @@
     <h1 class="text-center" style="color: white;">Top Articles in <%= @country.name %></h1>
     <div class="articles">
       <div class="row">
-        <% @country.topics.uniq.each do |topic| %>
-          <h2 class="mx-5" style="color: white"><%= topic.name %></h2>
-          <% @country.articles.each do |article| %>
+        <% @country.topics.first(1).each do |topic| %>
+          <%# <h2 class="mx-5" style="color: white"><%= topic.name</h2> %>
+          <% topic.articles.each do |article| %>
             <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
               <div class="topic">
                 <div class="card m-3 shadow-lg border-dark" style="max-width: 100%; border: none; position: static; height: 320px;">

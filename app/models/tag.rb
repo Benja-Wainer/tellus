@@ -7,5 +7,5 @@ class Tag < ApplicationRecord
             presence: true,
             unless: -> { !topic.blank? || !article.blank? || !country.blank? }
 
-  validates :country, uniqueness: { scope: :article }, unless: -> { article.blank? }
+  # validates :country, uniqueness: { scope: :article }, unless: -> { article.blank? }
 end
