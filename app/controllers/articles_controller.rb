@@ -19,7 +19,7 @@ class ArticlesController < ApplicationController
   end
 
   def refresh_pins
-    sleep 1
+    sleep 0.1
     respond_to do |format|
       format.html # Follow regular flow of Rails
       format.text { render partial: "shared/sidebar", formats: [:html] }
