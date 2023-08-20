@@ -32,7 +32,7 @@
             <% current_user.favorited_by_type('Topic').each do |topic| %>
               <div class="card my-2" style="width: 18rem;">
                 <div class="card-body card-details">
-                  <p class="card-text"><%= topic.name %></p>
+                  <%= link_to topic.name, topic_path(topic), class: "card-text" %>
                 </div>
               </div>
             <% end %>
