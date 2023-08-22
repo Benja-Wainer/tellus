@@ -78,12 +78,10 @@ export default class extends Controller {
             console.log(country.popup_html);
             // window.location.href=`/countries/${country.id}`
             // const popup = new mapboxgl.Popup().setHTML(country.popup_html);
-            new mapboxgl.Popup({className: "bg-dark"})
+            new mapboxgl.Popup({className: "bg-dark popup"})
               .setLngLat(e.lngLat)
               .setHTML(country.popup_html)
-              .addTo(map)
-              .addClassName("bg-dark");
-
+              .addTo(map);
           }
       });
 

@@ -17,11 +17,6 @@ class CountriesController < ApplicationController
         popup_html: render_to_string(partial: "popup", locals: {country: country})
       }
     end
-    # @country_names = []
-    # @countries.each do |country|
-    #   @country_names << country.name
-    # end
-    # @country_names.sort!
   end
 
   def show

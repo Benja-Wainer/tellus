@@ -17,16 +17,10 @@
   <body>
     <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <div class="page-content" data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary" data-controller="sidebar">
-      <div class="d-flex m-0 p-0">
-        <div class="flex-grow-1">
-          <%= yield %>
-        </div>
-      <div class="col-2" data-sidebar-target="sidebar" data-expanded="<%= user_signed_in? ? "1" : "0" %>">
-        <%= render "shared/sidebar" %>
-      </div>
+    <div class="page-content" data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary">
+      <%= yield %>
+      <%= render "shared/sidebar" %>
     </div>
-  </div>
 
     <div class="footer">
       <p>Copyright 2050 Tellus LLC</p>

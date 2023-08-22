@@ -4,6 +4,10 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.3.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1",
+    "mapbox-gl": "^2.15.0",
+    "mapbox-gl-animated-popup": "^0.4.0",
     "stimulus-reveal-controller": "^4.1.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"

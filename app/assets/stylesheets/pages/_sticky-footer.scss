@@ -9,5 +9,7 @@ body {
   flex: 1 0 auto;
   margin-top: 69px;
   background-image: url('background.jpg');
-  // background-attachment: fixed;
+  background-attachment: fixed;
+  background-size: 180%;
+  background-position: 50% 45%;
 }
