@@ -1,14 +1,38 @@
-Welcome <%= current_user.username %>
-<h2>Following Countries:</h2>
-  <ol>
-    <% current_user.favorited_by_type('Country').each do |country| %>
-      <li><%=  country.name %></li>
-    <% end %>
-  </ol>
-
-<h2>Following topics:</h2>
-  <ul>
-    <% current_user.favorited_by_type('Topic').each do |topic| %>
-      <li><%=  topic.name %></li>
-    <% end %>
-  </ul>
+<div class="banner"></div>
+<div class="container">
+  <div class="d-flex">
+    <div class="col-3" style="align-items: center;
+    display: flex;
+    flex-direction: column;">
+      <div class="avatar-bordered my-4"></div>
+      <div><%= current_user.username %></div>
+      <div class="pillbutton">View Other Countries</div>
+    </div>
+    <div class="flex-grow-1">
+      <div class="my-3">
+        <h4><strong>Countries Followed</strong></h4>
+      </div>
+        <% current_user.favorited_by_type('Country').each do |country| %>
+          <div class="col-4 my-4">
+            <div style="background-color:grey;">
+              <figure>
+                <%# <img src=  alt="Mountains"> %>
+                <figcaption><%= link_to "#{country.name}", country_path(country) %></figcaption>
+              </figure>
+            </div>
+          </div>
+        <% end %>
+      <hr>
+      <h4><strong>Topics Followed</strong></h4>
+      <div class="d-flex" style="flex-direction:column;">
+        <% current_user.favorited_by_type('Topic').each do |topic| %>
+          <%= link_to topic_path(topic) do %>
+            <div class="pillbutton"><%= topic.name %></div>
+          <% end %>
+        <% end %>
+      </div>
+      <hr>
+      <h4><strong>Articles Saved</strong></h4>
+    </div>
+  </div>
+</div>
