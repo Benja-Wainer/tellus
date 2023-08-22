@@ -19,7 +19,8 @@ puts "Made user #{user.email}"
 puts "Destroying all countries"
 Country.destroy_all
 puts "Next Countries"
-countries = "Afghanistan,Albania,
+countries = "Afghanistan,
+  Albania,
   Algeria,
   Andorra,
   Angola,
@@ -266,21 +267,22 @@ puts "finished making countries"
 puts "Destroying all topics"
 Topic.destroy_all
 puts "Making topics"
-topics = ["United States", "Japan", "Economy", "Inflation", "Bank of Japan", "Kansas", "Newspapers", "Police", "Free speech", "Household spending", "Gas prices", "Consumer price index"]
+topics = ["Top", "Sports", "Entertainment", "Business", "Politics", "United States", "Japan", "Economy", "Inflation", "Bank of Japan", "Kansas", "Newspapers", "Police", "Free speech", "Household spending", "Gas prices", "Consumer price index"]
 
 topics.each do |t|
-  topic = Topic.create(name: t)
+  topic = Topic.create!(name: t)
   p "created #{topic.name} with id #{topic.id}"
 end
 
 puts "finished making topics"
-# require 'net/http'
-
-# next articles
-# uri = URI('https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=c74773216f7bc318b072a88e2891eee4')
-# response = Net::HTTP.get(uri)
-# json_r = JSON.parse(response)
-# p json_r["articles"][0]["description"]
+puts "Connecting categories to countries"
+Country.all.each do |country|
+  Tag.create!(country: country, topic: Topic.find(1))
+  Tag.create!(country: country, topic: Topic.find(2))
+  Tag.create!(country: country, topic: Topic.find(3))
+  Tag.create!(country: country, topic: Topic.find(4))
+  Tag.create!(country: country, topic: Topic.find(5))
+end
 
 puts "Destroying old articles"
 Article.destroy_all
@@ -457,17 +459,11 @@ puts "Destroying old tags"
 Tag.destroy_all
 puts "Making tags"
 
-Tag.create!(country: Country.find_by(name: "Ireland"), article: article4)
-Tag.create!(country: Country.find_by(name: "United States"), article: article3)
+Tag.create!(country: Country.find_by(name: "United Kingdom"), article: article1, topic: Topic.find(2))
 Tag.create!(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
-Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(1))
-Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(6))
-Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(7))
-Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(8))
-Tag.create!(country: Country.find_by(name: "United States"), topic: Topic.find(9))
-Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(2))
-Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(3))
-Tag.create!(country: Country.find_by(name: "Japan"), topic: Topic.find(4))
+Tag.create!(country: Country.find_by(name: "United States"), article: article3, topic: Topic.find(4))
+Tag.create!(country: Country.find_by(name: "Ireland"), article: article4, topic: Topic.find(4))
+Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(4))
 
 p "Tags done"
 
