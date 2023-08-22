@@ -4,20 +4,26 @@
     <%= image_tag @article.image_url? ? @article.image_url : "TellUsBanner",
         class: "img-thumbnail article-image" %>
     <h2 class="title mt-2"><%= @article.title %></h2>
-    <ul class="list-inline">
-      <li class="list-inline-item">Suggested topics:</li>
-      <% @article.topics.each do |topic| %>
-        <li class="list-inline-item">
-          <p><span class="badge">
-            <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
-                <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
-            <% end %>
-          </span>
-          <span data-toggle-heart-target="newTopic"><%= topic.name %></span></p>
-        </li>
-      <% end %>
-    </ul>
     <p class="content"><%= @article.content %></p>
+    <div data-controller="show-articles">
+      <button class="btn btn-primary" type="button" data-action="show-articles#toggle">
+          See related topics
+      </button>
+      <div class="collapse" data-show-articles-target="collapsable">
+        <div class="card card-body">
+          <% @article.topics.each do |topic| %>
+            <li class="list-inline-item">
+              <p><span class="badge">
+                <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
+                    <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
+                <% end %>
+              </span>
+              <span data-toggle-heart-target="newTopic"><%= topic.name %></span></p>
+            </li>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <p>Read the original article <%= link_to "here", @article.url, class: "source-link" %></p>
   </div>
 </div>
