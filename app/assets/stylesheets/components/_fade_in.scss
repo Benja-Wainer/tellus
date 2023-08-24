@@ -1,28 +1,11 @@
-.scroll-animation {
+.reveal {
   opacity: 0;
-  -moz-transition: all 1000ms ease-out;
-  -webkit-transition: all 1000ms ease-out;
-  -o-transition: all 1000ms ease-out;
-  transition: all 1000ms ease-out;
-  -moz-transform: translate3d(0px, 100px, 0px);
-  -webkit-transform: translate3d(0px, 100px, 0px);
-  -o-transform: translate(0px, 100px);
-  -ms-transform: translate(0px, 100px);
-  transform: translate3d(0px, 100px, 0px);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
+  transform: translateY(20px);
+  transition: 1s cubic-bezier(0.5, 0, 0, 1);
+  transition-property: opacity, transform;
 }
 
-.scroll-animation.in-view {
+.reveal.in {
   opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-  -moz-transition: all 1000ms ease-out;
-  -webkit-transition: all 1000ms ease-out;
-  -o-transition: all 1000ms ease-out;
-  transition: all 1000ms ease-out;
+  transform: none;
 }
