@@ -266,16 +266,16 @@ puts "finished making countries"
 # next topics
 puts "Destroying all topics"
 Topic.destroy_all
-puts "Making topics"
+puts "Making categories"
 categories = ["business", "entertainment", "environment", "food", "health", "politics", "science", "sports", "technology", "top", "tourism", "world"]
 # demo_seed = ["United States", "Japan", "Economy", "Inflation", "Bank of Japan", "Kansas", "Newspapers", "Police", "Free speech", "Household spending", "Gas prices", "Consumer price index"]
 
-topics.each do |t|
-  topic = Topic.create!(name: t)
-  p "created #{topic.name} with id #{topic.id}"
-end
+# topics.each do |t|
+#   topic = Topic.create!(name: t)
+#   p "created #{topic.name} with id #{topic.id}"
+# end
 
-puts "finished making topics"
+puts "finished making categories"
 puts "Connecting categories to countries"
 
 Country.all.each do |country|
@@ -285,9 +285,9 @@ Country.all.each do |country|
   end
 end
 
-puts "Destroying old articles"
-Article.destroy_all
-puts "Making articles"
+# puts "Destroying old articles"
+# Article.destroy_all
+# puts "Making articles"
 
 # Demo Seeded Articles
 
@@ -458,37 +458,37 @@ puts "Making articles"
 
 #                           Under YCC, the BOJ guides short-term interest rates at -0.1% and buys huge amounts of government bonds to cap the 10-year bond yield around 0% as part of efforts to fire up inflation to its 2% target.")
 
-puts "Making tags"
+# puts "Making tags"
 
-Tag.create!(country: Country.find_by(name: "United Kingdom"), article: article1, topic: Topic.find(2))
-Tag.create!(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
-Tag.create!(country: Country.find_by(name: "United States"), article: article3, topic: Topic.find(4))
-Tag.create!(country: Country.find_by(name: "Ireland"), article: article4, topic: Topic.find(4))
-Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(4))
+# Tag.create!(country: Country.find_by(name: "United Kingdom"), article: article1, topic: Topic.find(2))
+# Tag.create!(country: Country.find_by(name: "United States"), article: article2, topic: Topic.find(1))
+# Tag.create!(country: Country.find_by(name: "United States"), article: article3, topic: Topic.find(4))
+# Tag.create!(country: Country.find_by(name: "Ireland"), article: article4, topic: Topic.find(4))
+# Tag.create!(country: Country.find_by(name: "Japan"), article: article5, topic: Topic.find(4))
 
-p "Tags done"
+# p "Tags done"
 
-def news_secret_key
-  ENV["NEWS_API_KEY"]
-end
+# def news_secret_key
+#   ENV["NEWS_API_KEY"]
+# end
 
-def news_dataset
-  api_data = { key: news_secret_key }
+# def news_dataset
+#   api_data = { key: news_secret_key }
 
-  news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=#{api_data[:key]}&lang=en")
+#   news = RestClient.get("https://gnews.io/api/v4/top-headlines?country=us&category=general&apikey=#{api_data[:key]}&lang=en")
 
-  news_array = JSON.parse(news)["articles"]
+#   news_array = JSON.parse(news)["articles"]
 
-  news_array.first(10).each do |s|
-    article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
-    tag = Tag.create(country: Country.find_by(name: "United States"), article: article, topic: Topic.find(1))
-    p "Created #{article.title}"
-  end
-end
+#   news_array.first(10).each do |s|
+#     article = Article.create(title: s["title"], date: s["publishedAt"], content: s["content"], url: s["url"], source: s["source"]["name"], description: s["description"], image_url: s["image"])
+#     tag = Tag.create(country: Country.find_by(name: "United States"), article: article, topic: Topic.find(1))
+#     p "Created #{article.title}"
+#   end
+# end
 
-news_dataset
+# news_dataset
 
 
 coolio = User.find(1)
-kremlin = Topic.find(2)
+# kremlin = Topic.find(2)
 coolio.favorite(kremlin)
