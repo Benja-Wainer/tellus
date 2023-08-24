@@ -4,7 +4,10 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.3.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.1",
     "stimulus-reveal-controller": "^4.1.0",
+    "stimulus-scroll-reveal": "^3.2.0",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4"
   },
