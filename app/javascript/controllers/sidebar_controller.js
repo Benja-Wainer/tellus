@@ -20,23 +20,26 @@ export default class extends Controller {
   }
 
   collapse() {
-    this.sidebarTarget.classList.remove("col-2")
-    this.sidebarTarget.style.width = "59px"
-    this.sidebarTarget.dataset.expanded = "0"
-    this.iconTarget.innerHTML = `
-      <i class="fa-solid fa-angles-left text-light btn btn-outline-dark" data-sidebar-target="icon"></i>
-    `
-    this.contentTarget.classList.add("d-none")
-    // this.backgroundTarget.style.background = "rgba(0, 0, 0, 0.1)"
+    this.sidebarTarget.classList.add('sidebar-collapsed')
+    this.sidebarTarget.classList.remove('sidebar')
+    this.sidebarTarget.style.background = "rgba(0, 0, 0, 0)"
+    this.sidebarTarget.dataset.expanded = "0";
+
+    this.iconTarget.classList.remove('fa-angles-right');
+    this.iconTarget.classList.add('fa-angles-left');
+
+    this.contentTarget.classList.add("d-none");
   }
 
   expand() {
-    this.sidebarTarget.style.removeProperty('width')
-    this.sidebarTarget.classList.add("col-2")
+    this.sidebarTarget.classList.remove('sidebar-collapsed')
+    this.sidebarTarget.classList.add('sidebar')
+    this.sidebarTarget.style.removeProperty('background')
     this.sidebarTarget.dataset.expanded = "1"
-    this.iconTarget.innerHTML = `
-      <i class="fa-solid fa-angles-right text-light btn btn-outline-dark" data-sidebar-target="icon"></i>
-    `
+
+    this.iconTarget.classList.add('fa-angles-right');
+    this.iconTarget.classList.remove('fa-angles-left');
+
     this.contentTarget.classList.remove("d-none")
   }
 

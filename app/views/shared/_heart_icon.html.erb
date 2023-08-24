@@ -1,0 +1,5 @@
+<span class="badge">
+  <%= link_to toggle_favorite_country_path(country), data: {"turbo-method": :patch} do %>
+      <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-heart <%= user_signed_in? && current_user.favorited?(country) ? "" : "text-secondary" %>" style="color: #ff5551;"></i>
+  <% end %>
+</span>

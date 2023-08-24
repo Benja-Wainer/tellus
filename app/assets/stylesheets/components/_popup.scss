@@ -8,3 +8,10 @@
   // width: 180px;
   background: $dark !important;
 }
+
+.mapboxgl-popup {
+  max-width: 655px !important;
+}
+ .popup-articles {
+  width: 84%;
+ }

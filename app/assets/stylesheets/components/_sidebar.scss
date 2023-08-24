@@ -4,10 +4,22 @@
   height: 100vh;
   position: fixed;
   top: 69px;
+  width: 327px;
+  right: 0px;
+  overflow: scroll;
 }
 
 .sidebar-header {
   color: #FFFFFF;
   text-align: justify;
   font-size: 20;
+}
+
+.sidebar-collapsed {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 8px;
+  position: fixed;
+  top: 69px;
+  width: 59px;
+  right: 0px;
 }

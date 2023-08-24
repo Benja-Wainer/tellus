@@ -1,5 +1,5 @@
 <span class="badge">
   <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
-      <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
+      <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #00dc22;"></i>
   <% end %>
 </span>
