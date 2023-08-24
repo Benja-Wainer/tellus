@@ -223,9 +223,9 @@ countries.each do |country|
   #   action: "query",
   #   format: "json",  # Response format
   #   titles: country.strip, # Replace with the title you're searching for
-  #   prop: "extracts",  # Get content
-  #   exintro: true,  # Only the introduction part
-  #   explaintext: true,  # Plain text content
+  #   prop: "pageimages", # Get images
+  #   pithumbsize: 300,   # Thumbnail size (adjust as needed)
+  #   piperpage: true
   # }
 
   # Build the URL with parameters
@@ -236,7 +236,7 @@ countries.each do |country|
   # data = JSON.parse(response.body)
 
   # page_id = data["query"]["pages"].keys.first
-  # country_info = data["query"]["pages"][page_id]["extract"]
+  # country_info = data["query"]["pages"][page_id]["pageimage"]
   place = Country.create(name: country.gsub("\n", "").strip)
   p "created country #{place.name} with id #{place.id} about #{place.country_info}"
 end

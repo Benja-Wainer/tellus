@@ -19,6 +19,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :articles, only: %i[index show] do
+    member do
+      patch "toggle_favorite", to: "articles#toggle_favorite"
+    end
+  end
+
   resources :articles, only: :show do
   end
 

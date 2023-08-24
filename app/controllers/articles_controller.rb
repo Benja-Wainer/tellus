@@ -26,6 +26,15 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def toggle_favorite
+    @article = Article.find(params[:id])
+    if current_user.favorited?(@article)
+      current_user.unfavorite(@article)
+    else
+      current_user.favorite(@article)
+    end
+  end
+
   private
 
   def topic_gen
