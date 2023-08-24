@@ -2,22 +2,29 @@
   <h1 class="text-center" style="color: white;">Top Articles in <%= @country.name %></h1>
   <div class="articles">
     <div class="row">
+    <%# Iterate through each category %>
       <% @country.topics.uniq.each do |topic| %>
-        <h2 class="mx-5" style="color: white"><%= topic.name%></h2>
-          <% @country.articles.each do |article| %>
-            <% if article.topics.include?(topic) %>
-              <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
-                <div class="topic">
-                  <div class="card m-3 shadow-lg border-dark" style="max-width: 100%; border: none; position: static; height: 320px;">
-                    <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
-                        class: "img-thumbnail article-card-img" %>
-                    <div class="card-body border-0">
-                      <p class="card-text"><%= article.title %></p>
-                      <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+      <%# If the topic has no articles, don't show ISSUE: It includes articles not a part of the country %>
+        <% if @country.articles.any? { |article| article.topics.include?(topic) } %>
+        <%# show topic name %>
+          <h2 class="mx-5" style="color: white"><%= topic.name.capitalize%></h2>
+          <%# iterate through each article %>
+            <% @country.articles.each do |article| %>
+            <%# If the article has that topic, show it in a card %>
+              <% if article.topics.include?(topic) %>
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                  <div class="topic">
+                    <div class="card m-3 shadow-lg border-dark" style="max-width: 100%; border: none; position: static; height: 320px;">
+                      <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
+                          class: "img-thumbnail article-card-img" %>
+                      <div class="card-body border-0">
+                        <p class="card-text"><%= article.title %></p>
+                        <%= link_to "Read Article", article, class: "article-button btn btn-primary" %>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              <% end %>
             <% end %>
           <% end %>
         <% end %>
