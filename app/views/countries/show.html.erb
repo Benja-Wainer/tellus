@@ -23,7 +23,7 @@
                         <div class="modal-dialog modal-lg" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel" style="display:none;">Modal title</h5>
+                              <h5 class="modal-title d-none" id="exampleModalLabel">Modal title</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
@@ -32,7 +32,7 @@
                               <div class="article-background">
                                 <div class="container container-md article">
                                   <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
-          class: "img-thumbnail article-image" %>
+                                  class: "img-thumbnail article-image" %>
                                   <h2 class="title mt-2"><%= article.title %></h2>
                                   <p class="content"><%= article.content %></p>
                                   <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
