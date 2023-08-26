@@ -1,5 +1,12 @@
 import { Controller } from "@hotwired/stimulus"
 
+import { autofill } from '@mapbox/search-js-web';
+
+autofill({
+    accessToken: 'pk.eyJ1IjoidGdhZmZlciIsImEiOiJjbGlrNTVibWEwOHRkM2NwOWF6Y3VvMHFrIn0.UxOvJ3__02GQNNAEkRhF7w'
+})
+
+
 // Connects to data-controller="world-map"
 export default class extends Controller {
   static values = {countries: Array}
@@ -20,11 +27,19 @@ export default class extends Controller {
     }
       });
 
+    const search = new MapboxSearchBox();
+    search.accessToken = 'pk.eyJ1IjoidGdhZmZlciIsImEiOiJjbGlrNTVibWEwOHRkM2NwOWF6Y3VvMHFrIn0.UxOvJ3__02GQNNAEkRhF7w';
+    search.options = {types: "country"}
+    search.placeholder = "Search for a country"
+    map.addControl(search, 'top-left');
+
+
     map.on('load', function () {
       map.addSource('cbs', {  // country-boundaries-simplified
           'type': 'geojson',
           'data': 'https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_50m_admin_0_countries.geojson'
       });
+
 
       map.addLayer({
           "id": "cf",  // country-fills
