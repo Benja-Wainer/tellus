@@ -14,14 +14,16 @@ class CountriesController < ApplicationController
       {
         name: country.name,
         id: country.id,
-        popup_html: render_to_string(partial: "popup", locals: {country: country})
+        popup_html: render_to_string(partial: "popup", locals: {country: country}),
+        code: country.code,
+        news_array: []
       }
     end
   end
 
   def show
     @country = Country.find(params[:id])
-    country_search
+    country_search if @country.articles.count == 0
   end
 
   def toggle_favorite

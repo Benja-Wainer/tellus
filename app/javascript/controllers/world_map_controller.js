@@ -7,6 +7,7 @@ export default class extends Controller {
     console.log("World Map controller connected");
     const countriesList = this.countriesValue;
     mapboxgl.accessToken = 'pk.eyJ1IjoidGdhZmZlciIsImEiOiJjbGlrNTVibWEwOHRkM2NwOWF6Y3VvMHFrIn0.UxOvJ3__02GQNNAEkRhF7w';
+    console.log(this.apiKeyValue);
     const map = new mapboxgl.Map({
     container: 'map', // container ID
     // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
@@ -73,12 +74,12 @@ export default class extends Controller {
       map.on("click", function(e) {
           var features = map.queryRenderedFeatures(e.point, { layers: ["cf"] });
           if (features.length) {
-            console.log(features);
+            console.log(features[0].properties.name);
             const country = countriesList.find((country) => country.name === features[0].properties.name);
-            console.log(country.popup_html);
+            // console.log(country.popup_html);
             // window.location.href=`/countries/${country.id}`
             // const popup = new mapboxgl.Popup().setHTML(country.popup_html);
-            new mapboxgl.Popup({className: "bg-dark popup"})
+            const popup = new mapboxgl.Popup({className: "bg-dark popup"})
               .setLngLat(e.lngLat)
               .setHTML(country.popup_html)
               .addTo(map);
