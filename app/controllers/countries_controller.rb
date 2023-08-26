@@ -47,6 +47,11 @@ class CountriesController < ApplicationController
     news_array.each do |s|
       article = Article.create(title: s["title"], date: s["pubDate"], content: s["content"], url: s["link"], source: s["source_id"]["name"], description: s["description"], image_url: s["image_url"])
       Tag.create(country: @country, article: article, topic: Topic.find_by_name(s["category"].first))
+      content = article.content
+      splitted_content = []
+      content.split('.').each_slice(3) { |s| splitted_content << s.join(".") }
+      formatted_content = splitted_content.join(".\n\n")
+      article.update(content: formatted_content)
     end
   end
 end
