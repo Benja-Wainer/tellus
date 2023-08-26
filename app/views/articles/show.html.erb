@@ -4,6 +4,7 @@
     <%= image_tag @article.image_url? ? @article.image_url : "TellUsBanner",
         class: "img-thumbnail article-image" %>
     <h2 class="title mt-2"><%= @article.title %></h2>
+    <%= render partial: "shared/like_article" %>
     <p class="content"><%= @article.content %></p>
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         See related topics
