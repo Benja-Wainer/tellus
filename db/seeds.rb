@@ -45,16 +45,16 @@ countries = "Afghanistan,
   Cambodia,
   Cameroon,
   Canada,
-  Central African Rep.,
+  Central African Republic,
   Chad,
   Chile,
   China,
   Colombia,
   Comoros,
-  Dem. Rep. Congo,
+  Democratic Republic of the Congo,
   Congo,
   Costa Rica,
-  Côte d'Ivoire,
+  Ivory Coast,
   Croatia,
   Cuba,
   Cyprus,
@@ -63,7 +63,7 @@ countries = "Afghanistan,
   Djibouti,
   Dominica,
   Dominican Republic,
-  East Timor (Timor-Leste),
+  East Timor,
   Ecuador,
   Egypt,
   El Salvador,
@@ -134,7 +134,7 @@ countries = "Afghanistan,
   Montenegro,
   Morocco,
   Mozambique,
-  Myanmar (Burma),
+  Myanmar,
   Namibia,
   Nauru,
   Nepal,
@@ -369,31 +369,38 @@ newsdataio_country_codes = {
 
 
 countries.each do |country|
-# Wikipedia API endpoint
-# base_url = "https://en.wikipedia.org/w/api.php"
+  # Wikipedia API endpoint
+  base_url = "https://en.wikipedia.org/w/api.php"
 
-# params = {
-#   action: "query",
-#   format: "json",  # Response format
-#   titles: country.strip, # Replace with the title you're searching for
-#   prop: "pageimages", # Get images
-#   pithumbsize: 300,   # Thumbnail size (adjust as needed)
-#   piperpage: true
-# }
+  params = {
+    action: "query",
+    format: "json",  # Response format
+    titles: country.strip, # Replace with the title you're searching for
+    prop: "pageimages", # Get images
+    pithumbsize: 300,   # Thumbnail size (adjust as needed)
+    piperpage: true
+  }
 
-# Build the URL with parameters
-# url = URI("#{base_url}?#{URI.encode_www_form(params)}")
+  # Build the URL with parameters
+  url = URI("#{base_url}?#{URI.encode_www_form(params)}")
 
-# response = Net::HTTP.get_response(url)
+  response = Net::HTTP.get_response(url)
 
-# data = JSON.parse(response.body)
+  data = JSON.parse(response.body)
 
-# page_id = data["query"]["pages"].keys.first
-# country_info = data["query"]["pages"][page_id]["pageimage"]
-place = Country.create(name: country.gsub("\n", "").strip)
-place.code = newsdataio_country_codes[place.name]
-place.save!
-p "created country #{place.name} with id #{place.id} with code #{place.code}"
+  page_id = data["query"]["pages"].keys.first
+  if data["query"]["pages"][page_id].key?("thumbnail")
+    country_flag = data["query"]["pages"][page_id]["thumbnail"]["source"]
+  else
+    country_flag = nil
+  end
+
+  if country_flag.nil? == false
+    place = Country.create(name: country.gsub("\n", "").strip, flag_url: country_flag, code: newsdataio_country_codes[country.gsub("\n", "").strip])
+  else
+    place = Country.create(name: country.gsub("\n", "").strip, code: newsdataio_country_codes[country.gsub("\n", "").strip])
+  end
+  p "created country #{place.name} with id #{place.id} about #{place.country_info} with code #{place.code}"
 end
 
 puts "finished making countries"
