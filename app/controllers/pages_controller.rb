@@ -6,9 +6,9 @@ class PagesController < ApplicationController
 
   def profile
     unless current_user.favorited_by_type('Country').empty?
-      @countries_info = []
-      current_user.favorited_by_type('Country').each do |country|
-        @countries_info << get_country_info(country.name)
+      @countries_info = {}
+      current_user.favorited_by_type('Country').each_with_index do |country, index|
+        @countries_info[index] = get_country_info(country.name)
       end
     end
   end
