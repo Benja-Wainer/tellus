@@ -3,7 +3,7 @@
   <div class="articles">
     <div class="row">
       <% @country.topics.uniq.each do |topic| %>
-        <h2 class="mx-5" style="color: white"><%= topic.name%></h2>
+        <h2 class="mx-5" style="color: white"><%= topic.name.capitalize%></h2>
         <% @country.articles.each_with_index do |article, index| %>
           <% if article.topics.include?(topic) %>
             <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
