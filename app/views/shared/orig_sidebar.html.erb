@@ -20,7 +20,7 @@
             </h5>
             <div id="<%=carousel_id%>" class="carousel slide mb-4" data-bs-ride="carousel">
               <div class="carousel-inner">
-                <% @topic.articles.first(3).each do |article| %>
+                <% country.articles.first(3).each do |article| %>
                     <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
                       <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
                         <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
