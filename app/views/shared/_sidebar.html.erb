@@ -23,7 +23,7 @@
                 <% country.articles.first(3).each do |article| %>
                     <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
                       <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
-                        <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
+                        <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                             class: "img-thumbnail article-card-img" %>
                         <div class="card-body border-0">
                           <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
@@ -58,7 +58,7 @@
                   <% topic.articles.first(3).each do |article| %>
                       <div class="carousel-item <%= article == topic.articles.first ? "active" : ""%>">
                         <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
-                          <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
+                          <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                               class: "img-thumbnail article-card-img" %>
                           <div class="card-body border-0">
                             <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
