@@ -10,7 +10,7 @@
               <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
                 <div class="topic">
                   <div class="card m-3 shadow-lg border-dark" style="max-width: 100%; border: none; position: static; height: 320px;">
-                    <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
+                    <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                           class: "img-thumbnail article-card-img" %>
                     <div class="card-body border-0">
                       <p class="card-text"><%= article.title %></p>
@@ -30,7 +30,7 @@
                           <div class="modal-body" style="padding:5px;">
                             <div class="article-background">
                               <div class="container container-md article">
-                                <%= image_tag article.image_url? ? article.image_url : "TellUsBanner",
+                                <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
           class: "img-thumbnail article-image" %>
                                 <h2 class="title mt-2"><%= article.title %></h2>
                                 <p class="content"><%= article.content %></p>

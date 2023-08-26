@@ -1,7 +1,7 @@
 <div class="article-background">
   <div class="container container-md article col-6 p-5">
 
-    <%= image_tag @article.image_url? ? @article.image_url : "TellUsBanner",
+    <%= image_tag @article.image_url? ? @article.image_url : image_path("TellUsBanner.jpg"),
         class: "img-thumbnail article-image" %>
     <h2 class="title mt-2"><%= @article.title %></h2>
     <%= render partial: "shared/like_article" %>
