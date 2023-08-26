@@ -1,5 +1,10 @@
 <div class="container bg-dark text-white h-100">
-  <h2 class="text-center text-white">Top Articles from <%= country.name.start_with?("United") ? "the" : ""%> <%= country.name %> <%= render partial: "shared/heart_icon", locals: {country: country} %></h2>
+  <div class="d-flex flex-row">
+    <% if country.flag_url? %>
+      <%= image_tag(country.flag_url, height: 75) %>
+    <% end %>
+    <h2 class="text-center text-white ms-4 align-self-center">Top Articles from <%= country.name.start_with?("United") ? "the" : ""%> <%= country.name %> <%= render partial: "shared/heart_icon", locals: {country: country} %></h2>
+  </div>
   <div class="d-flex flex-row popup-articles">
     <% country.articles.first(3).each do |article| %>
         <div class="card col-4 m-3 shadow-lg border-dark position-relative" style="border: none; height: 213px;">
