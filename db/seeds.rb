@@ -396,9 +396,9 @@ countries.each do |country|
   end
 
   if country_flag.nil? == false
-    place = Country.create(name: country.gsub("\n", "").strip, flag_url: country_flag, code: newsdataio_country_codes[place.name])
+    place = Country.create(name: country.gsub("\n", "").strip, flag_url: country_flag, code: newsdataio_country_codes[country.gsub("\n", "").strip])
   else
-    place = Country.create(name: country.gsub("\n", "").strip)
+    place = Country.create(name: country.gsub("\n", "").strip, code: newsdataio_country_codes[country.gsub("\n", "").strip])
   end
   p "created country #{place.name} with id #{place.id} about #{place.country_info} with code #{place.code}"
 end
