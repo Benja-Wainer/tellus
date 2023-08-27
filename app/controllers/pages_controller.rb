@@ -5,12 +5,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-    unless current_user.favorited_by_type('Country').empty?
-      @countries_info = {}
-      current_user.favorited_by_type('Country').each_with_index do |country, index|
-        @countries_info[index] = get_country_info(country.name)
-      end
-    end
+    @country = Country.all.sample(1)
+    @countries_info = get_country_info(@country)
   end
 
   def refresh_pins
@@ -32,7 +28,7 @@ class PagesController < ApplicationController
     params = {
       action: "query",
       format: "json",  # Response format
-      titles: country,  # Replace with the title you're searching for
+      titles: country[0].name, # Replace with the title you're searching for
       prop: "extracts",  # Get content
       exintro: true,  # Only the introduction part
       explaintext: true,  # Plain text content

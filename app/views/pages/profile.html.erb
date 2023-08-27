@@ -7,23 +7,33 @@
       display: flex;
       flex-direction: column;">
         <div class="avatar-bordered my-4"></div>
-        <div><%= current_user.username %></div>
-        <div class="overflow-scroll" style="height: 200px;" data-viewcountry-target="countryinput"><%= @countries_info[2] %></div>
-        <div class="pillbutton">View articles for this Country</div>
+        <h4> Welcome! <%= current_user.username %></h4>
+        <h5>Today's Country Spotlight!</h5>
+        <div class="d-flex align-items-center ">
+          <h5 style="padding:20px;"><%= @country[0].name %></h5>
+          <%= image_tag "#{@country[0].flag_url}", style: "width: 60px;" %>
+        </div>
+        <div class="overflow-scroll" style="height: 200px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
+        <%= link_to "View articles for this Country", country_path(@country[0]), class: "pillbutton" %>
       </div>
       <%# Right side %>
       <div class="flex-grow-1">
         <div class="my-3">
           <h4><strong>Countries Followed</strong></h4>
         </div>
-        <% current_user.favorited_by_type('Country').each do |country| %>
-          <div class="col-4 my-4">
-            <div class="pillbutton" data-action="click->viewcountry#showinfo">
-              <%= country.name %>
+        <div class="country-articles">
+          <% current_user.favorited_by_type('Country').each do |country| %>
+            <div class="country-article" data-action="click->viewcountry#showinfo">
+              <div class="country-figure">
+                <%= image_tag "#{country.flag_url}", class: "country-article-image", style: "width:200px;" %>
+              </div>
+              <div class="country-article-body">
+                <%= country.name %>
+                <%= link_to "Read more articles", country_path(country), style: "text-decoration:none; color:black;" %>
+              </div>
             </div>
-            <%= link_to "#{country.name}", country_path(country), style: "text-decoration:none; color:black;" %>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
         <hr>
         <h4><strong>Topics Followed</strong></h4>
         <div class="d-flex" style="flex-direction:column;">
