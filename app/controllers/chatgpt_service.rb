@@ -22,7 +22,7 @@ class ChatgptService
       messages:  [
         {
           "role": "system",
-          "content": "You will be provided with a block of text, and your task is to extract a list of maximum 5 topics from it. The topics may be 5 words or less."
+          "content": "You will be provided with a block of text, and your task is to extract a list of maximum 5 topics from it. The topics must be general and 5 words or less."
         },
         {
           "role": "user",
