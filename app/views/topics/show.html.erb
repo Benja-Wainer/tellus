@@ -15,9 +15,18 @@
                     <% end %>
                     <div class="card-body border-0">
                       <p class="card-text"><%= article.title %></p>
-                       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
-                        Read Article
-                      </button>
+                      <% if !article.countries.first.nil? && article.countries.first.flag_url? %>
+                        <div class="d-flex justify-content-between">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
+                            Read Article
+                          </button>
+                          <%= image_tag(article.countries.first.flag_url, height: 40) %>
+                        </div>
+                      <% else %>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
+                          Read Article
+                        </button>
+                      <% end %>
                       <!-- Modal -->
                       <div class="modal fade" id="exampleModal<%= index %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
