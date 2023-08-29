@@ -5,7 +5,8 @@ class PagesController < ApplicationController
   end
 
   def profile
-
+    @country = Country.all.sample(1)
+    @countries_info = get_country_info(@country)
   end
 
   def refresh_pins
@@ -16,7 +17,7 @@ class PagesController < ApplicationController
     end
   end
 
-  def get_country_info
+  def get_country_info(country)
     require 'net/http'
     require 'json'
 
@@ -27,7 +28,7 @@ class PagesController < ApplicationController
     params = {
       action: "query",
       format: "json",  # Response format
-      titles: "OpenAI",  # Replace with the title you're searching for
+      titles: country[0].name, # Replace with the title you're searching for
       prop: "extracts",  # Get content
       exintro: true,  # Only the introduction part
       explaintext: true,  # Plain text content
@@ -45,6 +46,6 @@ class PagesController < ApplicationController
     # Extract and print the content
     page_id = data["query"]["pages"].keys.first
     content = data["query"]["pages"][page_id]["extract"]
-    puts content
+    content
   end
 end
