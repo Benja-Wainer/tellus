@@ -10,10 +10,7 @@ class ArticlesController < ApplicationController
     if @article.topics.count == 1
       @topics = topic_gen.map do |topic_name|
         topic = Topic.create!(name: topic_name)
-        tag = Tag.new
-        tag.topic = topic
-        tag.article = @article
-        tag.save!
+        tag = Tag.create(topic: topic, article: @article)
       end
     end
   end

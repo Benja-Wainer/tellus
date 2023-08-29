@@ -16,7 +16,6 @@ class CountriesController < ApplicationController
         id: country.id,
         popup_html: render_to_string(partial: "popup", locals: {country: country}),
         code: country.code,
-        news_array: []
       }
     end
   end
@@ -39,6 +38,8 @@ class CountriesController < ApplicationController
     ENV["NEWSDATAIO_API_KEY"]
   end
 
+  private
+
   def country_search
     api_data = { key: news_dataio_secret_key }
     news = RestClient.get("https://newsdata.io/api/1/news?apikey=#{api_data[:key]}&country=#{@country.code}")
@@ -48,5 +49,9 @@ class CountriesController < ApplicationController
       article = Article.create(title: s["title"], date: s["pubDate"], content: s["content"], url: s["link"], source: s["source_id"]["name"], description: s["description"], image_url: s["image_url"])
       Tag.create(country: @country, article: article, topic: Topic.find_by_name(s["category"].first))
     end
+  end
+
+  def topic_gen(article)
+    ChatgptService.call(article.title + " " + article.content)
   end
 end
