@@ -30,7 +30,6 @@ class TopicsController < ApplicationController
     else
       current_user.favorite(@topic)
     end
-    # render partial: "shared/sidebar"
   end
 
   def news_dataio_secret_key
