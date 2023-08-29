@@ -27,9 +27,9 @@
               <div class="country-figure">
                 <%= image_tag "#{country.flag_url}", class: "country-article-image", style: "width:200px;" %>
               </div>
-              <div class="country-article-body">
-                <%= country.name %>
-                <%= link_to "Read more articles", country_path(country), style: "text-decoration:none; color:black;" %>
+              <div class="country-article-body d-flex flex-column">
+                <h4><%= country.name %></h4>
+                <%= link_to "Read more articles", country_path(country) %>
               </div>
             </div>
           <% end %>
