@@ -9,11 +9,12 @@
         <div class="avatar-bordered my-4"></div>
         <h4> Welcome! <%= current_user.username %></h4>
         <h5>Today's Country Spotlight!</h5>
+        <hr style="color:white;">
         <div class="d-flex align-items-center ">
           <h5 style="padding:20px;"><%= @country[0].name %></h5>
           <%= image_tag "#{@country[0].flag_url}", style: "width: 60px;" %>
         </div>
-        <div class="overflow-scroll" style="height: 200px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
+        <div class="overflow-scroll" style="height: 325px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
         <%= link_to "View articles for this Country", country_path(@country[0]), class: "pillbutton" %>
       </div>
       <%# Right side %>
@@ -27,9 +28,34 @@
               <div class="country-figure">
                 <%= image_tag "#{country.flag_url}", class: "country-article-image", style: "width:200px;" %>
               </div>
-              <div class="country-article-body d-flex flex-column">
-                <h4><%= country.name %></h4>
-                <%= link_to "Read more articles", country_path(country) %>
+              <div class="country-article-body d-flex flex-column" style="padding:4px;">
+                <% carousel_id= country.name.gsub(/\s+/,"").downcase + "Carousel"%>
+                <h5>
+                  <%= link_to country.name, country, class: "text-light text-center", style: "text-decoration: none; color:black;" %>
+                  <%= render partial: "shared/heart_icon", locals: { country: country } %>
+                </h5>
+                <div id="<%=carousel_id%>" class="carousel slide " data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <% country.articles.first(3).each do |article| %>
+                      <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
+                        <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 70px;">
+                          <div class="card-body border-0">
+                            <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <%= link_to "Read more articles", country_path(country), class: "h6", style: "text-decoration:none; color: black;" %>
               </div>
             </div>
           <% end %>
@@ -39,13 +65,13 @@
         <div class="d-flex" style="flex-direction:column;">
           <% current_user.favorited_by_type('Topic').each do |topic| %>
             <%= link_to topic_path(topic) do %>
-              <div class="pillbutton"><%= topic.name %></div>
+              <div class="pillbutton">#<%= topic.name %></div>
             <% end %>
           <% end %>
         </div>
         <hr>
         <h4><strong>Articles Saved</strong></h4>
-        <div class="d-flex" style="flex-direction:column;">
+        <div class="d-flex" style="flex-direction:column;margin-bottom: 40px;">
           <% current_user.favorited_by_type('Article').each do |article| %>
             <%= link_to article_path(article) do %>
               <div class="pillbutton"><%= article.title %></div>
