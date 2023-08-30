@@ -6,7 +6,8 @@ class PagesController < ApplicationController
 
   def profile
     @country = Country.all.sample(1)
-    @countries_info = get_country_info(@country)
+    # @countries_info = get_country_info(@country)
+    @countries_info = "This is great"
   end
 
   def refresh_pins
