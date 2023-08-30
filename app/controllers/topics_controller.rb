@@ -1,11 +1,13 @@
 class TopicsController < ApplicationController
-  def index
-    if params[:query].present?
-      @topics = Topic.search_by_name(params[:query])
-    else
-      @topics = Topic.all
-    end
-  end
+  skip_before_action :authenticate_user!, only: %i[home index show search_topics]
+
+  # def index
+  #   if params[:query].present?
+  #     @topics = Topic.search_by_name(params[:query])
+  #   else
+  #     @topics = Topic.all
+  #   end
+  # end
 
   def show
     @topic = Topic.find(params[:id])
@@ -20,6 +22,7 @@ class TopicsController < ApplicationController
       keyword_search
     end
   end
+
   def toggle_favorite
     @topic = Topic.find(params[:id])
     if current_user.favorited?(@topic)
@@ -27,12 +30,13 @@ class TopicsController < ApplicationController
     else
       current_user.favorite(@topic)
     end
-    # render partial: "shared/sidebar"
   end
 
   def news_dataio_secret_key
     ENV["NEWSDATAIO_API_KEY"]
   end
+
+  private
 
   def keyword_search
     api_data = { key: news_dataio_secret_key }
@@ -41,7 +45,13 @@ class TopicsController < ApplicationController
     news_array = JSON.parse(news)["results"]
 
     news_array.each do |s|
-      article = Article.create(title: s["title"], date: s["pubDate"], content: s["content"], url: s["link"], source: s["source_id"]["name"], description: s["description"], image_url: s["image_url"])
+      article = Article.create( title: s["title"],
+                                date: s["pubDate"],
+                                content: s["content"],
+                                url: s["link"],
+                                source: s["source_id"]["name"],
+                                description: s["description"],
+                                image_url: s["image_url"])
       Tag.create(country: Country.find_by(alt: s['country'].first), article: article, topic: @topic)
     end
   end

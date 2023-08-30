@@ -27,11 +27,11 @@ export default class extends Controller {
     }
       });
 
-    const search = new MapboxSearchBox();
-    search.accessToken = 'pk.eyJ1IjoidGdhZmZlciIsImEiOiJjbGlrNTVibWEwOHRkM2NwOWF6Y3VvMHFrIn0.UxOvJ3__02GQNNAEkRhF7w';
-    search.options = {types: "country"}
-    search.placeholder = "Search for a country"
-    map.addControl(search, 'top-left');
+    // const search = new MapboxSearchBox();
+    // search.accessToken = 'pk.eyJ1IjoidGdhZmZlciIsImEiOiJjbGlrNTVibWEwOHRkM2NwOWF6Y3VvMHFrIn0.UxOvJ3__02GQNNAEkRhF7w';
+    // search.options = {types: "country"}
+    // search.placeholder = "Search for a country"
+    // map.addControl(search, 'top-left');
 
 
     map.on('load', function () {
