@@ -38,13 +38,12 @@
                           </div>
                           <div class="modal-body" style="padding:5px;">
                             <div class="article-background">
-                              <div class="container container-md article">
+                              <div class="container container-md article p-5">
                                 <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
           class: "img-thumbnail article-image" %>
                                 <h2 class="title mt-2"><%= article.title %></h2>
-                                <p class="content"><%= article.content %></p>
-                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                                  See related topics
+                                                                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                                  Related topics
                                 </button>
                                 <div class="collapse" id="collapseExample">
                                   <div class="card card-body circle">
@@ -60,13 +59,10 @@
                                     <% end %>
                                   </div>
                                 </div>
-                                <br>
+                                <p class="content mt-3"><%= article.content %></p>
                                 <%= link_to "Read the original article#{article.source.present? ? " at #{article.source}" : ""}", article.url, class: "btn btn-secondary rounded mt-2" %>
                               </div>
                             </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                           </div>
                         </div>
                       </div>
