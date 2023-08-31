@@ -30,7 +30,7 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                 <div class="country-figure">
                   <%= image_tag "#{country.flag_url}", class: "country-article-image", style: "width:200px;" %>
                 </div>
-                <div class="country-article-body d-flex flex-column" style="padding:4px; color: black;">
+                <div class="country-article-body d-flex flex-column" style="padding:4px; color: black; align-items: center;">
                   <% carousel_id= country.name.gsub(/\s+/,"").downcase + "Carousel"%>
                   <h5>
                     <%= link_to country.name, country, style: "text-decoration: none; color:black;" %>
@@ -40,9 +40,9 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                     <div class="carousel-inner">
                       <% country.articles.first(3).each do |article| %>
                         <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
-                          <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 70px;">
+                          <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 65px;">
                             <div class="card-body border-0">
-                              <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
+                              <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link", style: "margin-top: -18px;"%>
                             </div>
                           </div>
                         </div>
@@ -57,7 +57,7 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <%= link_to "Read more articles", country_path(country), class: "h6", style: "text-decoration:none; color: black;" %>
+                  <%= link_to "Read more articles", country_path(country), class: "h6", style: "text-decoration:none; color: black; padding: 2px 20px", class: "pillbutton" %>
                 </div>
               </div>
             <% end %>
