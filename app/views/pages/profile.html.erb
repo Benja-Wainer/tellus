@@ -15,10 +15,8 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
           <h5 style="padding:20px;"><%= @country[0].name %></h5>
           <%= image_tag "#{@country[0].flag_url}", style: "width: 60px;" %>
         </div>
-        <div style="margin-right: 10px;">
-          <div class="overflow-scroll" style="height: 325px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
-          <%= link_to "View articles for this Country", country_path(@country[0]), class: "pillbutton" %>
-        </div>
+        <div class="overflow-scroll" style="height: 325px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
+        <%= link_to "View articles for this Country", country_path(@country[0]), class: "pillbutton" %>
       </div>
       <%# Right side %>
       <div class="flex-grow-1">
@@ -32,7 +30,7 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                 <div class="country-figure">
                   <%= image_tag "#{country.flag_url}", class: "country-article-image", style: "width:200px;" %>
                 </div>
-                <div class="country-article-body d-flex flex-column" style="padding:4px; color: black; align-items: center;">
+                <div class="country-article-body d-flex flex-column" style="padding:4px; color: black;">
                   <% carousel_id= country.name.gsub(/\s+/,"").downcase + "Carousel"%>
                   <h5>
                     <%= link_to country.name, country, style: "text-decoration: none; color:black;" %>
@@ -42,9 +40,9 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                     <div class="carousel-inner">
                       <% country.articles.first(3).each do |article| %>
                         <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
-                          <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 65px;">
+                          <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 70px;">
                             <div class="card-body border-0">
-                              <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link", style: "margin-top: -18px;"%>
+                              <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
                             </div>
                           </div>
                         </div>
@@ -59,7 +57,7 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                       <span class="visually-hidden">Next</span>
                     </button>
                   </div>
-                  <%= link_to "Read more articles", country_path(country), class: "h6", style: "text-decoration:none; color: black; padding: 2px 20px", class: "pillbutton" %>
+                  <%= link_to "Read more articles", country_path(country), class: "h6", style: "text-decoration:none; color: black;" %>
                 </div>
               </div>
             <% end %>
