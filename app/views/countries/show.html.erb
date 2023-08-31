@@ -1,64 +1,29 @@
-<div class="container">
-  <div class="min-vh-100" data-controller="reveal" data-reveal-hidden-class="text-secondary"  style="background: #555252">
-    <h1 class="text-center pt-3" style="color: white;"> <%= image_tag "#{@country.flag_url}", style: "height: 1em;" %> <%= @country.name %> <%= image_tag "#{@country.flag_url}", style: "height: 1em;" %> </h1>
-    <h2 class="text-center"> <%= render partial: "shared/heart_icon", locals: { country: @country } %> </h2>
-    <div id="article-container" class="row row-cols-auto p-3" data-masonry='{"percentPosition": true }' >
+<div id="article-container" class="container pt-3 min-vh-100" style="background: #555252">
+  <h1 class="text-center" style="color: white;">Top Articles in <%= @country.name %></h1>
+  <div class="articles">
+    <div class="row">
       <% @country.topics.uniq.each do |topic| %>
-        <% if topic.name == "top" %>
-          <div class="topic-show-country d-flex flex-column col-10 m-3">
-            <div class="topic-name col-12">
-                <h1 class="text-white text-center mb-5"><%= topic.name.capitalize %></h1>
-            </div>
-                <div class="row row-cols-auto"  data-masonry='{"percentPosition": true }'>
-                  <% topic.articles.each_with_index do |article, index| %>
-                    <% if !article.countries.empty? && (article.countries.first.name == @country.name) %>
-                      <div class="col">
-                          <div class="card m-3 shadow-lg border-dark" style="border: none; width: 300px">
-                            <% if article.image_url? %>
-                              <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
-                            <% end %>
-                            <div class="card-body border-0">
-                              <p class="card-text"><%= article.title %></p>
-                              <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
-                                Read Article
-                              </button>
-                              <%= render partial: "articles/modal", locals: {article: article, index: index}%>
-                            </div>
-                          </div>
-                      </div>
-                    <% end %>
-                  <% end %>
+        <% if @country.articles.any? { |article| article.topics.include?(topic) } %>
+          <h2 class="mx-5" style="color: white"><%= topic.name.capitalize%></h2>
+          <% @country.articles.each_with_index do |article, index| %>
+            <% if article.topics.include?(topic) %>
+              <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <div class="topic">
+                  <div class="card m-3 shadow-lg border-dark" style="max-width: 100%; border: none; position: static; height: 320px;">
+                    <!-- Regex validation to prevent movie files from passing through -->
+                    <%= image_tag article.image_url? && (/\.(jpg|gif|image)/i.match?(article.image_url)) ? article.image_url : image_path("TellUsBanner.jpg"),
+                          class: "img-thumbnail article-card-img" %>
+                    <div class="card-body border-0">
+                      <p class="card-text"><%= article.title %></p>
+                      <%= render partial: "articles/modal", locals: { article: article, index: index } %>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-        <% elsif !topic.articles.empty? && topic.articles.any? { |article| article.countries.first.name == @country.name }  %>
-        <div class="topic-show-country d-flex flex-column col m-3">
-          <div class="topic-name col-12">
-              <h1 class="text-white text-center mb-5"><%= topic.name.capitalize %></h1>
-          </div>
-              <div class="row row-cols-auto">
-                <% topic.articles.each_with_index do |article, index| %>
-                  <% if !article.countries.empty? && (article.countries.first.name == @country.name) %>
-                    <div class="col">
-                        <div class="card m-3 shadow-lg border-dark" style="border: none; width: 300px">
-                          <% if article.image_url? %>
-                            <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
-                          <% end %>
-                          <div class="card-body border-0">
-                            <p class="card-text"><%= article.title %></p>
-                            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
-                              Read Article
-                            </button>
-                            <%= render partial: "articles/modal", locals: {article: article, index: index}%>
-                          </div>
-                        </div>
-
-                    </div>
-                  <% end %>
-                <% end %>
-            </div>
-          </div>
           <% end %>
         <% end %>
-    </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
