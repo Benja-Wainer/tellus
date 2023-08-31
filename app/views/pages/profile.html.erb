@@ -16,8 +16,8 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
           <%= image_tag "#{@country[0].flag_url}", style: "width: 60px;" %>
         </div>
         <div style="margin-right: 10px;">
-          <div class="overflow-scroll" style="height: 325px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
-          <%= link_to "View articles for this Country", country_path(@country[0]), class: "pillbutton" %>
+          <div class="overflow-scroll country-window" style="height: 325px;" data-viewcountry-target="countryinput"><%= @countries_info %></div>
+          <%= link_to "View articles for this Country", country_path(@country[0]), class: "pillbutton mt-3 w-100" %>
         </div>
       </div>
       <%# Right side %>
