@@ -16,7 +16,10 @@
         <div class="container container-md article p-5">
           <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
             class: "img-thumbnail article-image" %>
-          <h2 class="title mt-2"><%= article.title %></h2>
+          <div class="d-flex align-items-center">
+            <h2 class="title mt-2 flex-grow-1"><%= article.title %></h2>
+            <%= render partial: "shared/like_article", locals: { article: article } %>
+          </div>
           <button class="btn btn-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             Related topics
           </button>
