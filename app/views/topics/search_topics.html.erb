@@ -1,32 +1,25 @@
 <div class="container">
   <div class="min-vh-100" data-controller="reveal" data-reveal-hidden-class="text-secondary"  style="background: #555252">
     <h1 class="text-center pt-3" style="color: white;">Results for "<%= @topic.name %>"</h1>
-    <div id="article-container" class="row row-cols-auto p-3" data-masonry='{"percentPosition": true }'>
+    <div id="article-container" class="row w-100" data-masonry='{"percentPosition": true }'>
       <% @topic.countries.uniq.each do |country| %>
-        <div class="topic-show-country col m-3">
-          <h1 class="text-white text-center"><%= country.name %> <%= image_tag "#{country.flag_url}", style: "height: 1em;" %></h1>
-            <div class="row row-cols-auto">
-              <% @topic.articles.each_with_index do |article, index| %>
-                <% if article.countries.include?(country) %>
-                  <div class="col">
-                      <div class="card m-3 shadow-lg border-dark" style="border: none; width: 300px">
-                        <% if article.image_url? %>
-                          <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
-                        <% end %>
-                        <div class="card-body border-0">
-                          <p class="card-text"><%= article.title %></p>
-                          <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
-                            Read Article
-                          </button>
-                          <%= render partial: "articles/modal", locals: {article: article, index: index}%>
-                        </div>
-                      </div>
+        <div class="col-4">
+          <div class="topic-show-country m-3">
+            <h1 class="text-white text-center"><%= country.name %> <%= image_tag "#{country.flag_url}", style: "height: 1em;" %></h1>
+                <% country.articles.select{|article| article.topics.include?(@topic)}[0...1].each_with_index do |article, index| %>
+                <div class="card m-3 shadow-lg border-dark" style="border: none">
+                  <% if article.image_url? %>
+                    <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
+                  <% end %>
+                  <div class="card-body border-0">
+                    <p class="card-text"><%= article.title %></p>
+                    <%= render partial: "articles/modal", locals: {article: article, index: index}%>
                   </div>
-                <% end %>
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           </div>
-        <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
