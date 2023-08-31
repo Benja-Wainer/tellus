@@ -1,4 +1,5 @@
-<div class="min-vh-100" style="background-color: black; color:white;">
+<div class="min-vh-100" style="background: rgb(48,46,46);
+background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); color:white;">
   <div class="banner"></div>
   <div class="container">
     <div class="d-flex" data-controller="viewcountry">
@@ -35,23 +36,23 @@
                     <%= link_to country.name, country, style: "text-decoration: none; color:black;" %>
                     <%= render partial: "shared/heart_icon", locals: { country: country } %>
                   </h5>
-                  <div id="<%=carousel_id%>" class="carousel slide " data-bs-ride="carousel" style="position:static;">
-                    <div class="carousel-inner" style="position:static;">
+                  <div id="<%=carousel_id%>" class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
                       <% country.articles.first(3).each do |article| %>
                         <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
                           <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 70px;">
-                            <div class="card-body border-0" style="position:static;">
+                            <div class="card-body border-0">
                               <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
                             </div>
                           </div>
                         </div>
                       <% end %>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="prev" style="z-index:0;">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="next" style="z-index:0;">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>
