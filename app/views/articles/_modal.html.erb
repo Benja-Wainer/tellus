@@ -1,5 +1,5 @@
 <%# modal try %>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
+<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal<%= index %>">
   Read Article
 </button>
 <!-- Modal -->
@@ -22,7 +22,7 @@
           </button>
           <div class="collapse" id="collapseExample">
             <div class="card card-body circle">
-              <% article.topics.each do |topic| %>
+              <% article.topics.uniq.each do |topic| %>
                 <li class="list-inline-item">
                   <p><span class="badge">
                       <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
@@ -40,4 +40,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>
