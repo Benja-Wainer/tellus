@@ -2,9 +2,12 @@
 
 // For example:
 $red: #FD1015;
-$blue: #0D6EFD;
+$blue: #18498a;
 $yellow: #FFC65A;
 $orange: #E67E22;
-$green: #1EDD88;
+$green: #00a219 !default;
 $gray: #0E0000;
 $light-gray: #F4F4F4;
+
+$primary: $blue !default;
+$success: $green !default;
