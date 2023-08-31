@@ -53,6 +53,11 @@ class TopicsController < ApplicationController
                                 description: s["description"],
                                 image_url: s["image_url"])
       Tag.create(country: Country.find_by(alt: s['country'].first), article: article, topic: @topic)
+      content = article.content
+      splitted_content = []
+      content.split('.').each_slice(3) { |s| splitted_content << s.join(".") }
+      formatted_content = splitted_content.join(".\n\n")
+      article.update(content: formatted_content)
     end
   end
 end
