@@ -1,0 +1,1966 @@
+[33mcommit bd951794379a9ea4d29c7b0ea4a3fc6628db3973[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mcountry-show-page-masonry[m[33m)[m
+Merge: e149c0a 752bc9b
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 31 21:47:31 2023 +0900
+
+    Merge pull request #93 from Benja-Wainer/revert-89-country-show-page-masonry
+    
+    Revert "Apply masonry to the country show page and remove duplicate modal"
+
+[33mcommit e149c0ae9239c2dbc166e94c99119564a4496ac3[m
+Merge: 46fefad c20d3b2
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Thu Aug 31 21:47:24 2023 +0900
+
+    Merge pull request #91 from Benja-Wainer/modal-changes
+    
+    Changed button and topic links colors
+
+[33mcommit 46fefada47dcd1443d731a74c8bad2bd883c5b25[m
+Merge: 929f029 16045e1
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 31 21:47:06 2023 +0900
+
+    Merge pull request #92 from Benja-Wainer/profile-improvements4
+    
+    Profile improvements4
+
+[33mcommit 752bc9b3831c14be78bcf19dfdc5e538dca5f573[m[33m ([m[1;31morigin/revert-89-country-show-page-masonry[m[33m)[m
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 31 21:43:40 2023 +0900
+
+    Revert "Apply masonry to the country show page and remove duplicate modal"
+
+[33mcommit 929f029e8f690904f6b03611bf2dfe6bf59100a4[m
+Merge: 11ec4db c689d51
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 31 21:40:07 2023 +0900
+
+    Merge pull request #89 from Benja-Wainer/country-show-page-masonry
+    
+    Apply masonry to the country show page and remove duplicate modal
+
+[33mcommit c689d514e04671edf62fd6d7ffb3f1df159c19e5[m[33m ([m[1;31morigin/country-show-page-masonry[m[33m)[m
+Merge: 7965dc3 11ec4db
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 31 21:39:56 2023 +0900
+
+    Merge branch 'master' into country-show-page-masonry
+
+[33mcommit 16045e1ee5e871ef48fbdf3b73e12d2a2d89632e[m[33m ([m[1;31morigin/profile-improvements4[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 21:38:15 2023 +0900
+
+    made small style changes
+
+[33mcommit c20d3b280956719f40be51ed46442913f7b1474d[m[33m ([m[1;31morigin/modal-changes[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 31 21:36:32 2023 +0900
+
+    Changed button and topic links colors
+
+[33mcommit 6b93e1613110229da5c721d16aa859d9760eb8a1[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 21:30:19 2023 +0900
+
+    made profile adjustments
+
+[33mcommit 11ec4db1a2f415b552647238aba6c4588250b8e7[m
+Merge: c7fa294 343b32b
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Thu Aug 31 21:22:51 2023 +0900
+
+    Merge pull request #90 from Benja-Wainer/revert-88-profile-improvements2
+    
+    Revert "Profile improvements2"
+
+[33mcommit 343b32bdeed98d33a2c7eff67e0123c1439ce51f[m[33m ([m[1;31morigin/revert-88-profile-improvements2[m[33m)[m
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Thu Aug 31 21:22:40 2023 +0900
+
+    Revert "Profile improvements2"
+
+[33mcommit c7fa29419316770057d41a4e44bda22e24a518e3[m
+Merge: 927b666 8b30358
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Thu Aug 31 21:21:21 2023 +0900
+
+    Merge pull request #88 from Benja-Wainer/profile-improvements2
+    
+    Profile improvements2
+
+[33mcommit 8b30358d7309cb88b7ffa936d251acb7481b4259[m[33m ([m[1;31morigin/profile-improvements2[m[33m)[m
+Merge: fa39fed 927b666
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Thu Aug 31 21:21:13 2023 +0900
+
+    Merge branch 'master' into profile-improvements2
+
+[33mcommit 7965dc347a0dfec91635df72cfc88ad3d5887fd4[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Thu Aug 31 21:18:12 2023 +0900
+
+    Apply masonry to the country show page and remove duplicate modal
+
+[33mcommit fa39fed26d4a5ba7a0f7813ff10105709f4837bb[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 21:15:49 2023 +0900
+
+    added border to country of the day
+
+[33mcommit 927b6665f79044c201d4fde9a62372e040bbb450[m
+Merge: 1eae7df 7ce1c02
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Thu Aug 31 21:15:22 2023 +0900
+
+    Merge pull request #87 from Benja-Wainer/modal-changes
+    
+    Partial is used for article modals. Also added text breaking in artic…
+
+[33mcommit 7ce1c02a29ce7561d7b5a6f98912dca6c80257c9[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 31 21:02:48 2023 +0900
+
+    Partial is used for article modals. Also added text breaking in articles created from topics page.
+
+[33mcommit 8d5f941d6554623bbb0a0f64e6195df53df1fe2e[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 20:52:42 2023 +0900
+
+    centered country card name and changed padding on cards
+
+[33mcommit 67de0e822b09d886d742b11d87ca40b7615906cf[m
+Merge: ad91120 1eae7df
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 19:43:50 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit 1eae7df657b2599e38facf755b8327861d3af840[m[33m ([m[1;32mpopup-sidebar-tweaks[m[33m)[m
+Merge: 39822bb ab72a58
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 31 19:35:23 2023 +0900
+
+    Merge pull request #86 from Benja-Wainer/revert-83-modal-improvements
+    
+    Revert "Added padding to article modals. Removed footer with close button. Mo…"
+
+[33mcommit ab72a5859a3b375247c717a49ad99d06023c25e9[m[33m ([m[1;31morigin/revert-83-modal-improvements[m[33m)[m
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 31 19:35:05 2023 +0900
+
+    Revert "Added padding to article modals. Removed footer with close button. Mo…"
+
+[33mcommit 39822bb5da1d78c0e07e28a0b034b1a57c605e7b[m[33m ([m[1;32mmodal-partial[m[33m)[m
+Merge: e3f96bf 7cfbd7d
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 31 19:25:57 2023 +0900
+
+    Merge pull request #83 from Benja-Wainer/modal-improvements
+    
+    Added padding to article modals. Removed footer with close button. Mo…
+
+[33mcommit 7cfbd7dba2b0a36f1438bb3a5a42da6b0475acdc[m[33m ([m[1;31morigin/modal-improvements[m[33m)[m
+Merge: 0535751 e3f96bf
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 31 19:25:36 2023 +0900
+
+    Merge branch 'master' into modal-improvements
+
+[33mcommit ad911209b7e6cb2e0a3d27434e4353eefa290ccc[m
+Merge: f57dd79 e3f96bf
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 19:13:09 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit e3f96bf339555b5f0fb03614b4c89e8915bd672a[m
+Merge: c4d6cbf c6ff1c6
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 31 19:12:43 2023 +0900
+
+    Merge pull request #85 from Benja-Wainer/profile-improvements
+    
+    Profile improvements
+
+[33mcommit f57dd7989d09a2e88de50a729e7c53d1ce969b24[m
+Merge: 23f98a2 c4d6cbf
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 18:50:27 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit c4d6cbf6dc5c75a2dd86e8307e04d4e976b728da[m
+Merge: 1f469d4 49346da
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Thu Aug 31 18:48:59 2023 +0900
+
+    Merge pull request #84 from Benja-Wainer/close-button-modal-fix
+    
+    fix close button on modals
+
+[33mcommit c6ff1c65e20a3ba73808859d24e51eba58437b24[m[33m ([m[1;31morigin/profile-improvements[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 18:47:12 2023 +0900
+
+    added date to articles
+
+[33mcommit 49346da4981bc57fc1798ad01932cb40f1d7c25c[m[33m ([m[1;31morigin/close-button-modal-fix[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Thu Aug 31 18:12:01 2023 +0900
+
+    fix close button on modals
+
+[33mcommit 71c4a74339b0d85d0abe47e9325dfeccd53ef46a[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 17:51:39 2023 +0900
+
+    changed z-index to 0 for cards and navbar to 1
+
+[33mcommit 23f98a26c10ab0c3b499ee1668c2004481e2fe97[m
+Merge: 5f449a8 1f469d4
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 31 14:48:22 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit 0535751d4d1de39b65720154ba83d8239c74f707[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Wed Aug 30 21:20:43 2023 +0900
+
+    Added padding to article modals. Removed footer with close button. Moved collapsable related topics list to top of article's content.
+
+[33mcommit 1f469d428952af8049b7f59913c30484425c41d1[m
+Merge: a687eb5 f981fa9
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Wed Aug 30 20:53:07 2023 +0900
+
+    Merge pull request #82 from Benja-Wainer/topics-masonry
+    
+    Implement masonry in topics show and search page
+
+[33mcommit 5f449a8002dc9857b71e9850e0af80df463fd9aa[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Wed Aug 30 12:03:10 2023 +0900
+
+    made card position static
+
+[33mcommit f981fa906c03e7db84ea9022efb0751720c30c20[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 29 23:49:24 2023 +0900
+
+    Implement masonry in topics show and search page
+
+[33mcommit a3d70b9b43f7b63f81b1d1ca07f4134c12af6ffa[m[33m ([m[1;32mtopic-show-page[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 29 23:38:28 2023 +0900
+
+    Implement masonry to both topic show and search page
+
+[33mcommit 5a6fd70c3662365c241902fe2d0e9237dfd06d78[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 29 23:37:14 2023 +0900
+
+    Implement masonry to topic show page
+
+[33mcommit fe3b916b5bce5097ffa5d9907203dbe54ff2c084[m
+Merge: 752ad42 a687eb5
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 29 22:21:09 2023 +0900
+
+    Merged
+
+[33mcommit 752ad428045639a92131073d2e0d57990f25a49a[m[33m ([m[1;31morigin/topic-show-page[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 29 22:16:10 2023 +0900
+
+    idk
+
+[33mcommit a687eb5b8fa41d99ce9b54c38bc25d6178ee1440[m
+Merge: debd7c4 3a90b46
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 29 22:14:57 2023 +0900
+
+    Merge pull request #80 from Benja-Wainer/topics-controller-country-assignment-fix
+    
+    Adjust topics controller to new country instances and fix linking cou…
+
+[33mcommit 3a90b46409c89e389a26af09e26c195e5b28a612[m[33m ([m[1;31morigin/topics-controller-country-assignment-fix[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Tue Aug 29 22:14:25 2023 +0900
+
+    Adjust topics controller to new country instances and fix linking countries to tags
+
+[33mcommit af6e3219aefdc514ed899b8c504b461552f483de[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 29 22:07:14 2023 +0900
+
+    more stlye changes to div and added carousel
+
+[33mcommit debd7c4efcad605dc72138da5d2336ff11b41605[m
+Merge: d1fe4fe 4b0a543
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Tue Aug 29 21:07:25 2023 +0900
+
+    Merge pull request #79 from Benja-Wainer/new-seed2
+    
+    Create countries as a hash
+
+[33mcommit 4b0a543dcd0bd2dcf8cd7592999745204869248c[m[33m ([m[1;31morigin/new-seed2[m[33m, [m[1;32mnew-seed2[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 29 21:06:13 2023 +0900
+
+    Create countries as a hash
+
+[33mcommit d1fe4fe370f34a369536c83e9a0992855b24b07c[m
+Merge: 1e08db0 4501526
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 29 20:28:01 2023 +0900
+
+    Merge pull request #78 from Benja-Wainer/profileinteresting
+    
+    Profileinteresting
+
+[33mcommit 4501526a09e5a3e26c3dd6d194c4a54631f2363b[m[33m ([m[1;31morigin/profileinteresting[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 29 20:26:34 2023 +0900
+
+    switched to darkmode
+
+[33mcommit 1e08db051745d97f23a40afe327f85a98cca714a[m[33m ([m[1;32mcountry-show-page[m[33m)[m
+Merge: 6bc9190 72ff2cf
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 29 19:48:06 2023 +0900
+
+    Merge pull request #77 from Benja-Wainer/topic-show-page-flags
+    
+    Small flags are added to articles in topics show page for these artic…
+
+[33mcommit ad67274fbcd51424e78447b4e54a865824ab9b36[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 29 13:41:00 2023 +0900
+
+    added some styling to cards and to country of the day
+
+[33mcommit 72ff2cfde0cc2074f94847217acbe234a8c0f010[m[33m ([m[1;31morigin/topic-show-page-flags[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Mon Aug 28 23:24:33 2023 +0900
+
+    Small flags are added to articles in topics show page for these articles linked to a country.
+
+[33mcommit 89df37a221dd3291a627df8dc166dfd730429fd3[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Mon Aug 28 01:07:53 2023 +0900
+
+    added country of the day and cards to followed countries
+
+[33mcommit 6bc919062007f173430a3f7d12ae075f0231d3f0[m
+Merge: 47d94a0 64c3f3f
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sun Aug 27 19:40:12 2023 +0900
+
+    Merge pull request #76 from Benja-Wainer/searchtopics
+    
+    added topic search function
+
+[33mcommit 47d94a0e20c4e1bb7c3be1ca5104fc47164af2bf[m
+Merge: 200a987 c0ca6f5
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sun Aug 27 19:39:58 2023 +0900
+
+    Merge pull request #75 from Benja-Wainer/check-if-image-article-show
+    
+    Add regex check validation for image file for the country show page
+
+[33mcommit 200a98750d47ae07dd542ce7a4681f8eac4ad44e[m
+Merge: a0ecdbd 85ee7ae
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sun Aug 27 19:39:42 2023 +0900
+
+    Merge pull request #74 from Benja-Wainer/mapbox-search-box
+    
+    Add search function to world map
+
+[33mcommit 64c3f3fa89cef881c0735a49640d858220c063bd[m[33m ([m[1;31morigin/searchtopics[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 26 22:51:19 2023 +0900
+
+    added topic search function
+
+[33mcommit 85ee7ae194a947b4b92ce80ac7a0befb986d5932[m[33m ([m[1;31morigin/mapbox-search-box[m[33m, [m[1;32mmapbox-search-box[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 19:36:29 2023 +0900
+
+    Modify the chat gpt prompt if we ever get it to work again
+
+[33mcommit 5e9bc31da330d0493c0aad6a4b1deefe078d8cf5[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 19:34:02 2023 +0900
+
+    Add a useless(for now) render articles controller for possible chat gpt implementation
+
+[33mcommit c0ca6f5027300c6a1892aee123dc7a2b5da0de51[m[33m ([m[1;31morigin/check-if-image-article-show[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 26 18:55:10 2023 +0900
+
+    Add regex check validation for image file for the country show page
+
+[33mcommit db9e18b045ba7b14478d7a7e7558d1f0b01c1742[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 18:23:35 2023 +0900
+
+    Add search function to world map
+
+[33mcommit a0ecdbdcff6ca2da8c223e0bc0ac5bb98456c54e[m
+Merge: 7ac8fe2 1abacb6
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 26 17:34:24 2023 +0900
+
+    Merge pull request #73 from Benja-Wainer/article-paragraphs
+    
+    When creating articles it splits contents onto paragraphs each three …
+
+[33mcommit 1abacb6b262fbed0be622a258d76fca0667affdc[m[33m ([m[1;31morigin/article-paragraphs[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 26 17:30:23 2023 +0900
+
+    When creating articles it splits contents onto paragraphs each three sentences
+
+[33mcommit 7ac8fe24a9b424dbd57c0c7de9c93a71bc965cfd[m
+Merge: 0d4566b 537deaf
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 26 11:23:40 2023 +0900
+
+    Merge pull request #72 from Benja-Wainer/path-fix
+    
+    Fix more image paths
+
+[33mcommit 537deaf0cdd75640a572919f7c4f505df8304845[m[33m ([m[1;31morigin/path-fix[m[33m, [m[1;32mpath-fix[m[33m, [m[1;32mless_seeds[m[33m, [m[1;32mexperiementing[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 11:22:24 2023 +0900
+
+    Fix more image paths
+
+[33mcommit 0d4566b1543b23fd4695ba3bd382bbdedde76625[m
+Merge: 0d1956a cb24f1d
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 26 11:13:50 2023 +0900
+
+    Merge pull request #71 from Benja-Wainer/image-path
+    
+    Add image paths
+
+[33mcommit cb24f1df17c0601b1e08d385122d542728740b20[m[33m ([m[1;31morigin/image-path[m[33m, [m[1;32mimage-path[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 11:13:07 2023 +0900
+
+    Add image paths
+
+[33mcommit 0d1956a400e7e834b46fe4ba22d236f7ff305e89[m
+Merge: 2b6d185 26b7463
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 26 10:43:59 2023 +0900
+
+    Merge pull request #70 from Benja-Wainer/topic_show_page_modals
+    
+    Topic show page modals
+
+[33mcommit 26b74632b83b6a39685ec4faee9cf4470441e91e[m[33m ([m[1;31morigin/topic_show_page_modals[m[33m, [m[1;32mtopic_show_page_modals[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 10:43:35 2023 +0900
+
+    Pretty up search function
+
+[33mcommit 8bdbe23e8a31a4fa24ce791f637889f43360cc8b[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 10:40:36 2023 +0900
+
+    Add Modals for topic show page
+
+[33mcommit 2b6d185005b965c035d63b73b71a82087ff0b83e[m
+Merge: 929252d 959d3ec
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 26 10:23:29 2023 +0900
+
+    Merge pull request #69 from Benja-Wainer/modalfix
+    
+    removed button
+
+[33mcommit 959d3ecb735ca328eebc2d8c5bc9ee1c23e31779[m[33m ([m[1;31morigin/modalfix[m[33m)[m
+Merge: 4ce0036 929252d
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 26 10:23:19 2023 +0900
+
+    Merge branch 'master' into modalfix
+
+[33mcommit 929252da3f8ad18a1a07e86873ea8e771bf171ed[m
+Merge: ef49d6f 1d571d9
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 26 10:18:15 2023 +0900
+
+    Merge pull request #68 from Benja-Wainer/seed-fix
+    
+    Fixed seeds
+
+[33mcommit 1d571d95e5b36c555efafef5803b19b991eea6d7[m[33m ([m[1;31morigin/seed-fix[m[33m, [m[1;32mseed-fix[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 10:17:48 2023 +0900
+
+    Fixed seeds
+
+[33mcommit ef49d6fccbc94711d0224fd35ee9bc5e9da682a3[m
+Merge: 2f9887a b7cecd3
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 26 10:13:28 2023 +0900
+
+    Merge pull request #67 from Benja-Wainer/delete_country_codes
+    
+    Delete country codes
+
+[33mcommit 2f9887a5c62bb4264deff200d5f606ee0048c78a[m
+Merge: 24d8a3c c9e5660
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 26 10:12:57 2023 +0900
+
+    Merge pull request #66 from Benja-Wainer/country-flags
+    
+    Country flags
+
+[33mcommit c9e56600a3def9f093361ea9ec956296a9655f8a[m[33m ([m[1;31morigin/country-flags[m[33m)[m
+Merge: aa99ea9 24d8a3c
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 26 10:12:51 2023 +0900
+
+    Merge branch 'master' into country-flags
+
+[33mcommit 4ce0036f3f1cbde204794a11aef3deed507e8a7e[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 26 10:10:06 2023 +0900
+
+    removed button
+
+[33mcommit b7cecd351ac1ef11b298c557b78558986d3f62c7[m[33m ([m[1;31morigin/delete_country_codes[m[33m, [m[1;32mdelete_country_codes[m[33m)[m
+Merge: ba3d9ea 24d8a3c
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 10:02:39 2023 +0900
+
+    Debugging
+
+[33mcommit 24d8a3ca72a3cfbffec36b700d6ffe4b645d3818[m
+Merge: 6af400f 5b1bbfa
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 26 09:55:06 2023 +0900
+
+    Merge pull request #65 from Benja-Wainer/debugging2
+    
+    Fix small bugs and quality of life changes
+
+[33mcommit ba3d9eaa8ebb0fd07f0187442029a8d5311c26d4[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 09:54:12 2023 +0900
+
+    Hi
+
+[33mcommit 5b1bbfaf3ac8d153b0e138412dbc918f6110b391[m[33m ([m[1;31morigin/debugging2[m[33m, [m[1;32mdebugging2[m[33m)[m
+Merge: dbaaa6d 6af400f
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 26 09:40:55 2023 +0900
+
+    merged
+
+[33mcommit 508b8f6709ad76977341af6fe0b76b225369b954[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 26 09:05:02 2023 +0900
+
+    added scrollable div
+
+[33mcommit aa99ea9ff8c70a3ff033eea8d8142a8860300333[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Fri Aug 25 05:38:48 2023 +0900
+
+    Added flag to country pop ups where available. Not implemented on country search yet as there seems to be an issue with the background.
+
+[33mcommit dbaaa6dd233dedb8d360e0e7cb6fbcfe773a7767[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Fri Aug 25 00:18:27 2023 +0900
+
+    Fix small bugs and quality of life changes
+    
+    I changed the seed and schema so that each country has a "code" column
+    to reference when making the newsdata API call. I also fixed the width
+    issue on the sidebar card images and made categories only show if there
+    were articles under them.
+
+[33mcommit 40d485676cb51ca7f76dadba4f33b20ed052a218[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 24 23:28:10 2023 +0900
+
+    Adds flag url from wikipedia when available
+
+[33mcommit 654159dbbe11cb39f7b00fa918c63fbc1d8d196c[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 24 22:20:30 2023 +0900
+
+    added wikipedia call to profile page
+
+[33mcommit 6af400f4451ac815c368624294da404c33c55435[m
+Merge: 3354473 3662d47
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Thu Aug 24 21:47:28 2023 +0900
+
+    Merge pull request #64 from Benja-Wainer/modaltry2
+    
+    added modals to countries show page
+
+[33mcommit 3662d47ec71272afeb9906cc549c25162997a141[m[33m ([m[1;31morigin/modaltry2[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 24 21:46:12 2023 +0900
+
+    added modals to countries show page
+
+[33mcommit 3354473358b28ab01c6efc4e7c14f3b5287cd9c6[m
+Merge: 065ed0b b156b47
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Thu Aug 24 20:41:40 2023 +0900
+
+    Merge pull request #63 from Benja-Wainer/savearticles2
+    
+    added saving partial to articles show page
+
+[33mcommit b156b47d239a141cb38e1151c89f743116521802[m[33m ([m[1;31morigin/savearticles2[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 24 20:23:02 2023 +0900
+
+    added saving partial to articles show page
+
+[33mcommit 065ed0baaccd54b1d48f82fc03f94bb962f633b4[m
+Merge: 7ba20d0 6088c93
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 24 19:51:52 2023 +0900
+
+    Merge pull request #61 from Benja-Wainer/seed-purge
+    
+    Purge seed of extranneous files
+
+[33mcommit 6088c939b88ddebad80a99ad9c1eb8e6683c959c[m[33m ([m[1;31morigin/seed-purge[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 24 19:42:46 2023 +0900
+
+    Purge extranneous seeds
+
+[33mcommit a4729f559824270e534c8536b6b84e8e845c2fd3[m[33m ([m[1;31morigin/ugly-seed[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 24 19:27:56 2023 +0900
+
+    Ugly seed
+
+[33mcommit 7ba20d08a917e2d5c8125b4d9b4f430f28503089[m
+Merge: c1ad718 6eda68f
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 24 19:20:18 2023 +0900
+
+    Merge pull request #57 from Benja-Wainer/country-preview
+    
+    Beautify the map popup and sidebar
+
+[33mcommit c1ad718d67f5b4971743c473c5e4763640e80963[m
+Merge: 5596694 a5bb344
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:19:41 2023 +0900
+
+    Merge pull request #58 from Benja-Wainer/qualityoflife2
+    
+    deleted extra button on home page
+
+[33mcommit a5bb344389928b7ecb5516796857659dc9417e1f[m[33m ([m[1;31morigin/qualityoflife2[m[33m)[m
+Merge: d7869bd 5596694
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:19:30 2023 +0900
+
+    Merge branch 'master' into qualityoflife2
+
+[33mcommit 6eda68f8b1b5f8ec3ebd11d6cb7cfc6e9a4f1b64[m[33m ([m[1;31morigin/country-preview[m[33m)[m
+Merge: 64691d9 5596694
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:17:55 2023 +0900
+
+    Merge branch 'master' into country-preview
+
+[33mcommit 5596694781b0e6abc94834ef755c77cd1bf3300f[m
+Merge: 5727721 e333004
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:13:48 2023 +0900
+
+    Merge pull request #59 from Benja-Wainer/fadein
+    
+    added in fade in effect and stimulus controller
+
+[33mcommit e333004a5245bb028dd13144ecd0f9d22274e891[m[33m ([m[1;31morigin/fadein[m[33m)[m
+Merge: 365e041 5727721
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:13:41 2023 +0900
+
+    Merge branch 'master' into fadein
+
+[33mcommit 572772148a28277f852c525dca6248ba2f3a58be[m
+Merge: 178691e c18344c
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:12:32 2023 +0900
+
+    Merge pull request #60 from Benja-Wainer/article-show-improvements
+    
+    Article show improvements
+
+[33mcommit c18344c4d1e6668bb34b19937d93090fd7d74dd8[m[33m ([m[1;31morigin/article-show-improvements[m[33m)[m
+Merge: acfb59a 178691e
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:12:17 2023 +0900
+
+    Merge branch 'master' into article-show-improvements
+
+[33mcommit 64691d98adc16787cf866132ae082fdf0190f3b4[m
+Merge: 151d9e6 178691e
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 24 19:11:08 2023 +0900
+
+    Merge branch 'master' into country-preview
+
+[33mcommit acfb59a2e681a259d6f0fe6a6f41f87c1067840a[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 24 00:37:41 2023 +0900
+
+    Installed bootstrap. Moved article topics to bootstrap collapsable card and made button for original article. Deleted paragraph for article source, including source in the original article button. Article titles could maybe use a different source, suggestions welcome.
+
+[33mcommit 365e0419eb01f9468de557dda7d4ce956af387bf[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 24 00:31:35 2023 +0900
+
+    added in fade in effect and stimulus controller
+
+[33mcommit d7869bd3592c342b0f82c4e690eeadd22258aaf1[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Wed Aug 23 23:50:11 2023 +0900
+
+    deleted extra button on home page
+
+[33mcommit 151d9e6779bf50d3b2b7d8819d58c2938ee013ba[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Wed Aug 23 01:28:37 2023 +0900
+
+    Beautify the map popup and sidebar
+    
+    I created a javascript bootstrap carousel of rotating articles below
+    each pinned country and topic. I also created three articles to preview
+    after clicking on a country.
+
+[33mcommit f4531ef974cc9c4cda74c860ce9bdd3bb642901d[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Tue Aug 22 23:55:05 2023 +0900
+
+    Reverted change in application.js
+
+[33mcommit 0aa3bee3e9271bad3177b4e08c99ddc46ac0edcb[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Tue Aug 22 23:52:38 2023 +0900
+
+    Made article topics collapsable with JS controller
+
+[33mcommit 178691e9cc36712daa42a5eadbaacd7246a42869[m
+Merge: 781f4b7 0e91abd
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Tue Aug 22 22:04:28 2023 +0900
+
+    Merge pull request #56 from Benja-Wainer/54-add-link-to-topic-in-sidebar
+    
+    Add topic links to the sidebar.
+
+[33mcommit 781f4b712dd5628c74cb73ddee2142dbff6e908b[m
+Merge: 27c3263 378cda1
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Tue Aug 22 22:03:18 2023 +0900
+
+    Merge pull request #55 from Benja-Wainer/savearticles
+    
+    made articles favoritable and created join table for users and articl…
+
+[33mcommit 0e91abd1279b7da7aedb2915b4d94acce46ecbb4[m[33m ([m[1;31morigin/54-add-link-to-topic-in-sidebar[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Tue Aug 22 21:58:36 2023 +0900
+
+    Add topic links to the sidebar.
+
+[33mcommit 378cda1e041179b53aa4e22ae324fc0122beaea5[m[33m ([m[1;31morigin/savearticles[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 22 21:51:56 2023 +0900
+
+    made articles favoritable and created join table for users and articles for later use
+
+[33mcommit 27c326342a15e3d942f9176e87af90835b9805dc[m
+Merge: a00533b 1b8e350
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 22 21:07:37 2023 +0900
+
+    Merge pull request #53 from Benja-Wainer/52-make-country-api-call-in-the-country-show-page
+    
+    Add API Call for articles in Country Show.
+
+[33mcommit 1b8e350783d999572018a1b4dcf870b4e32ce3a0[m[33m ([m[1;31morigin/52-make-country-api-call-in-the-country-show-page[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Tue Aug 22 20:56:27 2023 +0900
+
+    Add API Call for articles in Country Show.
+    
+    This now creates articles in the country show page on the current countries supported by newsdataio. Please check the documentation for supported countries.
+
+[33mcommit a00533bcac1ae6af66cf5cfd4a71ced50e4810cd[m
+Merge: e13a7dc e5ecb02
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Tue Aug 22 20:03:33 2023 +0900
+
+    Merge pull request #51 from Benja-Wainer/navbar-bugfix
+    
+    Fix the navbar css
+
+[33mcommit e5ecb02661f26a1a03cec1383b7173f65aacfe29[m[33m ([m[1;31morigin/navbar-bugfix[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 22 20:02:41 2023 +0900
+
+    Fix the navbar css
+
+[33mcommit e13a7dc7f48e8a0ab54cbc8ed3ae7c9c39bd2334[m
+Merge: c1c639e 09addbd
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 22 19:58:33 2023 +0900
+
+    Merge pull request #50 from Benja-Wainer/profile
+    
+    Profile
+
+[33mcommit 09addbd68a827e2f47e0ed5d4c371022311d249b[m[33m ([m[1;31morigin/profile[m[33m)[m
+Merge: c3710bd c1c639e
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 22 19:58:25 2023 +0900
+
+    Merge branch 'master' into profile
+
+[33mcommit c3710bde3cefeed1fb4d624b9f4ca6ac86622bab[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 22 19:55:41 2023 +0900
+
+    added h4
+
+[33mcommit c1c639ed30244b8cbed1371f20c335de321e9c67[m
+Merge: d677baa 1112836
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Tue Aug 22 19:46:33 2023 +0900
+
+    Merge pull request #49 from Benja-Wainer/qualityoflife
+    
+    changed navbar link and added extra button on home page
+
+[33mcommit 1112836711e413058234e34647aa011523edc3d8[m[33m ([m[1;31morigin/qualityoflife[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 22 19:08:09 2023 +0900
+
+    changed navbar link and added extra button on home page
+
+[33mcommit d677baa96f649e661d25a1939457706c233b3257[m
+Merge: 086f722 a6d0ba6
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sun Aug 20 12:59:08 2023 +0900
+
+    Merge pull request #48 from Benja-Wainer/faster-refresh
+    
+    Fix and improve the toggle heart action
+
+[33mcommit a6d0ba6ae0b2df68d335fb684ee160041dbf2560[m[33m ([m[1;31morigin/faster-refresh[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 18:42:54 2023 +0900
+
+    Fix and improve the toggle heart action
+    
+    I set the refresh rate to 0.1 and moved the refresh_pins route to the
+    pages controller so that the world map can also access the refresh_pins
+    action.
+
+[33mcommit e8e9fa317d32b842cab0148c2e058151539fdc4a[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 18:24:39 2023 +0900
+
+    Made sleep in articles_controller#refresh_pins set to 0.1. It still seems to work
+
+[33mcommit 086f72225f11d226b6318112a1413bc580cd7a71[m
+Merge: fe005bb 61447f5
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Sat Aug 19 18:17:16 2023 +0900
+
+    Merge pull request #47 from Benja-Wainer/seeding
+    
+    Added categories to seeds and rearranged the show page
+
+[33mcommit 61447f5e130802a9dfd1c614365b989adb7fe879[m[33m ([m[1;31morigin/seeding[m[33m)[m
+Merge: d8f8d21 fe005bb
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 18:16:45 2023 +0900
+
+    Fixed conflicts
+
+[33mcommit fe005bbeddaa6d9ae9346edb2692992570f85308[m
+Merge: d6f6f05 939d4a7
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Sat Aug 19 18:09:03 2023 +0900
+
+    Merge pull request #46 from Benja-Wainer/sidebar-javascript
+    
+    Sidebar javascript
+
+[33mcommit d8f8d21afa3a730829a1f54080c0bb5292078cb4[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 18:08:45 2023 +0900
+
+    Added categories to seeds, rearranged the dhow page to be organized by category, fixed the sticky navbar, created a pin icon partial, fixed the background
+
+[33mcommit 939d4a75c7faf1b6a5376ea06d1f1c5bb9944545[m[33m ([m[1;31morigin/sidebar-javascript[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 19 18:05:29 2023 +0900
+
+    Sidebar autorefreshes and add cards when pinning articles' topics
+
+[33mcommit a38f45a068fe4e8d553d67163fd8122ab073ce9b[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 19 18:04:21 2023 +0900
+
+    Added banner and style to profile page
+
+[33mcommit d6f6f057936a95811ddf19a6f22764ee07dfbfb2[m
+Merge: d91ea5f 33fb0f1
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 19 17:40:05 2023 +0900
+
+    Merge pull request #45 from Benja-Wainer/topics-newsdataio-api
+    
+    create topic api controller keyword search. create topics show templa…
+
+[33mcommit 33fb0f1efa412961db0daec7e8e172b6a927a7f3[m[33m ([m[1;31morigin/topics-newsdataio-api[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 19 17:38:32 2023 +0900
+
+    create topic api controller keyword search. create topics show template, and add article uniqueness validation
+
+[33mcommit c322d00c77b8327b3fb86142a957685529d840f6[m
+Merge: 5d8fb55 d91ea5f
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 19 14:34:31 2023 +0900
+
+    Merging with navbar debugging
+
+[33mcommit d91ea5f7ff0e0091cedb442d01f347a5cca06a0c[m
+Merge: 7f51f18 5b4c15f
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 19 14:33:49 2023 +0900
+
+    Merge pull request #44 from Benja-Wainer/debugging
+    
+    Debugging front end icon toggle
+
+[33mcommit 5b4c15fd033ee6399bf2761cc709a0c272a33aa9[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 12:07:06 2023 +0900
+
+    Pin toggle working now on articles show page
+
+[33mcommit 618ed1d41f6bf167952f35bb9ce6e273b382ad5d[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 12:03:16 2023 +0900
+
+    debugging
+
+[33mcommit 7f51f189b362377676ab86a24931302987bdd73e[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 11:25:59 2023 +0900
+
+    navbar bugfix
+
+[33mcommit 5d8fb55d38cdc51cf00808cfb0675722ac3e5216[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 19 11:18:50 2023 +0900
+
+    Fixed seed and country show page default image
+
+[33mcommit fa6dd875cea73c58a1a6ca7859606fb2a3c20689[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 11:05:59 2023 +0900
+
+    Last second fixes
+
+[33mcommit 7eb8660c37a3e3918acd1a0580b1741b78fcd71e[m
+Merge: db7d2dd 2c245ba
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 19 10:18:44 2023 +0900
+
+    Merge pull request #42 from Benja-Wainer/home-link-fix-2
+    
+    ACTUALLY fixed this time
+
+[33mcommit db7d2dde94b5ba69315c8525544faec311de261c[m
+Merge: e898f33 97249c5
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 19 10:18:16 2023 +0900
+
+    Merge pull request #41 from Benja-Wainer/country-show-columns
+    
+    Country show columns
+
+[33mcommit 97249c5bc78fdedf6b1bc9eb23627b3ebb10f5dc[m[33m ([m[1;31morigin/country-show-columns[m[33m)[m
+Merge: 71130e6 e898f33
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 10:17:43 2023 +0900
+
+    Fixed merges
+
+[33mcommit 2c245ba7281cb9faf7e746a353e0e69af0631617[m[33m ([m[1;31morigin/home-link-fix-2[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 10:10:25 2023 +0900
+
+    ACTUALLY fixed this time
+
+[33mcommit e898f33114e4ad20ecdbe5b7d546e16808b27f56[m
+Merge: ff94cbf 4692186
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 19 09:57:45 2023 +0900
+
+    Merge pull request #40 from Benja-Wainer/add-image-url-to-seeded-articles
+    
+    Added images to seeded articles where available. Changed default imag…
+
+[33mcommit ff94cbf96b9475660b804c634dda0f147449b6e2[m
+Merge: 7e52a8f 0871f79
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 19 09:56:55 2023 +0900
+
+    Merge pull request #38 from Benja-Wainer/landingpage
+    
+    Landingpage
+
+[33mcommit 0871f79ff767c97eb2a2b84cbdd61c957470cb74[m[33m ([m[1;31morigin/landingpage[m[33m)[m
+Merge: 4251129 7e52a8f
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 19 09:56:43 2023 +0900
+
+    Merge branch 'master' into landingpage
+
+[33mcommit 7e52a8fc257d2a037646c1ad720560e4538a8423[m
+Merge: 1730d71 0dac6b7
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 19 09:55:01 2023 +0900
+
+    Merge pull request #39 from Benja-Wainer/home-link-fix
+    
+    Fixed home link
+
+[33mcommit 71130e6dc02242175aa5653b4eb66124863908d5[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 19 09:54:33 2023 +0900
+
+    modify show page to put them into cards sorted into row of ropics
+
+[33mcommit 469218678141eb7f44ec5f137db7e0f0f6ab31a8[m[33m ([m[1;31morigin/add-image-url-to-seeded-articles[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 19 09:54:24 2023 +0900
+
+    Added images to seeded articles where available. Changed default image in article show page to be coherent with country show page.
+
+[33mcommit 0dac6b7c1b81c672d5d8562d5b896becd29c121c[m[33m ([m[1;31morigin/home-link-fix[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 09:50:28 2023 +0900
+
+    Fixed home link
+
+[33mcommit 1730d717ac7c33f287ad5d74d6eb530a243ad81d[m
+Merge: 382d702 f53328b
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 19 09:39:09 2023 +0900
+
+    Merge pull request #37 from Benja-Wainer/sidebar
+    
+    Sidebar and World Map Popups
+
+[33mcommit 382d702cf2e0c13f0d9702b95b004ced228de1d5[m
+Merge: c8d39a5 da35e54
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 19 09:38:54 2023 +0900
+
+    Merge pull request #35 from Benja-Wainer/icon-toggle
+    
+    Icon toggle
+
+[33mcommit c8d39a572c870c54959d9535ac0aceb7f9d4d21b[m
+Merge: 119f7f1 67cd39e
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 19 09:14:37 2023 +0900
+
+    Merge pull request #36 from Benja-Wainer/fixing-new-seed
+    
+    Fixed Benjamin's Seed
+
+[33mcommit 4251129bf409ef1939961edbe971ed4525ffd84d[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 19 08:38:59 2023 +0900
+
+    Changed photo to fit caption and added text to down arrow
+
+[33mcommit f53328b0e3f73e4c22c8af301caa9ec515b3ec1a[m[33m ([m[1;31morigin/sidebar[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 04:05:24 2023 +0900
+
+    Beautified the sidebar and popups for the world map. Good night
+
+[33mcommit 5a97d05397f0fce70bf57441c3b5d8e3e8bfcb4f[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 03:30:51 2023 +0900
+
+    More copying
+
+[33mcommit cfdbc121451337ec770e61ce7c2d0729d1cdec56[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 03:28:57 2023 +0900
+
+    copying from icon toggle
+
+[33mcommit 4dccf25252f977e6acdea592a4e37b96f42c943e[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 19 03:24:55 2023 +0900
+
+    Created a collapsible sidebar and popups when clicking on countries
+
+[33mcommit 4716327c6c948327d8c7f509c5c4f4ba13a01ab4[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 19 00:31:04 2023 +0900
+
+    added paralax and many javascript elements to landing page
+
+[33mcommit af39105efd41384370bd1e2a934e5314e5e72b22[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Fri Aug 18 01:11:04 2023 +0900
+
+    added parallax effect and picture to landing page
+
+[33mcommit 67cd39e0a266f8b31a16db33cb1418f774134636[m[33m ([m[1;31morigin/fixing-new-seed[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 17 23:08:48 2023 +0900
+
+    Fixed seeds and added uniqueness validation to the tag model
+
+[33mcommit 2386f91c119997dd16a830d73e631ea0b77dd352[m
+Merge: 71260da 119f7f1
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 17 22:39:24 2023 +0900
+
+    Merging with master
+
+[33mcommit 71260dabfb3eba462f88289a490a1202567c4eb9[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 17 22:35:48 2023 +0900
+
+    Fixing seed
+
+[33mcommit 815c1b0ea66f09016ce7e2d25986748620857213[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 17 22:14:39 2023 +0900
+
+    Made seed with tailored articles, having issues with the articles showing multiple times
+
+[33mcommit da35e54c9a05dfb2f4b426d363c444489e42d075[m[33m ([m[1;31morigin/icon-toggle[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 17 22:14:08 2023 +0900
+
+    fixed icon toggle
+
+[33mcommit 119f7f171f3209a051e66fa723795a215ea1dade[m
+Merge: 116f407 bea4e5d
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Thu Aug 17 21:02:56 2023 +0900
+
+    Merge pull request #34 from Benja-Wainer/mapfix
+    
+    Fixed
+
+[33mcommit bea4e5dde703cf6d03ada87f2b34bc94381799f4[m[33m ([m[1;31morigin/mapfix[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 17 21:02:24 2023 +0900
+
+    Fixed
+
+[33mcommit 290b76838845db875a6a4f4e8552abbe91b52e35[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 17 21:01:32 2023 +0900
+
+    Working on it
+
+[33mcommit 116f4075c3871dce63ef403cb0d9d9e07d3f0d4c[m
+Merge: 6447021 2fd6a39
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 17 20:49:12 2023 +0900
+
+    Merge pull request #33 from Benja-Wainer/landingpage
+    
+    Landingpage
+
+[33mcommit 644702141cfc36d7f0e53826a6b692e701df4786[m
+Merge: eed2cc6 09f814d
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 17 20:45:40 2023 +0900
+
+    Merge pull request #32 from Benja-Wainer/countryindex
+    
+    Countryindex
+
+[33mcommit 09f814d1988e31002471d32cbe4f31b36778a564[m[33m ([m[1;31morigin/countryindex[m[33m)[m
+Merge: 4d92521 eed2cc6
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 17 20:45:32 2023 +0900
+
+    Merge branch 'master' into countryindex
+
+[33mcommit eed2cc6d370688fc8b635663bd018cde944f3f64[m
+Merge: 9510569 5fd4c47
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 17 19:24:42 2023 +0900
+
+    Merge pull request #31 from Benja-Wainer/topic-gen
+    
+    Topic gen and small navbar/sidebar fixes
+
+[33mcommit 2fd6a392a49b2882d870d8509c78d7cbbb78d826[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 17 19:23:10 2023 +0900
+
+    changed save to update method
+
+[33mcommit 5efdb2e433aec0cb9533a37b2be80bfebe30b049[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 17 15:05:04 2023 +0900
+
+    added automation with javascript to homepage
+
+[33mcommit 4d92521f25004387ebc06ee2454d41c85c26e7fe[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 17 01:25:07 2023 +0900
+
+    Added hover effect and pics to index page
+
+[33mcommit c0833385044d74174c5518e7b488ee078eeed84b[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Wed Aug 16 07:14:51 2023 +0900
+
+    added country info and fixed navbar
+
+[33mcommit 5fd4c47bf2ed58fc7c9135c526809af546be66ba[m[33m ([m[1;31morigin/topic-gen[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 15 22:55:31 2023 +0900
+
+    No more api key exposed
+
+[33mcommit 890a25e4ec4a4b60cc9204e72f47b250da67328c[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 15 22:49:17 2023 +0900
+
+    topic gen
+
+[33mcommit b977f06978a310816d9bd1384d117575ae3ef88d[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 15 22:43:02 2023 +0900
+
+    made topic gen
+
+[33mcommit 962defc7ff6287d0327c11228e5d40d6ca572624[m
+Merge: cba1594 9510569
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 15 22:41:40 2023 +0900
+
+    Merge branch 'master' into topic-gen
+
+[33mcommit cba15947c7ef8fbc374278bd3ee40bc0426679cc[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 15 22:27:14 2023 +0900
+
+    Made topic gen
+
+[33mcommit d94c29a8786b88b4e63d06bbfc8167820ea402e7[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Tue Aug 15 22:03:26 2023 +0900
+
+    started country show columns
+
+[33mcommit 9510569309048578ef2abe5b5699a5a81ab7100e[m
+Merge: 3b524dd ec88f6e
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Tue Aug 15 20:51:37 2023 +0900
+
+    Merge pull request #29 from Benja-Wainer/SSL-implementation
+    
+    Ssl implementation
+
+[33mcommit 3b524dd5db849036a7b4afd47a7becae78bf0664[m
+Merge: f909d34 73c68db
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Tue Aug 15 20:23:41 2023 +0900
+
+    Merge pull request #27 from Benja-Wainer/countryshow2
+    
+    Countryshow2
+
+[33mcommit 0ce34288700f5fa99c0eb64388f6eba94eb29ca3[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 15 19:42:55 2023 +0900
+
+    changed index page
+
+[33mcommit 73c68db85cf3ca57ea6a546371106d5f2d90cb4a[m[33m ([m[1;31morigin/countryshow2[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 15 17:43:32 2023 +0900
+
+    added image to country show page
+
+[33mcommit ec88f6e2b6a2f8e128d34f6eb20b2e8e1e2a3e2a[m[33m ([m[1;31morigin/SSL-implementation[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Tue Aug 15 09:15:27 2023 +0900
+
+    Removed API key from seed file
+
+[33mcommit e11f877e45998a2aa9ea7b7637cd206db633b86c[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Tue Aug 15 09:06:36 2023 +0900
+
+    Changed production.rb to force SSL
+
+[33mcommit e27c260d7941385050718cbfa9746912def3a233[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 16:06:14 2023 +0900
+
+    Fixed landing page image
+
+[33mcommit 49a744012381846b50f04fed2d860eb2d48b836e[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 15:54:58 2023 +0900
+
+    Added API key
+
+[33mcommit 27a1e452bbaf610bc4aade049dbd64ffb53ace86[m
+Merge: 37b599c f909d34
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 15:07:11 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit f909d34125be2f1fc0710939724ff61f878b80cf[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 12 15:05:22 2023 +0900
+
+    Fixed bugs
+
+[33mcommit e0a1a1e3686782739d10a30975eb558843642f24[m
+Merge: f146ff7 6d9bbdc
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 12 14:37:56 2023 +0900
+
+    Merge pull request #26 from Benja-Wainer/seed-touch-up
+    
+    Seed touch up
+
+[33mcommit 6d9bbdc7f184fc95e92552c11b3f13856993d31c[m[33m ([m[1;31morigin/seed-touch-up[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 14:34:34 2023 +0900
+
+    Made the seed delete previous DB entries instead of writing them on top. It doesn't work for countries so DB reset is needed.
+
+[33mcommit 37b599c6e8acd037f643e80f9f4a2f4d84451b9e[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 14:33:55 2023 +0900
+
+    added css
+
+[33mcommit 09d8a2d76ce930f43e5f73eabbb50343d450a4fd[m
+Merge: 957ff77 f146ff7
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 14:21:56 2023 +0900
+
+    fixing error
+
+[33mcommit 957ff77b5ae241f96503b51f703a6670a0fc0b9a[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 14:20:23 2023 +0900
+
+    added css component
+
+[33mcommit 0f0e70cf9d49be4798789fcb7b46669513b05b5c[m
+Merge: 8fcacff f146ff7
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 14:20:02 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit f146ff7d536211f7a91b44f7b0b50d916d8f1c46[m
+Merge: eb48327 897347e
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 12 14:16:17 2023 +0900
+
+    Merge pull request #25 from Benja-Wainer/navbar_3
+    
+    Navbar 3
+
+[33mcommit 8fcacff457371e1166735bbf1ea3ad530e087f8d[m
+Merge: 61588cb eb48327
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 14:12:07 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit eb4832796c12bed128e8c0fd64e52400721be1d7[m
+Merge: b21d758 a0a06bc
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 12 14:11:22 2023 +0900
+
+    Merge pull request #24 from Benja-Wainer/sidebar
+    
+    Sidebar
+
+[33mcommit 897347e0413c50d846b0af9ea98352b74c305679[m[33m ([m[1;31morigin/navbar_3[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 14:10:50 2023 +0900
+
+    made the navbar sticky deleted avatar and changed footer
+
+[33mcommit a0a06bc8d1dcbc802809587e24b12e9dd22a3f55[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 14:10:15 2023 +0900
+
+    Added sidebar for pinned items and included in layout. Cards for pinned topics don't have a link since there is no topics show page yet.
+
+[33mcommit b21d758c5f2fa9d63a2e38f518f9251dae66a2be[m
+Merge: 519bdce 2c8cbe5
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Sat Aug 12 14:06:14 2023 +0900
+
+    Merge pull request #23 from Benja-Wainer/favoritor-debug
+    
+    Pin icon now
+
+[33mcommit 2c8cbe530407e0521070679633e0c63437dcbda5[m[33m ([m[1;31morigin/favoritor-debug[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 12 14:02:36 2023 +0900
+
+    Pin now
+
+[33mcommit 3ea154fa0c6ca6efe24f7d67d2bfffc5aef89a69[m
+Merge: 3b8d1cc 519bdce
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 12:56:44 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit 519bdce5db7398f648b86244d613546811b43dd7[m
+Merge: 45600ba c91570a
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 12 12:56:28 2023 +0900
+
+    Merge pull request #22 from Benja-Wainer/api-intelliseeds
+    
+    Api intelliseeds
+
+[33mcommit c91570aa99619fda682ba9b71e5e70cdc8bf7543[m[33m ([m[1;31morigin/api-intelliseeds[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 12 12:55:32 2023 +0900
+
+    finished intelligent seeds
+
+[33mcommit 673ffe68f9689dbfeb245e18767b17a73886392c[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 12 12:37:16 2023 +0900
+
+    Country assign to article needs to be fixed still
+
+[33mcommit 84a6b56a2b1e9579dba198b898b23a5e94e11658[m
+Merge: 87a63cf 45600ba
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 11:49:05 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus into sidebar
+
+[33mcommit 3b8d1cc30e2e52fcdbd2025f6f16ef064a409dcf[m
+Merge: ea98b70 45600ba
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 12 11:12:19 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit 61588cb27fa9a03c3c23bd0efe97644d3b998b94[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 12 11:06:51 2023 +0900
+
+    Favoritor working now
+
+[33mcommit 45600bad44ddcc191d11d400ece9cce65b2b7eed[m
+Merge: 4b8b5d3 3188d47
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 12 11:02:00 2023 +0900
+
+    Merge pull request #21 from Benja-Wainer/favoritor
+    
+    Favoritor works
+
+[33mcommit 87a63cf3c69209fa2499868e3363465c8acbdeab[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Fri Aug 11 22:48:19 2023 +0900
+
+    Current progress with the sidebar
+
+[33mcommit e1379578f4554e00c84a58866f6e517f12a37ea1[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Fri Aug 11 22:09:05 2023 +0900
+
+    Played around with Intelliseeds, not much luck so far. Added more details to articles in a migration
+
+[33mcommit 3188d477b0ee7b132903c30bf38c220ec667c1bb[m[33m ([m[1;31morigin/favoritor[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 10 23:40:44 2023 +0900
+
+    Made toggle hearts work and basic profile page
+
+[33mcommit fcdd9ac156040d304a3315509a81b40723947379[m
+Merge: a6257e6 4b8b5d3
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 10 22:57:31 2023 +0900
+
+    Fixed conflicts
+
+[33mcommit a6257e677be84697fc14defbc43f6ba52db43647[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 10 22:55:34 2023 +0900
+
+    Incorporated favoritor and heart toggles
+
+[33mcommit 90613fd339e75695ad10b68edeca0d361cbea639[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 10 21:53:32 2023 +0900
+
+    Working
+
+[33mcommit ea98b70bada3853bc3b414670fd134a2bb6de290[m
+Merge: 311f403 4b8b5d3
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 10 21:37:18 2023 +0900
+
+    Merge branch 'master' of github.com:Benja-Wainer/tellus
+
+[33mcommit 311f4038890ff2600557bc63439b88ce01ab613b[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 10 21:37:06 2023 +0900
+
+    trying to pull
+
+[33mcommit 4b8b5d34159267795ababf9cee6838b06d5b1b5a[m
+Merge: 697d765 539bb60
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 10 21:32:47 2023 +0900
+
+    Merge pull request #20 from Benja-Wainer/world_map_fix
+    
+    Fixed world map
+
+[33mcommit 539bb60ff25bf62588a1b8801460afdbf11fac77[m[33m ([m[1;31morigin/world_map_fix[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 10 21:32:07 2023 +0900
+
+    Fixed world map
+
+[33mcommit 6f3c0e78f6cabac8b36e9d889cb229c5788acee7[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Thu Aug 10 21:22:40 2023 +0900
+
+    Working on favoritor
+
+[33mcommit 697d7653254cf095bd05d95e61907ff8bd7e8998[m
+Merge: f46ca1b fff7af3
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 10 21:21:49 2023 +0900
+
+    Merge pull request #19 from Benja-Wainer/article-show-page-2
+    
+    Article show page 2
+
+[33mcommit f46ca1b4cb01cd432d2e2086f7a2f151fd6fe4c8[m
+Merge: d450d1f 6ab6499
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 10 21:21:33 2023 +0900
+
+    Merge pull request #18 from Benja-Wainer/navbar
+    
+    Navbar
+
+[33mcommit 6ab6499c6b92127a70f55eaf82812a08106ce22d[m[33m ([m[1;31morigin/navbar[m[33m)[m
+Merge: 2678e00 d450d1f
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 10 21:21:21 2023 +0900
+
+    Merge branch 'master' into navbar
+
+[33mcommit fff7af32e53680e47c0826fc807bf9d1a3a5e48c[m[33m ([m[1;31morigin/article-show-page-2[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 10 21:17:18 2023 +0900
+
+    Made the article show page
+
+[33mcommit 2678e00e2c9b20a773ec15f2a87cde8f90f9d9b1[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 10 21:11:32 2023 +0900
+
+    Fixed spacing and made search apply to countries only
+
+[33mcommit 52a331d51822e46bb0bc6c29931cabc07c891c35[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Thu Aug 10 20:21:22 2023 +0900
+
+    added search function for countries
+
+[33mcommit 2809bc9f9f040e26d8a709891cb68076d61ab218[m
+Merge: 36f5c43 d450d1f
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Thu Aug 10 19:45:14 2023 +0900
+
+    Temporary commit to move branches
+
+[33mcommit d450d1f96d514f80e1ad4f5be0faff4a31ba1c56[m
+Merge: 81687a1 3f3e923
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 10 19:32:02 2023 +0900
+
+    Merge pull request #17 from Benja-Wainer/country-show-page
+    
+    Country show page
+
+[33mcommit 3f3e9232806eae672d3e1135aa26d56cce2f0398[m[33m ([m[1;31morigin/country-show-page[m[33m)[m
+Merge: c7efd77 81687a1
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 10 19:31:52 2023 +0900
+
+    Merge branch 'master' into country-show-page
+
+[33mcommit 81687a117818a46958205a3b57ffd0d97b2d9e2d[m
+Merge: ee9d00d b82bc0f
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Thu Aug 10 19:21:31 2023 +0900
+
+    Merge pull request #16 from Benja-Wainer/world-map
+    
+    World map
+
+[33mcommit b82bc0f03a95ba960d2bb89da25c553d6da464dc[m[33m ([m[1;31morigin/world-map[m[33m)[m
+Merge: d9330f4 ee9d00d
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Thu Aug 10 19:20:41 2023 +0900
+
+    Merge branch 'master' into world-map
+
+[33mcommit c7efd774ac824d0df28754a7b55bbe149445d3c0[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Wed Aug 9 12:01:51 2023 +0900
+
+    Updated Country Show Page to adjusted container width and adjusted notication to include likes and read more button
+
+[33mcommit d9330f40cc2d89507e8ff46c48eb477145524f47[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 8 22:46:18 2023 +0900
+
+    Fixed bug of Centeral African Rep.
+
+[33mcommit a9862b319ed7775afb8627ef2788621d69165d48[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Tue Aug 8 22:40:41 2023 +0900
+
+    I GOT IT WORKING
+
+[33mcommit ff79cf4eba9b035d09202872e92a74a4327df179[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 8 22:12:48 2023 +0900
+
+    changed fonts of header
+
+[33mcommit 503b0a0a17e95b5a1aca570fe458079cac163bad[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Tue Aug 8 22:02:09 2023 +0900
+
+    country show page
+
+[33mcommit 668b5271e5a5f0c17111a94ae0762d2ce535bf93[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Tue Aug 8 22:01:33 2023 +0900
+
+    changed color or header and footer
+
+[33mcommit 36f5c4355e6f353d440db6a64f03a6564f24987b[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Mon Aug 7 13:09:35 2023 +0900
+
+    Added show page for articles (no banner yet). Added article scss file. Also added migration for article sources
+
+[33mcommit 137938812317287a41f0c66df7797b44048092c2[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 18:01:35 2023 +0900
+
+    Hover world map
+
+[33mcommit ee9d00d977f851c52047f900c735a476b2eaaf36[m
+Merge: 824587b 867f9f7
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Sat Aug 5 17:58:00 2023 +0900
+
+    Merge pull request #14 from Benja-Wainer/article-show-page
+    
+    Made basic show page for articles
+
+[33mcommit 824587b237e45957d08ecf65e42860684d70e10d[m
+Merge: e6bcbc7 2295139
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 17:57:30 2023 +0900
+
+    Merge pull request #15 from Benja-Wainer/landing-page
+    
+    started landing page
+
+[33mcommit 2295139d0ae6081fa814c331985143a5f42f792c[m[33m ([m[1;31morigin/landing-page[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 5 17:50:06 2023 +0900
+
+    started landing page
+
+[33mcommit 867f9f7515ae514f1636bae698bb6e730c1ae9c8[m[33m ([m[1;31morigin/article-show-page[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 17:48:51 2023 +0900
+
+    Made basic show page for articles
+
+[33mcommit e6bcbc725c6c11f1ea767b7dd180fe8222542a1a[m
+Merge: 3794bcf 73df8a8
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 5 17:21:45 2023 +0900
+
+    Merge pull request #13 from Benja-Wainer/country-show-page
+    
+    Linked countries and topics with tags. Fixed the 'topics having topic…
+
+[33mcommit 73df8a8f26e83f29665cae467c0be38f6b43da2d[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 17:19:41 2023 +0900
+
+    Linked countries and topics with tags. Fixed the 'topics having topics issue'. Added basic country show page that show topics.
+
+[33mcommit 3794bcfe78c3237ec497f68d09697665987850fa[m
+Merge: 0f47d1d 8c80358
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 16:59:46 2023 +0900
+
+    Merge pull request #12 from Benja-Wainer/sticky-footer
+    
+    Sticky footer
+
+[33mcommit 8c80358f74fd653f75892fcd3facf919ea811197[m[33m ([m[1;31morigin/sticky-footer[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 16:59:06 2023 +0900
+
+    Sticky footer
+
+[33mcommit 0f47d1d09b041ab8061b7a155055db841f730952[m
+Merge: d87a16f 1066802
+Author: Christian St. Prix <46357071+christprix@users.noreply.github.com>
+Date:   Sat Aug 5 16:15:12 2023 +0900
+
+    Merge pull request #11 from Benja-Wainer/conditional-tag-params
+    
+    Made tag references conditional
+
+[33mcommit 1066802a4df0c78e3b1499655970cfe2c4879d47[m[33m ([m[1;31morigin/conditional-tag-params[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 16:12:25 2023 +0900
+
+    Added optional tag params
+
+[33mcommit 516ec90a40b8236c0b07ce9f289dc319a7223f06[m[33m ([m[1;31morigin/optional-tag-params[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 15:59:02 2023 +0900
+
+    Made tag references optional
+
+[33mcommit d87a16f775723705e0da39e080095f011f57d7a6[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 15:53:38 2023 +0900
+
+    Added username to seeded user
+
+[33mcommit bce8fdeb1e90a13a7d71961cc03f016e288644f8[m
+Merge: 2cb1324 ef8b847
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 15:49:55 2023 +0900
+
+    Merge pull request #10 from Benja-Wainer/seeds
+    
+    Made users countries topics and tags
+
+[33mcommit ef8b847418c03fef0689c6e17e942384b415d463[m[33m ([m[1;31morigin/seeds[m[33m)[m
+Author: Christian Stprix <christprix@gmail.com>
+Date:   Sat Aug 5 15:48:06 2023 +0900
+
+    Made users countries topics and tags
+
+[33mcommit 2cb132403f598b5fff994d5872e220373aabc441[m
+Merge: 5d462fd 21eaed4
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 15:31:29 2023 +0900
+
+    Merge pull request #9 from Benja-Wainer/messing-with-views
+    
+    Add username to users
+
+[33mcommit 21eaed4d9a452714a21fb0aeb74269dc030c244e[m[33m ([m[1;31morigin/messing-with-views[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 15:30:58 2023 +0900
+
+    Add username to users
+
+[33mcommit 5d462fd939f01712b1d9016934d4257456a288b0[m
+Merge: f239683 a80b607
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 5 15:02:36 2023 +0900
+
+    Merge pull request #8 from Benja-Wainer/articles-controller-views
+    
+    articles controller and view finished. Adjusted country view
+
+[33mcommit a80b60721cfe53d163f55537f6c25f6925a64f27[m[33m ([m[1;31morigin/articles-controller-views[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 5 15:00:20 2023 +0900
+
+    articles controller and view finished. Adjusted country view
+
+[33mcommit f2396831795515abadc41e2bbf0cc01c3ea8d7f0[m
+Merge: 57bfdb7 33421c5
+Author: Christopher Bowman <117893544+ProgressChris88@users.noreply.github.com>
+Date:   Sat Aug 5 14:50:46 2023 +0900
+
+    Merge pull request #7 from Benja-Wainer/users-migration-validation
+    
+    Added username to user
+
+[33mcommit 33421c574f276ab4d88ad244a9bf07549c880e52[m[33m ([m[1;31morigin/users-migration-validation[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 14:49:55 2023 +0900
+
+    Added username to user
+
+[33mcommit 57bfdb7af23e63778f82d88402c24201451b6ef9[m
+Merge: 4cda27c 26d6b32
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 14:48:23 2023 +0900
+
+    Merge pull request #6 from Benja-Wainer/countries-controller
+    
+    Added Controller and Views for Countries
+
+[33mcommit 26d6b32b65a564b16a599bb30ce1f91fa60574d0[m[33m ([m[1;31morigin/countries-controller[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 5 14:43:04 2023 +0900
+
+    Added Controller and View
+
+[33mcommit 4cda27c29d6671f0fe6b3f3ff13c51f28d79352e[m
+Merge: f6007e0 6917992
+Author: Trevor Gaffney <104704481+tgaffer52@users.noreply.github.com>
+Date:   Sat Aug 5 14:41:31 2023 +0900
+
+    Merge pull request #5 from Benja-Wainer/topics-and-subscription-controllers
+    
+    Topics and subscription controllers
+
+[33mcommit f6007e0fbb01512fb3a83c434694c7fc45478c33[m
+Merge: 344801c 725a482
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 14:40:10 2023 +0900
+
+    Merge pull request #4 from Benja-Wainer/change-users-to-pages
+    
+    Change users to pages
+
+[33mcommit 344801cdf3c16e118cab290f896fd021fe1832b1[m
+Merge: 020e2bd a8da1ca
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 14:39:59 2023 +0900
+
+    Merge pull request #3 from Benja-Wainer/delete-routes
+    
+    Deleted routes
+
+[33mcommit 725a482576496ed140c7e823e523f839729bb6de[m[33m ([m[1;31morigin/change-users-to-pages[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 14:39:19 2023 +0900
+
+    changed users controller routes to pages
+
+[33mcommit 69179920dfb78b6b6e2e79f1832d2463f15efd9c[m[33m ([m[1;31morigin/topics-and-subscription-controllers[m[33m)[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 14:35:39 2023 +0900
+
+    Added basic topics index view
+
+[33mcommit a8da1ca3639ef904ffd8266b3637553ef941f986[m[33m ([m[1;31morigin/delete-routes[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 14:34:57 2023 +0900
+
+    Deleted routes
+
+[33mcommit 70ad5f3122d5f7d6ff9a6777bf34aca3564ef2f0[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 14:17:12 2023 +0900
+
+    Added topics controller and index method
+
+[33mcommit 020e2bd1645327b8c2855fa854fc5b9191f1c9f6[m
+Merge: 7409915 e6878bc
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 12:53:17 2023 +0900
+
+    Merge pull request #2 from Benja-Wainer/add-models
+    
+    Finished models and initial validations
+
+[33mcommit e6878bcab5e71a41f053a28fae93fbce6764d5f2[m[33m ([m[1;31morigin/add-models[m[33m)[m
+Author: Christopher Bowman <chrisbowmanfl@gmail.com>
+Date:   Sat Aug 5 12:51:32 2023 +0900
+
+    Finished models and initial validations
+
+[33mcommit 7409915bf18a62bd17b9f2f4684e0b583553cb2e[m
+Merge: 75413f7 3db3f94
+Author: Benja-Wainer <123282375+Benja-Wainer@users.noreply.github.com>
+Date:   Sat Aug 5 12:49:45 2023 +0900
+
+    Merge pull request #1 from Benja-Wainer/adding-routes
+    
+    Added routes
+
+[33mcommit 3db3f94f74a68aeead767cbb80d3d2bb0fe0a305[m[33m ([m[1;31morigin/adding-routes[m[33m)[m
+Author: Trevor Gaffney <tgaffer@gmail.com>
+Date:   Sat Aug 5 12:48:11 2023 +0900
+
+    Added routes
+
+[33mcommit 75413f7ce15ffb8f4e0baba92849f89b615efefa[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 12:19:47 2023 +0900
+
+    Added favoriter gem
+
+[33mcommit f7f71e270132896a218e3dbc5cfd351ef9f77001[m
+Author: Benjamin Wainer <benjawainer@gmail.com>
+Date:   Sat Aug 5 12:09:46 2023 +0900
+
+    New repo commit
