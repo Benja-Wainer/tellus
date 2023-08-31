@@ -6,11 +6,7 @@ class PagesController < ApplicationController
 
   def profile
     @country = Country.all.sample(1)
-    content = get_country_info(@country)
-    splitted_content = []
-    content.split('.').each_slice(3) { |s| splitted_content << s.join(".") }
-    formatted_content = splitted_content.join(".\n\n")
-    @countries_info = formatted_content
+    @countries_info = get_country_info(@country)
   end
 
   def refresh_pins
