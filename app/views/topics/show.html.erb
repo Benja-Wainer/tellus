@@ -9,7 +9,7 @@
               <% @topic.articles.each_with_index do |article, index| %>
                 <% if article.countries.include?(country) %>
                   <div class="col">
-                      <div class="card m-3 shadow-lg border-dark" style="border: none; width: 300px">
+                      <div class="card my-3 shadow-lg border-dark" style="border: none; width: 300px">
                         <% if article.image_url? %>
                           <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
                         <% end %>
