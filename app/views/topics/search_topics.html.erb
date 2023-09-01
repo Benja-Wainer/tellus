@@ -3,25 +3,24 @@
     <h1 class="text-center pt-3" style="color: white;">Results for "<%= @topic.name %>"</h1>
     <div id="article-container" class="row w-100" data-masonry='{"percentPosition": true }'>
       <% @topic.countries.uniq.each do |country| %>
-        <div class="col-4">
-          <div class="topic-show-country m-3">
-            <h1 class="text-white text-center"><%= country.name %> <%= image_tag "#{country.flag_url}", style: "height: 1em;" %></h1>
-                <% country.articles.select{|article| article.topics.include?(@topic)}[0...1].each_with_index do |article, index| %>
-                <div class="card m-3 shadow-lg border-dark" style="border: none">
-                  <% if article.image_url? %>
-                    <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
-                  <% end %>
-                  <div class="card-body border-0">
-                    <p class="card-text"><%= article.title %></p>
-                    <%= render partial: "articles/modal", locals: {article: article}%>
-                  </div>
+        <% country.articles.select{|article| article.topics.include?(@topic)}[0...1].each_with_index do |article, index| %>
+          <div class="col-4">
+            <div class="topic-show-country m-3">
+              <h1 class="text-white text-center"><%= country.name %> <%= image_tag "#{country.flag_url}", style: "height: 1em;" %></h1>
+              <div class="card m-3 shadow-lg border-dark" style="border: none">
+                <% if article.image_url? %>
+                  <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
+                <% end %>
+                <div class="card-body border-0">
+                  <p class="card-text"><%= article.title %></p>
+                  <%= render partial: "articles/modal", locals: {article: article}%>
+                </div>
               </div>
-            <% end %>
+            </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
 </div>
-
 <%# this is just a comment %>
