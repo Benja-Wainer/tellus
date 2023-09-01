@@ -17,7 +17,7 @@
                       <% end %>
                       <div class="card-body border-0">
                         <p class="card-text"><%= article.title %></p>
-                        <%= render partial: "articles/modal", locals: {article: article, index: index}%>
+                        <%= render partial: "articles/modal", locals: {article: article}%>
                       </div>
                     </div>
                   </div>
@@ -44,7 +44,7 @@
                         <% end %>
                         <div class="card-body border-0">
                           <p class="card-text"><%= article.title %></p>
-                          <%= render partial: "articles/modal", locals: {article: article, index: index}%>
+                          <%= render partial: "articles/modal", locals: {article: article}%>
                         </div>
                       </div>
                     </div>
