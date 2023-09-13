@@ -5,6 +5,8 @@ ruby "3.1.2"
 
 gem 'jquery-rails'
 
+gem "pundit"
+
 gem 'pg_search'
 
 gem "json"
