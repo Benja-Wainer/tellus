@@ -33,4 +33,9 @@ Rails.application.routes.draw do
   get "/profile", to: "pages#profile", as: :profile
   get "refresh_pins", to: "pages#refresh_pins"
 
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :topics, only: [ :index, :show ]
+    end
+  end
 end
