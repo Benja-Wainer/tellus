@@ -1,24 +1,43 @@
 <div class="article-background">
+  <button type="button" class="btn btn-secondary mx-2 text-center text-white" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Login
+  </button>
+  <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container container-md article col-6 p-5">
-
     <%= image_tag @article.image_url? ? @article.image_url : image_path("TellUsBanner.jpg"),
         class: "img-thumbnail article-image" %>
     <h2 class="title mt-2"><%= @article.title %></h2>
     <%= render partial: "shared/like_article" %>
     <p class="content"><%= @article.content %></p>
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-        See related topics
+      See related topics
     </button>
     <div class="collapse" id="collapseExample">
       <div class="card card-body circle">
         <% @article.topics.each do |topic| %>
           <li class="list-inline-item">
             <p><span class="badge">
-              <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
+                <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
                   <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
-              <% end %>
-            </span>
-            <span data-toggle-heart-target="newTopic"><%= topic.name %></span></p>
+                <% end %>
+              </span>
+              <span data-toggle-heart-target="newTopic"><%= topic.name %></span></p>
           </li>
         <% end %>
       </div>

@@ -6,24 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
-
   </head>
-
   <body>
-    <%= render "shared/navbar" %>
+    <%= render partial: "shared/navbar" %>
+    <%= render partial: "shared/login_modals" %>
     <%= render "shared/flashes" %>
     <div class="page-content" data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary">
       <%= yield %>
       <%= render "shared/sidebar" %>
     </div>
-
     <div class="footer">
       <p>Copyright 2050 Tellus LLC</p>
     </div>
