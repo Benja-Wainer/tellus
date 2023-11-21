@@ -17,7 +17,9 @@
                       <% end %>
                       <div class="card-body border-0">
                         <p class="card-text"><%= article.title %></p>
-                        <%= render partial: "articles/modal", locals: {article: article}%>
+                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+                          Read Article
+                        </button>
                       </div>
                     </div>
                   </div>
