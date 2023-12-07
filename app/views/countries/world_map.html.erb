@@ -1,3 +1,10 @@
 <div data-controller="world-map" data-world-map-countries-value="<%= @countries.to_json %>">
   <div id='map' class="vh-100 w-100 position-relative"></div>
 </div>
+<% Country.all.each do |country| %>
+  <% if country.articles.any? %>
+    <%  country.articles.first(3).each do |article| %>
+      <%= render partial: "articles/modal", locals: {article: article} %>
+    <% end %>
+  <% end %>
+<% end %>

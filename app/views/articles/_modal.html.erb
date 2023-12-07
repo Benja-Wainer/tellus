@@ -1,48 +1,41 @@
 <%# modal try %>
-<% article_id = article.title.gsub(/['¨]/,"").split(" ")[4] %>
-<button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#exampleModal<%= article_id %>">
-  Read Article
-</button>
-<!-- Modal -->
-<div class="modal fade" id="exampleModal<%= article_id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header" style="display:none;">
-        <h5 class="modal-title" id="exampleModalLabel" style="display:none;">Modal title</h5>
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body" style="padding:5px;">
-      <div class="article-background">
-        <div class="container container-md article p-5">
-          <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
+<% if article %>
+  <!-- Modal -->
+  <div class="modal fade" id="articleModal<%= article.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body" style="padding:5px;">
+          <div class="article-background">
+            <div class="container container-md article p-5">
+              <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
             class: "img-thumbnail article-image" %>
-          <div class="d-flex align-items-center">
-            <h2 class="title mt-2 flex-grow-1"><%= article.title %></h2>
-            <%= render partial: "shared/like_article", locals: { article: article } %>
-          </div>
-          <button class="btn btn-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            Related topics
-          </button>
-          <div class="collapse" id="collapseExample">
-            <div class="card card-body circle">
-              <% article.topics.uniq.each do |topic| %>
-                <li class="list-inline-item">
-                  <p><span class="badge">
-                      <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
-                        <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
-                      <% end %>
-                    </span>
-                    <span data-toggle-heart-target="newTopic"><%= link_to topic.name, topic, style: "color: black; text-decoration: none;" %></span></p>
-                </li>
-              <% end %>
+              <div class="d-flex align-items-center">
+                <h2 class="title mt-2 flex-grow-1"><%= article.title %></h2>
+                <%= render partial: "shared/like_article", locals: { article: article } %>
+              </div>
+              <button class="btn btn-success text-white" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Related topics
+              </button>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body circle">
+                  <% article.topics.uniq.each do |topic| %>
+                    <li class="list-inline-item">
+                      <p><span class="badge">
+                          <%= link_to toggle_favorite_topic_path(topic), data: {"turbo-method": :patch} do %>
+                            <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(topic) ? "" : "text-secondary" %>" style="color: #26630c;"></i>
+                          <% end %>
+                        </span>
+                        <span data-toggle-heart-target="newTopic"><%= link_to topic.name, topic, style: "color: black; text-decoration: none;" %></span></p>
+                    </li>
+                  <% end %>
+                </div>
+              </div>
+              <p class="content mt-3"><%= article.content %>.</p>
+              <%= link_to "Read the original article#{article.source.present? ? " at #{article.source}" : ""}", article.url, class: "btn btn-secondary rounded mt-2" %>
             </div>
           </div>
-          <p class="content mt-3"><%= article.content %>.</p>
-          <%= link_to "Read the original article#{article.source.present? ? " at #{article.source}" : ""}", article.url, class: "btn btn-secondary rounded mt-2" %>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
+<% end %>

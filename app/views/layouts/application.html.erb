@@ -19,6 +19,28 @@
     <div class="page-content" data-controller="toggle-heart" data-toggle-heart-toggle-class="text-secondary">
       <%= yield %>
       <%= render "shared/sidebar" %>
+      <%# sidebar modals %>
+      <% if user_signed_in? %>
+        <% if current_user.favorited_by_type('Country').any? %>
+          <% current_user.favorited_by_type('Country').each do |country| %>
+            <% country.articles.first(3).each do |article| %>
+              <%= render partial: "articles/modal", locals: {article: article} %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% if current_user.favorited_by_type('Topic').any? %>
+          <% current_user.favorited_by_type('Topic').each do |topic| %>
+            <% topic.articles.first(3).each do |article| %>
+              <%= render partial: "articles/modal", locals: {article: article} %>
+            <% end %>
+          <% end %>
+        <% end %>
+        <% if current_user.favorited_by_type('Article').any? %>
+          <% current_user.favorited_by_type('Article').each do |article| %>
+            <%= render partial: "articles/modal", locals: {article: article} %>
+          <% end %>
+        <% end %>
+      <% end %>
     </div>
     <div class="footer">
       <p>Copyright 2050 Tellus LLC</p>

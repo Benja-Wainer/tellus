@@ -7,14 +7,17 @@
   </div>
   <div class="d-flex flex-row popup-articles">
     <% country.articles.first(3).each do |article| %>
-        <div class="card col-4 m-3 shadow-lg border-dark position-relative" style="border: none; height: 213px;">
-          <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
+      <div class="card col-4 m-3 shadow-lg border-dark position-relative" style="border: none; height: 213px;">
+        <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
               class: "img-thumbnail", style: "height: 123px; object-fit: cover;" %>
-          <div class="card-body px-2 pb-0 border-0">
-            <p><%= link_to article.title, article, class: "link-dark link-underline-opacity-0 fs-6 card-text stretched-link" %></p>
-          </div>
+        <div class="card-body px-2 pb-0 border-0">
+          <p class="fs-6 card-text"><%= article.title %></p>
+          <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+            Read Article
+          </button>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
   <div class="d-flex justify-content-center w-100">
     <%= link_to "See more", country, class: "btn btn-primary" %>

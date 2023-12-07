@@ -1,17 +1,17 @@
 <aside class="sidebar" data-sidebar-target="sidebar" data-controller="sidebar" data-expanded="<%= user_signed_in? ? "1" : "0" %>">
-    <div class="top-2 cursor-pointer" data-action="click->sidebar#toggle">
-      <button data-sidebar-target="icon" class="fa-solid fa-angles-right text-light btn btn-outline-dark"></button>
-    </div>
-    <div class="container pb-5" data-toggle-heart-target="topics" data-sidebar-target="content">
-      <% if user_signed_in? && current_user.all_favorited.empty? %>
-        <h4 class="sidebar-header mt-3 text-wrap">Nothing has been pinned yet...</h4>
-
-      <% elsif user_signed_in? == false %>
-              <h4 class="sidebar-header mt-3 text-wrap">Sign in to see your favorite <br>countries and topics!</h4>
-      <% else %>
-
+  <div class="top-2 cursor-pointer" data-action="click->sidebar#toggle">
+    <button data-sidebar-target="icon" class="fa-solid fa-angles-right text-light btn btn-outline-dark"></button>
+  </div>
+  <div class="container pb-5" data-toggle-heart-target="topics" data-sidebar-target="content">
+    <% if user_signed_in? && current_user.all_favorited.empty? %>
+      <h4 class="sidebar-header mt-3 text-wrap">Nothing has been pinned yet...</h4>
+    <% elsif user_signed_in? == false %>
+      <h4 class="sidebar-header mt-3 text-wrap">Sign in to see your favorite <br>
+        countries and topics!</h4>
+    <% else %>
       <% if user_signed_in? && current_user.favorited_by_type('Country').any? %>
-        <div class="border-bottom pb-5"><h3 class="sidebar-header mt-3">Pinned Countries</h3>
+        <div class="border-bottom pb-5">
+          <h3 class="sidebar-header mt-3">Pinned Countries</h3>
           <% current_user.favorited_by_type('Country').each do |country| %>
             <% carousel_id= country.name.gsub(/\s+/,"").downcase + "Carousel"%>
             <h5>
@@ -21,63 +21,66 @@
             <div id="<%=carousel_id%>" class="carousel slide mb-4" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <% country.articles.first(3).each do |article| %>
-                    <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
-                      <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
-                        <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
+                  <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
+                    <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
+                      <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                             class: "img-thumbnail article-card-img" %>
-                        <div class="card-body border-0">
-                          <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
-                        </div>
+                      <div class="card-body border-0">
+                        <button class="btn btn-light card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+                          <%= article.title %>
+                        </button>
                       </div>
                     </div>
+                  </div>
                 <% end %>
               </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+              <button class="carousel-control-prev" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#<%=carousel_id%>" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
           <% end %>
         </div>
       <% end %>
-
-        <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
-          <h3 class="sidebar-header mt-3">Pinned Topics</h3>
-            <% current_user.favorited_by_type('Topic').each do |topic| %>
-              <% carousel_id= topic.name.gsub(/\s+/,"").downcase + "Carousel"%>
-              <h5>
-                <%= link_to topic.name, topic, class: "text-light text-center", style: "text-decoration: none;" %>
-                <%= render partial: "shared/pin_icon", locals: { topic: topic } %>
-              </h5>
-              <div id="<%= carousel_id %>" class="carousel slide mb-4" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <% topic.articles.first(3).each do |article| %>
-                      <div class="carousel-item <%= article == topic.articles.first ? "active" : ""%>">
-                        <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
-                          <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
+      <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
+        <h3 class="sidebar-header mt-3">Pinned Topics</h3>
+        <% current_user.favorited_by_type('Topic').each do |topic| %>
+          <% carousel_id= topic.name.gsub(/\s+/,"").downcase + "Carousel"%>
+          <h5>
+            <%= link_to topic.name, topic, class: "text-light text-center", style: "text-decoration: none;" %>
+            <%= render partial: "shared/pin_icon", locals: { topic: topic } %>
+          </h5>
+          <div id="<%= carousel_id %>" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% topic.articles.first(3).each do |article| %>
+                <div class="carousel-item <%= article == topic.articles.first ? "active" : ""%>">
+                  <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
+                    <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                               class: "img-thumbnail article-card-img" %>
-                          <div class="card-body border-0">
-                            <%= link_to article.title, article, class: "link-dark link-underline-opacity-0 card-text stretched-link" %>
-                          </div>
-                        </div>
-                      </div>
-                  <% end %>
+                    <div class="card-body border-0">
+                      <button class="btn btn-light card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+                        <%= article.title %>
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-              </div>
-            <% end %>
+              <% end %>
             </div>
-          <% end %>
+            <button class="carousel-control-prev" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         <% end %>
+      </div>
+    <% end %>
+  <% end %>
 </aside>
