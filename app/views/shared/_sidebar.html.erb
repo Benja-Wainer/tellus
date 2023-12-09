@@ -22,9 +22,9 @@
               <div class="carousel-inner">
                 <% country.articles.first(3).each do |article| %>
                   <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
-                    <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
+                    <div class="d-block w-100 card article-card shadow-lg border-dark" style="height: 257px;">
                       <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
-                            class: "img-thumbnail article-card-img" %>
+                            class: "article-card-img" %>
                       <div class="card-body border-0">
                         <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
                           <%= article.title %>
@@ -58,9 +58,9 @@
             <div class="carousel-inner">
               <% topic.articles.first(3).each do |article| %>
                 <div class="carousel-item <%= article == topic.articles.first ? "active" : ""%>">
-                  <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 257px;">
+                  <div class="d-block w-100 card article-card shadow-lg border-dark" style="border: none; height: 257px;">
                     <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
-                              class: "img-thumbnail article-card-img" %>
+                              class: "article-card-img" %>
                     <div class="card-body border-0">
                       <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
                         <%= article.title %>
