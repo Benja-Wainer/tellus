@@ -1,0 +1,9 @@
+<div class="d-block w-100 card article-card shadow-lg border-dark" style="height: 257px;">
+  <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
+                            class: "article-card-img" %>
+  <div class="card-body border-0">
+    <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+      <%= article.title %>
+    </a>
+  </div>
+</div>

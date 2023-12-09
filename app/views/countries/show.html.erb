@@ -11,17 +11,8 @@
               <% topic.articles.each_with_index do |article, index| %>
                 <% if !article.countries.empty? && (article.countries.first == @country) %>
                   <div class="col-4">
-                    <div class="card m-3 shadow-lg border-dark" style="border: none">
-                      <% if article.image_url? %>
-                        <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
-                      <% end %>
-                      <div class="card-body border-0">
-                        <p class="card-text"><%= article.title %></p>
-                        <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
-                          Read Article
-                        </button>
-                      </div>
-                    </div>
+                    <%= render partial: "articles/article_card_show", locals: {article: article} %>
+                    <%= render partial: "articles/modal", locals: {article: article} %>
                   </div>
                 <% end %>
               <% end %>
@@ -40,15 +31,8 @@
                 <% topic.articles.each_with_index do |article, index| %>
                   <% if !article.countries.empty? && (article.countries.first.name == @country.name) %>
                     <div class="col">
-                      <div class="card m-3 shadow-lg border-dark" style="border: none">
-                        <% if article.image_url? %>
-                          <%= image_tag "#{article.image_url}", class: "img-thumbnail article-card-img" %>
-                        <% end %>
-                        <div class="card-body border-0">
-                          <p class="card-text"><%= article.title %></p>
-                          <%= render partial: "articles/modal", locals: {article: article}%>
-                        </div>
-                      </div>
+                      <%= render partial: "articles/article_card_show", locals: {article: article}%>
+                      <%= render partial: "articles/modal", locals: {article: article}%>
                     </div>
                   <% end %>
                 <% end %>

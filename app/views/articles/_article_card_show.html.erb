@@ -1,0 +1,10 @@
+<div class="card article-card m-3 shadow-lg border-dark" style="border: none">
+  <% if article.image_url? %>
+    <%= image_tag "#{article.image_url}", class: "article-card-img" %>
+  <% end %>
+  <div class="card-body border-0">
+    <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+      <%= article.title %>
+    </a>
+  </div>
+</div>

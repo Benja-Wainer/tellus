@@ -3,7 +3,8 @@
 }
 
 .mapboxgl-popup-content {
-  // font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
   padding: 0;
   // width: 180px;
   background: $dark !important;
@@ -12,6 +13,6 @@
 .mapboxgl-popup {
   max-width: 655px !important;
 }
- .popup-articles {
+.popup-articles {
   width: 84%;
- }
+}

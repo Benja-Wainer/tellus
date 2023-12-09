@@ -31,7 +31,7 @@
                 </div>
               </div>
               <p class="content mt-3"><%= article.content %>.</p>
-              <%= link_to "Read the original article#{article.source.present? ? " at #{article.source}" : ""}", article.url, class: "btn btn-secondary rounded mt-2" %>
+              <%= link_to "Read the original article#{article.source.present? ? " at #{article.source}" : ""}", article.url, class: "btn btn-secondary rounded mt-2", target: "_blank" %>
             </div>
           </div>
         </div>
