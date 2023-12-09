@@ -1,6 +1,10 @@
 <div class="container">
   <div class="min-vh-100" data-controller="reveal" data-reveal-hidden-class="text-secondary"  style="background: #555252">
-    <h1 class="text-center pt-3" style="color: white;">Top articles for <%= @topic.name %></h1>
+    <h1 class="text-center pt-3" style="color: white;">Top articles for <%= @topic.name %>
+      <%= link_to toggle_favorite_topic_path(@topic), data: {"turbo-method": :patch} do %>
+        <i data-toggle-heart-target="icon" data-action="click->toggle-heart#toggle" class="fs-3 fa-solid fa-thumbtack <%= user_signed_in? && current_user.favorited?(@topic) ? "" : "text-secondary" %>" style="color:#00dc22;"></i>
+      <% end %>
+    </h1>
     <div id="article-container" class="row w-100" data-masonry='{"percentPosition": true }'>
       <% @topic.countries.uniq.each do |country| %>
         <% country.articles.select{|article| article.topics.include?(@topic)}[0...1].each_with_index do |article, index| %>
