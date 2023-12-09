@@ -26,9 +26,9 @@
                       <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                             class: "img-thumbnail article-card-img" %>
                       <div class="card-body border-0">
-                        <button class="btn btn-light card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+                        <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
                           <%= article.title %>
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -62,9 +62,9 @@
                     <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
                               class: "img-thumbnail article-card-img" %>
                     <div class="card-body border-0">
-                      <button class="btn btn-light card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+                      <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
                         <%= article.title %>
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>

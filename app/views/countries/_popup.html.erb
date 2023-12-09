@@ -11,10 +11,9 @@
         <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
               class: "img-thumbnail", style: "height: 123px; object-fit: cover;" %>
         <div class="card-body px-2 pb-0 border-0">
-          <p class="fs-6 card-text"><%= article.title %></p>
-          <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
-            Read Article
-          </button>
+          <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+            <%= article.title %>
+          </a>
         </div>
       </div>
     <% end %>
