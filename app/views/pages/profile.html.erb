@@ -42,11 +42,11 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
                     <div class="carousel-inner">
                       <% country.articles.first(3).each do |article| %>
                         <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
-                          <div class="d-block w-100 card shadow-lg border-dark" style="border: none; height: 65px;">
+                          <div class="d-block w-100 card shadow-lg border-dark" style="border: none;">
                             <div class="card-body border-0">
-                              <button class="btn btn-light card-text stretched-link text-truncate" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>" style="margin-top: -18px">
+                              <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
                                 <%= article.title %>
-                              </button>
+                              </a>
                             </div>
                           </div>
                         </div>
@@ -80,7 +80,6 @@ background: linear-gradient(166deg, rgba(48,46,46,1) 0%, rgba(0,0,0,1) 100%); co
         <h4><strong>Articles Saved</strong></h4>
         <div class="d-flex" style="flex-direction:column;margin-bottom: 40px;">
           <% current_user.favorited_by_type('Article').order(:created_at).each_with_index do |article, index| %>
-            <% article_id = article.title.gsub(/['¨]/,"").split(" ")[4] %>
             <button type="button" class="pillbutton text-truncate" style="-webkit-line-clamp: 4; max-width: 35ch;" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
               <%= article.title %> <%= article.created_at.strftime("%b-%d-%Y") %>
             </button>

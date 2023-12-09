@@ -15,22 +15,14 @@
           <% current_user.favorited_by_type('Country').each do |country| %>
             <% carousel_id= country.name.gsub(/\s+/,"").downcase + "Carousel"%>
             <h5>
-              <%= link_to country.name, country, class: "text-light text-center", style: "text-decoration: none;" %>
+              <%= link_to country.name, country, class: "link-light text-center link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %>
               <%= render partial: "shared/heart_icon", locals: { country: country } %>
             </h5>
             <div id="<%=carousel_id%>" class="carousel slide mb-4" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <% country.articles.first(3).each do |article| %>
                   <div class="carousel-item <%= article == country.articles.first ? "active" : ""%>">
-                    <div class="d-block w-100 card article-card shadow-lg border-dark" style="height: 257px;">
-                      <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
-                            class: "article-card-img" %>
-                      <div class="card-body border-0">
-                        <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
-                          <%= article.title %>
-                        </a>
-                      </div>
-                    </div>
+                    <%= render partial: "articles/article_card_sidebar", locals: {article: article} %>
                   </div>
                 <% end %>
               </div>
@@ -47,40 +39,44 @@
         </div>
       <% end %>
       <% if user_signed_in? && current_user.favorited_by_type('Topic').any? %>
-        <h3 class="sidebar-header mt-3">Pinned Topics</h3>
-        <% current_user.favorited_by_type('Topic').each do |topic| %>
-          <% carousel_id= topic.name.gsub(/\s+/,"").downcase + "Carousel"%>
-          <h5>
-            <%= link_to topic.name, topic, class: "text-light text-center", style: "text-decoration: none;" %>
-            <%= render partial: "shared/pin_icon", locals: { topic: topic } %>
-          </h5>
-          <div id="<%= carousel_id %>" class="carousel slide mb-4" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <% topic.articles.first(3).each do |article| %>
-                <div class="carousel-item <%= article == topic.articles.first ? "active" : ""%>">
-                  <div class="d-block w-100 card article-card shadow-lg border-dark" style="border: none; height: 257px;">
-                    <%= image_tag article.image_url? ? article.image_url : image_path("TellUsBanner.jpg"),
-                              class: "article-card-img" %>
-                    <div class="card-body border-0">
-                      <a class="card-text stretched-link" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
-                        <%= article.title %>
-                      </a>
-                    </div>
+        <div class="border-bottom pb-5">
+          <h3 class="sidebar-header mt-3">Pinned Topics</h3>
+          <% current_user.favorited_by_type('Topic').each do |topic| %>
+            <% carousel_id= topic.name.gsub(/\s+/,"").downcase + "Carousel"%>
+            <h5>
+              <%= link_to topic.name, topic, class: "link-light text-center link-underline link-underline-opacity-0 link-underline-opacity-75-hover" %>
+              <%= render partial: "shared/pin_icon", locals: { topic: topic } %>
+            </h5>
+            <div id="<%= carousel_id %>" class="carousel slide mb-4" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <% topic.articles.first(3).each do |article| %>
+                  <div class="carousel-item <%= article == topic.articles.first ? "active" : ""%>">
+                    <%= render partial: "articles/article_card_sidebar", locals: {article: article} %>
                   </div>
-                </div>
-              <% end %>
+                <% end %>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
+          <% end %>
+        </div>
+      <% end %>
+      <% if user_signed_in? && current_user.favorited_by_type('Article').any? %>
+        <h3 class="sidebar-header mt-3">Articles Saved</h3>
+        <div class="d-flex" style="flex-direction:column; margin-bottom: 40px;">
+          <% current_user.favorited_by_type('Article').order(:created_at).each_with_index do |article, index| %>
+            <button type="button" class="pillbutton text-truncate" style="-webkit-line-clamp: 4; max-width: 35ch;" data-bs-toggle="modal" data-bs-target="#articleModal<%= article.id %>">
+              <%= article.title %> <%= article.created_at.strftime("%b-%d-%Y") %>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#<%= carousel_id %>" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </aside>
