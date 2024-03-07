@@ -8,4 +8,4 @@ rails yarn build --watch
 
 rails db:create
 
-This application will requrie 3 APIs for NewsAPI, ChatGPT Api and Newsdataio API.
+This application will require 3 APIs for NewsAPI, ChatGPT Api and Newsdataio API.
