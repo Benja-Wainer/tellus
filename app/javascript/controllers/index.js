@@ -2,22 +2,22 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application"
+import { application } from "./application";
 
-import HelloController from "./hello_controller"
-application.register("hello", HelloController)
+import HelloController from "./hello_controller";
+application.register("hello", HelloController);
 
-import RenderArticleController from "./render_article_controller"
-application.register("render-article", RenderArticleController)
+import RenderArticleController from "./render_article_controller";
+application.register("render-article", RenderArticleController);
 
-import ShowArticlesController from "./show_articles_controller"
-application.register("show-articles", ShowArticlesController)
+// import ShowArticlesController from "./show_articles_controller"
+// application.register("show-articles", ShowArticlesController)
 
-import SidebarController from "./sidebar_controller"
-application.register("sidebar", SidebarController)
+import SidebarController from "./sidebar_controller";
+application.register("sidebar", SidebarController);
 
-import ToggleHeartController from "./toggle_heart_controller"
-application.register("toggle-heart", ToggleHeartController)
+import ToggleHeartController from "./toggle_heart_controller";
+application.register("toggle-heart", ToggleHeartController);
 
-import WorldMapController from "./world_map_controller"
-application.register("world-map", WorldMapController)
+import WorldMapController from "./world_map_controller";
+application.register("world-map", WorldMapController);
